@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Програмирање 2 - И смер</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="Styles/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="Styles/unutrasnje.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="header">
+
+    </div>
+    <div class="container">
+
+        <h1 id="page_title"></h1>
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-primary template" style="display:none;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#">
+                        </a>
+                    </h3>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse in">
+                    <div class="panel-body"></div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <footer>
+            <p>&copy; Математички факултет Универзитета у Београду 2016
+			</p>
+        </footer>
+    </div>
+
+    <div id="test_template" style="display:none">
+        <form style="display:inline;" class="input-file-form">
+            <label class="btn btn-default btn-file">
+                Одабери .c датотеку
+                <input type="file" style="display: none;" class="input-file-c-upload" accept=".c">
+            </label>
+        </form>
+        <span class='label label-info input-file-info'></span>
+        <button class="btn btn-default input-file-run-test" type="button" style="margin-left:10px">Покрени тест</button>'
+        <div class="alert alert-danger input-file-alert" style="display:none; margin-top:10px;">
+            <strong>Грешка</strong> Ова функционалност је тренутно у припреми.
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="Scripts/odbrojavanje.js"></script>
+    <script src="Scripts/site.js"></script>
+    <script src="Scripts/data.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var data = null;
+        $(function () {
+            var id = parseInt(getParameterByName('id'));
+            var name = "";
+            switch (id) {
+                case 1:
+                    name = "Ранији испитни рокови";
+                    data = data1;
+                    break;
+                case 2:
+                    name = "Одабрани задаци за вежбу";
+                    data = data2;
+                    break;
+                case 3:
+                    name = "Задаци са текућих рокова";
+                    data = data3;
+                    break;
+            }
+            $("#page_title").html(name);
+
+            var task_id = 0;
+            var category_id = 0;
+
+            var template_category = $(".template");
+            var template_test = $("#test_template");
+
+            for (var i = 0; i < data.length; i++) {
+                data[i].id = category_id++;
+
+                var newPanel = template_category.clone();
+                newPanel.find(".collapse").removeClass("in");
+                newPanel.find(".panel-primary").removeClass("template");
+                newPanel.find(".accordion-toggle").attr("href", '#collapse_' + data[i].id).text(data[i].name);
+                newPanel.find(".panel-collapse").attr("id", 'collapse_' + data[i].id);
+                newPanel.find(".panel-body").append('<div id="div_id_' + data[i].id + '"></div>');
+
+                $("#accordion").append(newPanel.fadeIn());
+
+                var div = $('#div_id_' + data[i].id);
+
+                for (var j = 0; j < data[i].tasks.length; j++) {
+                    var current_task_id = task_id++;
+
+                    div.append('<img src="' + data[i].url + '/' + data[i].tasks[j] + '.png" style="width:90%";>');
+                    
+                    div.append('<h4><a target="_blank" href="' + data[i].url + '/' + data[i].tasks[j] + '">Решење</a></h4>');
+
+                    div.append('<h4><a target="_blank" href="' + data[i].url + '/' + data[i].tasks[j] + '.txt">Тест примери</a></h4>');
+
+                    var test_panel = template_test.clone();
+                    test_panel.attr("id", "div_run_test_" + current_task_id);
+                    test_panel.find(".input-file-form").attr("id", "input_file_form_" + current_task_id);
+                    test_panel.find(".input-file-c-upload").attr("id", "input_file_c_upload_" + current_task_id);
+                    test_panel.find(".input-file-c-upload").attr("test_id", current_task_id);
+                    test_panel.find(".input-file-info").attr("id", "input_file_info_" + current_task_id);
+                    test_panel.find(".input-file-run-test").attr("id", "input_file_run_test_" + current_task_id);
+                    test_panel.find(".input-file-run-test").attr("test_file_path", data[i].url + '/' + data[i].tasks[j] + '.txt');
+                    test_panel.find(".input-file-run-test").attr("test_id", current_task_id);
+                    test_panel.find(".input-file-alert").attr("id", "input_file_alert_" + current_task_id);
+                    div.append(test_panel.fadeIn());
+
+                    div.append('<hr>');
+                }
+
+                $(".input-file-c-upload").change(function () {
+                    var test_id = $(this).attr("test_id");
+                    $("#input_file_info_" + test_id).html($(this).val());
+                });
+
+                $(".input-file-run-test").bind('click', function () {
+                    var test_id = $(this).attr("test_id");
+                    var data = new window.FormData($('#input_file_form_' + test_id)[0]);
+                    $.ajax({
+                        xhr: function () {  
+                            return $.ajaxSettings.xhr();
+                        },
+                        type: "POST",
+                        data: data,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        url: "test.php",
+                        success: function () { },
+                        error: function () {
+                            //console.log('error');
+                            $("#input_file_alert_" + test_id).show();
+                        },
+                    });
+                });
+            }
+       });
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Програмирање 2 - И смер</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="Styles/bootstrap.min.css" rel="stylesheet">
+
+    <link href="Styles/pocetna.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="header">
+
+    </div>
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+    
+    <div class="jumbotron" style="margin-top:0px !important;">
+        <div class="container">
+            <h1> Програмирање 2 </h1>
+
+            <p>
+                Овде ће бити објављивани сви материјали са часова вежби (свих асистената),
+                важна обавештења, детаљи о организацији курса и остале битне информације.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-3 opis">
+                <h2><a href="okursu.html">О курсу</a></h2>
+                <p> Овде можете наћи неке техничке информације о курсу за ову школску годину. </p>
+            </div>
+            <div class="col-md-3 opis">
+                <h2><a href="obaveze.html">Обавезе студената</a></h2>
+                <p> Овде можете наћи све детаље о организацији курса и расподелу бодова по обавезама за ову школску годину. </p>
+            </div>
+            <div class="col-md-3 opis">
+                <h2><a href="vezbe.html">Вежбе</a></h2>
+                <p> Овде се налазе сви материјали који су вам потребни спремање колоквијума и испита, који су са часова вежби свих асистената на овом курсу. </p>
+            </div>
+            <div class="col-md-3 opis">
+                <h2><a href="obavestenja.html">Обавештења</a></h2>
+                <p> Овде се објављују сва обавештења од значаја за све студенте који слушају овај курс. </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; Математички факултет Универзитета у Београду 2016</p>
+        </footer>
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/site.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sakriveno").hide();
+            $("#josInformacija").click(function () {
+                $("#sakriveno").slideToggle();
+            });
+        })
+    </script>
+</body>
+</html>
