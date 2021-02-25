@@ -1,0 +1,27 @@
+k{ 3 jovan zarko nikola petar marko strahinja uciteljica k}
+i{ nikola strahinja  i}
+|
+k{ -2 a b c k}
+i{ -1 i}
+|
+k{ 1 a b c k}
+i{ a b c i}
+|
+k{ 1 ab cde fgh 2000 342 fdskl353 dfddg ddf k}
+i{ ab cde fgh 2000 342 fdskl353 dfddg ddf i}
+|
+k{ 2 ab cde fgh 2000 342 fdskl353 dfddg ddf 4646 dfkd 453 fdsk nesto ovo ono lepo neke reci abcdefGdgdgdhsd k}
+i{ cde 2000 fdskl353 ddf dfkd fdsk ovo lepo reci  i}
+|
+k{ 3 ab cde fgh 2000 342 fdskl353 dfddg ddf 4646 dfkd 453 fdsk nesto ovo ono lepo neke reci abcdefGdgdgdhsd k}
+i{ fgh fdskl353 4646 fdsk ono reci i}
+|
+k{ 4 neke reci i jos par nekih reci i jos novih nekih reci k}
+i{ jos i reci i}
+|
+k{ 1 rec k}
+i{ rec i}
+|
+k{ 100 rec k}
+i{  i}
+|

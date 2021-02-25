@@ -1,0 +1,48 @@
+.jumbotron {
+	margin-top: 50px;
+}
+
+#poruka_naslov {
+	text-align: center
+}
+
+
+.opis {
+	height: 300px;
+	position: relative;
+}
+
+.opis .btn {
+	position: absolute;
+	bottom: 5px;
+	/*width: 70%;
+	left:15%;*/
+}
+
+.jumbotron h1 {
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+.notif {
+	text-align: center;
+	position: fixed;
+	background-color: red;
+	color: white;
+	z-index: 1001;
+	top: 60px;
+	height: 30px;
+	padding-top: 3px;
+	width: 100%;
+}
+
+.obavestenje {
+	text-align: center;
+	background-color: #FF6347;
+	
+	color:white;
+}
+
+#sakriveno {
+	color: white;
+}

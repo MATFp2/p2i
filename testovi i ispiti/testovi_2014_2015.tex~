@@ -1,0 +1,857 @@
+% *************************************************************
+% *************************************************************
+% *************************************************************
+\chapter{Testovi i ispiti 2014/15}
+% *************************************************************
+% *************************************************************
+% *************************************************************
+
+
+%---------------------------------------------------------------------
+\section{Programiranje 2, I smer, 2014/15, prvi prakticni test}
+%---------------------------------------------------------------------
+
+
+\subsection{Grupa 1}
+
+\begin{enumerate}
+
+\item Sa standardnog ulaza se u\v citava ceo broj \emph{x}, ceo broj \emph{n} ($n \le 100$), a potom i niz od \emph{n} celih brojeva. Napisati rekurzivnu funkciju \emph{void f(int a[], int n, int x)}, koja u nizu \emph{a} poslavlja na nulu sve parove susednih elementa \v ciji je zbir (u po\v cetnom nizu) jednak \emph{x}. Rezultuju\' ci niz ispisati na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz & \mlcell{3 9\\1 2 7 6 0 3 2 1 4} & \mlcell{2 2\\1 1} & \mlcell{5 5 \\8 2 3 2 9} & \mlcell{7 8\\ 1 5 2 6 3 4 3 9} \\ \hline
+
+  Izlaz &  0 0 7 6 0 0 0 0 4 & 0 0& 8 0 0 0 9 & 1 0 0 6 0 0 0 9\\ \hline
+
+\end{tabular}
+
+\normalsize
+
+
+
+\item Sa standardnog ulaza se u\v citava ceo broj \emph{n} ($n \le 100$), a potom i niz od \emph{n} celih brojeva, uredjenih rastu\' ce. Binarnom pretragom prona\' ci indeks prvog elementa koji je ve\' ci od prose\v cne vrednosti u nizu (element sa najmanjim indeksom koji ispunjava dato svojstvo). Ispisati dobijeni indeks na standardni izlaz (u slu\v caju da takav broj ne postoji ne pisati ni\v sta).  U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz & \mlcell{10 \\ 5 10 12 20 100 101 102 596 703 1001}&\mlcell{8 \\ 1 2 8 10 65 102 104 500} & \mlcell{0 }& \mlcell{3 \\ 100 100 100}\\ \hline
+
+  Izlaz &7 & 5 &  &  \\ \hline
+
+\end{tabular}
+
+\normalsize
+
+
+
+\item U datoteci "kompleksni.txt" se nalaze kompleksni brojevi (njihov ta\v can broj nije unapred poznat). Svaki kompleksan broj je zadat sa dva broja tipa \emph{float}. Sortirati kompleksne
+
+   brojeve nerastu\' ce prema veli\v cini modula. Dobijeni sortiran niz upisati u datoteku "sortirani\_kompleksni.txt". Maksimalan
+
+   broj kompleksnih brojeva je 1000. U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz &
+
+
+
+  \mlcell{kompleksni.txt:\\19.89 3.56 \\ 6.87 19.05 \\ 10.21 11.32 \\ 10.23 2.78 \\ 6.04 17.19 \\ 19.55 15.53} &
+
+  \mlcell{kompleksni.txt:\\4.22 12.63\\14.49 18.18\\5.76 6.91\\15.39 4.44}&
+
+  & kompleksni.txt: \\ \hline
+
+  Izlaz &
+
+  \mlcell{sortirani\_kompleksni.txt:\\19.55 15.53\\6.87 19.05\\19.89 3.56\\6.04 17.19\\10.21 11.32\\10.23 2.78} &
+
+  \mlcell{sortirani\_kompleksni.txt:\\14.49 18.18\\15.39 4.44\\4.22 12.63\\5.76 6.91}&
+
+  -1 & sortirani\_kompleksni.txt:\\ \hline
+
+\end{tabular}
+
+\normalsize
+
+\end{enumerate}
+
+
+
+\subsection{Grupa 2}
+
+
+\begin{enumerate}
+
+\item Sa standardnog ulaza se u\v citava ceo broj \emph{n} ($n \le 100$), a potom i niz od \emph{n} celih brojeva.  Napisati rekurzivnu funkciju \emph{void f(int a[], int n)} koja u nizu \emph{a} postavlja na nulu sve elemente koji su (u po\v cetnom nizu) jednaki zbiru svojih suseda. Rezultuju\' ci niz ispisati na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz & \mlcell{6 \\ 1 4 3 6 3 3} & \mlcell{5 \\1 0  3 3 0}& \mlcell{2 \\1 1} & \mlcell{6 \\1 2 1 1 3 2} \\ \hline
+
+  Izlaz & 1 0 3 0 3 3 & 1 0 0 0 0 & 1 & 1 0 1 1 0 2 \\ \hline
+
+\end{tabular}
+
+\normalsize
+
+
+
+\item Sa standardnog ulaza se u\v citava ceo broj \emph{k}, ceo broj \emph{n} ($n \le 100$), a potom i niz od \emph{n} celih brojeva, uredjenih rastu\' ce. Napisati funkciju koja binarnom pretragom nalazi indeks prvog $k$-tocifrenog elementa (element sa najmanjim indeksom koji ispunjava dato svojstvo). Ispisati dobijeni indeks na standardni izlaz (u slu\v caju da takav broj ne postoji ne pisati ni\v sta). U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz & \mlcell{4 10 \\ 5 10 12 20 100 101 102 596 703 1001}&\mlcell{3 8 \\ 1 2 8 10 65 102 104 500} & \mlcell{5 0 }& \mlcell{4 3 \\ 100 100 100}\\ \hline
+
+  Izlaz &9 & 5 &  &  \\ \hline
+
+\end{tabular}
+
+\normalsize
+
+
+
+\item Datoteka "artikli.txt" sadr\v zi informacije o artiklima.
+
+Format datoteke je takav da je najpre dat broj artikala, a potom u svakom
+
+slede\' cem redu su date informacije o artiklu: \emph{naziv} (najvi\v se 20 karaktera), \emph{cena} (ceo broj), \emph{komada} (ceo broj).
+
+Artikala nikad nema vi\v se od 200. U\v citati datoteku u niz struktura ARTIKAL,
+
+a potom sortirati niz prema ukupnoj vrednosti artikala ($vrednost = cena \cdot komada$) u opadaju\' cem
+
+poretku i ispisati ga na standardni izlaz. U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz &
+
+  \mlcell{artikli.txt:\\3\\ frizider 23450 2\\ pegla 4500 15\\ usisivac 7000 4}&\mlcell{artikli.txt:\\5\\ a1 162 130\\ a2 160 136\\a3 172 182\\a4 173 183\\a5 101 116} & \mlcell{}&
+
+  \mlcell{artikli.txt:\\0} \\ \hline
+
+  Izlaz &\mlcell{pegla 4500 15\\frizider 23450 2\\usisivac 7000 4 }& \mlcell{a4 173 183\\a3 172 182\\ a2 160 136\\a1 162 130\\ a5 101 116} & -1 & \\ \hline
+
+\end{tabular}
+
+\normalsize
+
+\end{enumerate}
+
+
+
+\subsection{Grupa 4}
+
+\begin{enumerate}
+
+\item Ceo broj \emph{x} se u\v citava sa standardnog ulaza. Napisati rekurzivnu funkciju \emph{int f(int x)} koja u datom broju $x$ uklanja sve cifre koje su (u po\v cetnom broju) jednake zbiru svojih suseda. Rezultat funkcije ispisati na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz & 14363 & 11 & 13216 & 10330 \\ \hline
+
+  Izlaz & 133 & 11 & 1216 & 100\\ \hline
+
+\end{tabular}
+
+\normalsize
+
+
+
+\item Sa standardnog ulaza se u\v citava ceo broj \emph{x}, ceo broj \emph{n} ($n \le 100$), a potom i niz od \emph{n} celih brojeva, uredjenih rastu\' ce. Napisati funkciju koja u rastu\' ce uredjenom nizu celih brojeva pronalazi broj koji je najbli\v zi datom broju $x$. Ukoliko ima vi\v se takvih brojeva pronalazi onaj sa najmanjim indeksom. Funkcija vra\' ca vrednost
+
+pronadjenog broja i treba da radi u vremenu $O(log(n))$. Ispisati dobijeni broj na standardni izlaz (u slu\v caju da takav broj ne postoji ispisati 0). U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz & \mlcell{11 10 \\ 5 10 12 20 100 101 102 596 703 1001}&\mlcell{200 8 \\ 1 2 8 10 65 102 104 500} & \mlcell{5 0 }& \mlcell{54 3 \\ 100 100 100}\\ \hline
+
+  Izlaz &10 & 104 & 0 & 100  \\ \hline
+
+\end{tabular}
+
+\normalsize
+
+
+
+\item U datoteci \v cije se ime zadaje kao prvi argument komandne linije se nalaze pozitivni razlomci, u svakom redu po jedan, ne vi\v se od 256 (njihov ta\v can broj nije unapred poznat). Jedan razlomak je zadat kao par brojeva tipa \emph{float}.
+
+   Koriste\' ci qsort, sortirati ih rastu\' ce, i tako sortirane ih upisati u datoteku \v cije se ime zadaje kao drugi argument komenandne linije. U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz &
+
+  \mlcell{a.out u.txt i.txt \\u.txt:\\14.49 18.18\\15.39 4.44\\4.22 12.63\\5.76 6.91} &
+
+  \mlcell{a.out u.txt i.txt \\u.txt:\\ 1 2 \\ 3 4 \\ 5 0 \\ 6 7}&
+
+  \mlcell{a.out u.txt i.txt }&
+
+  \mlcell{a.out u.txt i.txt \\u.txt:}
+
+  \\ \hline
+
+  Izlaz &
+
+  \mlcell{i.txt:\\4.22 12.63\\14.49 18.18\\5.76 6.91\\15.39 4.44} &
+
+  -1 &
+
+  -1 &
+
+  sortirani\_kompleksni.txt:
+
+  \\ \hline
+
+\end{tabular}
+
+\normalsize
+
+\end{enumerate}
+
+
+
+\subsection{Grupa 3}
+
+\begin{enumerate}
+
+\item Sa standardnog ulaza se u\v citava ceo broj \emph{n} ($n \le 100$), a potom i niz od \emph{n} celih brojeva. Napisati rekurzivnu funkciju \emph{int f(int a[], int n)} koja ra\v cuna proizvod svih neparnih brojeva prosledjenog celobrojnog niza. Rezultat funkcije ispisati na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz & \mlcell{6 \\ 1 4 3 6 3 3} & \mlcell{4 \\ 2 4 6 8} & \mlcell{3 \\ 5 0 2}& 0\\ \hline
+
+  Izlaz &  27 &1 & 5 & 1\\ \hline
+
+\end{tabular}
+
+\normalsize
+
+
+
+\item Kao argumenti komandne linije zadaju se dva broja tipa \emph{float} $a$ i $b$ ($a \le b$). Sa standarnog ulaza se unosi 11 brojeva tipa \emph{float} (redom $a_0, a_1, a_2, ...,a_{10}$) koji predstavljaju koeficijente polinoma $a_{10}x^{10} + a_9x^9 + a_8x^8 + ... + a_0$. Napisati funkciju koja tra\v zi nulu polinoma na intervalu $[a, b]$. Pretpostaviti da \' ce na intervalu $[a, b]$ uvek postojati ta\v cno jedna nula funkcije, i da su vrednosti polinoma u ta\v ckama \emph{a} i \emph{b} razli\v citog znaka. Koristiti metod polovljenja intervala. Rezultat ispisati na standardni izlaz zaokru\v zen na dve decimale. U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz & \mlcell{a.out 0 2 \\ -1 0 1 0 0 0 0 0 0 0 0}&\mlcell{a.out -7.5 1.3 \\ 1 0 -2 3.2 0 0 0 0 0 0 0} & \mlcell{a.out -1 0 \\ -4 0 5 -0.2 0 0 0 0 0 0 0}& \mlcell{a.out 20 30 \\ -4 0 5 -0.2 0 0 0 0 0 0 0}\\ \hline
+
+  Izlaz & 1.00 & -0.52 & -0.88 & 24.97 \\ \hline
+
+\end{tabular}
+
+\normalsize
+
+
+
+\item U prvom redu datoteke ''proizvodi.txt'' dat je broj $n$ ($n \le 1000$), a zatim u svakom od narednih rarednih $n$ redova naziv proizvoda i koli\v cina. Proizvod sa istim nazivom se mo\v ze pojaviti vi\v se puta u vi\v se razli\v citih redova u datoteci. Potrebno je u\v citati sve proizvode u niz (bez ponavljanja proizvoda), u kome \' ce se uz svaki proizvod \v cuvati njegova ukupna koli\v cina pro\v citana iz datoteke. Niz sortirati na osnovu ukupne koli\v cine rastu\' ce i ispisati ga na standarndi izlaz.  U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+
+
+\small
+
+\begin{tabular}{ |l|l|l|l|l| }
+
+\hline
+
+  Ulaz &
+
+  \mlcell{proizvodi.txt:\\5\\p1 20\\p2 50\\p1 40\\p3 10\\p2 5}&\mlcell{proizvodi.txt:\\8\\p1 18 \\ p2 2 \\ p3 17 \\ p4 12 \\ p1 9 \\ p2 9 \\ p3 13 \\ p4 14} & \mlcell{}&
+
+  \mlcell{proizvodi.txt:\\0} \\ \hline
+
+  Izlaz &\mlcell{p3 10\\p2 55\\p1 60}& \mlcell{p2 11 \\ p4 26 \\ p1 27 \\ p3 30} & -1 & \\ \hline
+
+\end{tabular}
+
+\normalsize
+\end{enumerate}
+
+
+
+
+
+\section{Programiranje 2, I smer, 2013/14, Drugi prakti\v cni test}
+
+\subsection{Prva grupa}
+
+NAPOMENA: Na desktopu napraviti direktorijum sa imenom
+\verb|inicijaliAsistenta_ImePrezime_brojIndeksa_1|.  U tom
+direktorijumu \v cuvati zadatke -- 1.c, 2.c, 3.c. U drugom i tre\' cem
+zadatku korisiti pomo\' cne funkcije iz liste.[hc], a u fajlovima 2.c
+i 3.c napisati samo tra\v zenu i main funkciju.
+
+\setcounter{z}{0}
+
+\begin{z}
+  Napisati funkciju {\tt unsigned int f1(unsigned int x)} koja u datom
+  broju invertuje svaki tre\'ci bit. Prvi bit koji se invertuje je bit
+  najmanje te\v zine.  Sa standardnog ulaza se unosi ceo pozitivan
+  broj. Ispisati rezultat funkcije na standardni izlaz.
+\end{z}
+\begin{verbatim}
+Ulaz:     0           345         1024        1
+Izlaz:    1227133513  1227133712  1227134537  1227133512
+\end{verbatim}
+
+\begin{z}
+  Napisati funkciju {\tt int f2(cvor* lista)} koja za elemente liste
+  $a_1, a_2, ..., a_n$ ra\v cuna $a_1 - a_2 + a_3 - ... +
+  (-1)^{n+1}a_n$. Dozvoljeno je dodati jo\v s jedan argument u
+  funkciju f2.  Lista se u\v citava sa standardnog ulaza, sve dok se
+  ne unese nula (koja se ne treba nalaziti u listi), elemenati se
+  dodaju na kraj liste, a rezultat funkcije se ispisuje na standardni
+  izlaz.
+\end{z}
+
+\begin{verbatim}
+Ulaz:     4 2 5 3 8 0     12 3 3 24 25 0     4 6 2 1 2 4 0    0
+Izlaz:    12              13                 -3               0
+\end{verbatim}
+
+\begin{z}
+  Napisati funkciju {\tt void f3(cvor* lista, int k)} koja modifikuje
+  zadatu listu tako \v sto iza svakog broja deljivog sa {\tt k}
+  ume\'ce -1. Lista se u\v citava sa standardnog ulaza, sve dok se ne
+  unese nula, potom se u\v citava k, a izmenjenu listu ispisati na
+  standardni izlaz.
+\end{z}
+\begin{verbatim}
+Ulaz:     4 2 5 3 8 0 2        12 3 3 24 25 0 3           4 6 2 1 2 4 0 1                   0 5
+Izlaz:    4 -1 2 -1 5 3 8 -1   12 -1 3 -1 3 -1 24 -1 25   4 -1 6 -1 2 -1 1 -1 2 -1 4 -1
+\end{verbatim}
+
+
+\subsection{Drugi prakti\v cni test - Druga grupa}
+
+NAPOMENA: Na desktopu napraviti direktorijum sa imenom
+\verb|inicijaliAsistenta_ImePrezime_brojIndeksa_2|.  U tom
+direktorijumu \v cuvati zadatke -- 1.c, 2.c, 3.c. U drugom i tre\' cem
+zadatku korisiti pomo\' cne funkcije iz liste.[hc], a u fajlovima 2.c
+i 3.c napisati samo tra\v zenu i main funkciju.
+
+\setcounter{z}{0}
+
+\begin{z}
+  Napisati funkciju {\tt unsigned int f1(unsigned int x, unsigned int
+    k, unsigned int p)} koja u datom broju invertuje prvih $k$ i
+  poslednjih $p$ bitova. U slu\v caju da su $k$ i $p$ u zbiru dovoljno
+  veliki, mo\v ze se desiti da neki bitovi budu dva puta
+  invertovani. Bitovi broja se \v citaju sa desna na levo. Sa
+  standardnog ulaza se unose celi pozitivni brojevi $x$, $k$ i
+  $p$. Ispisati rezultat funkcije na standardni izlaz.
+\end{z}
+\begin{verbatim}
+Ulaz:     0 2 3         23345 2 1         1024 1 4        1 3 2
+Izlaz:    3758096387    2147506994        4026532865      3221225478
+\end{verbatim}
+
+\begin{z}
+  Napisati funkciju {\tt int f2(cvor* lista, int k)} koja vra\'ca zbir
+  elemenata u listi deljivih sa k. Lista se u\v citava sa standardnog
+  ulaza, sve dok se ne unese nula (koja se ne treba nalaziti u listi),
+  elemenati se dodaju na kraj liste, potom se u\v citava k, a rezultat
+  funkcije se ispisuje na standardni izlaz.
+\end{z}
+\begin{verbatim}
+Ulaz:     4 2 5 3 8 0 2    12 3 3 24 25 0 3     4 6 2 1 2 4 0 5     0 8
+Izlaz:    14               42                   0                   0
+\end{verbatim}
+
+\begin{z}
+  Napisati funkciju {\tt void f3(cvor* lista)} koja modifikuje zadatu
+  listu tako \v sto iza svakog broja ume\'ce broj njegovih cifara.
+  Lista se u\v citava sa standardnog ulaza, sve dok se ne unese nula,
+  a izmenjenu listu ispisati na standardni izlaz.
+\end{z}
+\begin{verbatim}
+Ulaz:     4 2 5 3 8 0            -12 312 3 24 25 0             1024 0      0
+Izlaz:    4 1 2 1 5 1 3 1 8 1    -12 2 312 3 3 1 24 2 25 2     1024 4
+\end{verbatim}
+
+
+\subsection{Drugi prakti\v cni test - Tre\' ca grupa}
+
+NAPOMENA: Na desktopu napraviti direktorijum sa imenom
+\verb|inicijaliAsistenta_ImePrezime_brojIndeksa_3|.  U tom
+direktorijumu \v cuvati zadatke -- 1.c, 2.c, 3.c. U drugom i tre\' cem
+zadatku korisiti pomo\' cne funkcije iz liste.[hc], a u fajlovima 2.c
+i 3.c napisati samo tra\v zenu i main funkciju.
+
+\setcounter{z}{0}
+
+\begin{z}
+  Napisati funkciju {\tt unsigned int f1(unsigned int x, unsigned int
+    k)} koja u datom broju invertuje svako k-to pojavljivanje
+  jedinice.  Bitovi broja se \v citaju sa desna na levo. Sa
+  standardnog ulaza se unosi ceo pozitivan broj $x$ i $k$. Ispisati
+  rezultat funkcije na standardni izlaz.
+\end{z}
+\begin{verbatim}
+Ulaz:     0 2         23345 2         1024 1         1 3
+Izlaz:    0           4641            0              1
+\end{verbatim}
+
+\begin{z}
+  Napisati funkciju {\tt int f2(cvor* lista1, cvor* lista2)} koja
+  vra\'ca skalarni proizvod dve liste. Pretpostaviti da su liste iste
+  du\v zine. Liste se u\v citavaju sa standardnog ulaza, sve dok se ne
+  unese nula (koja se ne treba nalaziti u listi), elemenati se dodaju
+  na kraj liste, a rezultat funkcije se ispisuje na standardni izlaz.
+\end{z}
+\begin{verbatim}
+Ulaz:     1 2 3 0 4 5 6 0    10 9 0 4 3 0      4 0 5 0     0 0
+Izlaz:    32                 67                20          0
+\end{verbatim}
+
+\begin{z}
+  Napisati funkciju {\tt void f3(cvor* lista)} koja modifikuje zadatu
+  listu tako \v sto ukljanja svaki broj koji je ve\' ci od svog
+  predhodnika.  Lista se u\v citava sa standardnog ulaza, sve dok se
+  ne unese nula, a izmenjenu listu ispisati na standardni izlaz.
+\end{z}
+\begin{verbatim}
+Ulaz:     4 2 5 3 8 0    12 3 3 24 25 0   4 6 2 1 2 4 3 0    3 0
+Izlaz:    4 2 3          12 3 3           4 2 1 3            3
+\end{verbatim}
+
+\section{Programiranje 2, 2014/2015, I smer, zavr\v{s}ni ispit, jun 1}
+\subsection{Grupa 1}
+
+NAPOMENA: Na desktopu napraviti direktorijum sa imenom \verb|InicijaliAsistenta_ImePrezime_BrojIndeksa_1|.
+U tom direktorijumu \v cuvati zadatke -- 1.c, 2.c, 3.c, 4.c, 5.c\\
+U direktorijumu {\tt g1} nalaze se funkcije za rad sa listama ({\tt liste.c} i {\tt liste.h}) i
+funkcije za rad sa stablima ({\tt stabla.c} i {\tt stabla.h}).  \\
+
+\bigskip
+
+\begin{enumerate}
+\item Kao argumenti komandne linije su zadata dva pravougaonika sa svoim dimenzijama, redom \v sirinom i visinom: \emph{s1 v1 s2 v2} (tipa $float$). Ispisati na standardni izlaz koliko najvi\v se prvih pravougaonika mo\v ze da stane u drugi, tako da su odgovaraju\' ce stranice paralelne (svaka stranica koja ozna\v cava \v sirinu prvog pravougaoniku je paralelna sa  stranicom koja  ozna\v cava \v sirinu drugog pravougaonika). U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz & ./a.out 3.2 4.1 2.1 16.2 & ./a.out 2.1 3.2 9.8 9.1 & ./a.out 2 2 4 4 & ./a.out \\ \hline
+  Izlaz & 0 & 8 & 4 & -1\\ \hline
+\end{tabular}
+\normalsize
+
+\item U datoteci $duzi.txt$ se nalazi spisak du\v zi zadat ta\v ckama. Format datoteke je takav da je najpre zadat broj du\v zi, a pitom u svakom narednom redu du\v z u vidu \v cetiri koordinate: \emph{Ax Ay Bx By} (tipa $float$). Potrebno je u\v citati du\v zi iz datoteke, sortirati ih opadaju\' ce prema njihovoj du\v zini i ispisati tako sortirani niz na standardni izlaz. U svakom redu se ispisuju \emph{Ax Ay Bx By d}, gde je $d$ du\v zina du\v zi. Sve podatke ispisati zaokru\v zene na dve decimale. Koristiti dinami\v cku alokaciju memorije. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz.  Za koren broja tipa \emph{float} koristiti funkciju \emph{sqrtf}.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+Ulaz
+&\mlcell{$duzi.txt$:\\4\\2.09	7.33	9.12	1.58\\5.67	4.01	1.25	0.62\\6.73	8.61	1.88	8.49\\3.77	8.82	9.93	6.99}
+&\mlcell{$duzi.txt$:\\4\\4 2 4 4 \\6 6 2 7\\5 5 1 9\\7 0 4 5}
+&\mlcell{$duzi.txt$:\\4\\0 4 7 9\\1 7 7 0\\2 8 4 4\\4 1 6 8}
+&\mlcell{}\\ \hline
+Izlaz
+&\mlcell{2.09 7.33 9.12 1.58 9.08\\3.77 8.82 9.93 6.99 6.43\\5.67 4.01 1.25 0.62 5.57\\6.73 8.61 1.88 8.49 4.85}
+&\mlcell{7.00 0.00 4.00 5.00 5.83\\5.00 5.00 1.00 9.00 5.66\\6.00 6.00 2.00 7.00 4.12\\4.00 2.00 4.00 4.00 2.00}
+&\mlcell{1.00 7.00 7.00 0.00 9.22\\0.00 4.00 7.00 9.00 8.60\\4.00 1.00 6.00 8.00 7.28\\2.00 8.00 4.00 4.00 4.47}
+&\mlcell{-1} \\ \hline
+\end{tabular}
+\normalsize
+
+\item Sa standardnog ulaza se unosi ceo broj $n$ ($n \le 32$), a zatim i niz od $n$ neozna\v cenih celih brojeva. Formirati neozna\v ceni ceo broj $x$ tako \v sto se na $i$-ti bit broja $x$ postavlja vrednost $i$-tog bita $i$-tog broja niza. Broj $x$ ispisati na standardni izlaz. Bitove broja \v citati od pozicija manje te\v zine ka pozicijama ve\' ce te\v zine. Podrazumevana vrednost bitova broja $x$ je $0$. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+Ulaz & 7 12 45 72 415 146 333 85 & 5 1024 64 128 31 511& 5 127 0 0 63 128 & 41\\ \hline
+Izlaz & 88 & 24 & 9 & -1\\ \hline
+\end{tabular}
+\normalsize
+
+\item Napisati funkcuju koja bri\v se svaki element liste koji je manji od sume svih prethodnih elemenata u listi. Prilikom ra\v cunanja sume uzeti u obzir i prethodno obrisane elemente. Kreirati glavni program koji u\v citava listu, poziva funkciju \emph{f4} i ispisuje dobijenu listu na izlaz. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+Ulaz & 1 2 3 1 2 3 9 30 0 &1 2 4 8 16 32 0& 51 27 84 28 62 3 28 0& 5 2 4 1 4 20 100 84 21 200 0\\ \hline
+Izlaz & 1 2 3 30 & 1 2 4 8 16 32 & 51 84 & 5 20 100\\ \hline
+\end{tabular}
+\normalsize
+
+
+\item Sa standardnog ulaza se u\v citavaju dva stabla, $s1$ i $s2$. Ispitati da li $s1$ i $s2$ imaju istu strukturu (dva stabla imaju istu strukturu ako se jedno mo\v ze u
+potpunosti preklopiti preko drugog i obrnuto). U slu\v caju da nemaju istu strukturu ispisati $-1$ na standardni izlaz. U slu\v caju da imaju istu strukturu potrebno je izmeniti vrednosti u \v cvorovima stabla $s1$ tako \v sto se vrednost svakog \v cvora stabla $s1$ uve\' ca za vrednost odgovaraju\' ceg \v cvora stabla $s2$.  Izmenjeno stablo $s1$ ispisati na standardni izlaz. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz &
+  \mlcell{10 5 15 12 13 0\\12 7 20 15 17 0} &
+  \mlcell{10 5 15 12 11 0\\12 7 20 15 17 0} &
+  \mlcell{30 15 46 11 0\\20 13 81 9 0}&
+  \mlcell{10 8 0\\10 8 12 0} \\ \hline
+  Izlaz &
+  12 22 27 30 35 &
+  -1&
+  20 28 50 127&
+  -1\\ \hline
+\end{tabular}
+\normalsize
+
+\end{enumerate}
+
+
+\subsection{Grupa 2}
+
+NAPOMENA: Na desktopu napraviti direktorijum sa imenom \verb|InicijaliAsistenta_ImePrezime_BrojIndeksa_2|.
+U tom direktorijumu \v cuvati zadatke -- 1.c, 2.c, 3.c, 4.c, 5.c\\
+U direktorijumu {\tt g2} nalaze se funkcije za rad sa listama ({\tt liste.c} i {\tt liste.h}) i
+funkcije za rad sa stablima ({\tt stabla.c} i {\tt stabla.h}).  \\
+
+\bigskip
+
+\begin{enumerate}
+\item Kao argumenti komandne linije su zadate tri ta\v cke sa svoim koordinatama: \emph{x1 y1 x2 y2 x3 y3} (tipa $float$). Izra\v cunati du\v zinu puta koji po\v cinje u ta\v cki (0,0), prolazi kroz sve tri ta\v cke redom i zavr\v sava se u ta\v cki (0,0). Rezultat ispisati na standardni izlaz zaokru\v zen na dve decimale. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. Za koren broja tipa \emph{float} koristiti funkciju \emph{sqrtf}.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz & ./a.out 1 0 1 1 0 1 & ./a.out 3 4 -2 1 2 8 & ./a.out 2 -1 4 3 -2 1 & ./a.out 1 2 3\\ \hline
+  Izlaz & 4.00 & 27.14 & 15.27 & -1 \\ \hline
+\end{tabular}
+\normalsize
+
+\item U datoteci $proizvodi.txt$ se nalazi spisak proizvoda. Format datoteke je takav da je najpre zadat broj proizvoda, a zatim u svakom narednom redu naziv proizvoda (maksimalno 20 karaktera), cena i koli\v cina (tipa $float$).  Potrebno je u\v citati proizvode iz datoteke, sortirati ih opadaju\' ce prema ukupnoj vrednosti (\emph{cena * koli\v cina}) i ispisati tako sortirani niz na standardni izlaz. U svakom redu se ispisuju naziv, cena, koli\v cina i ukupna vrednost. Sve podatke ispisati zaokru\v zene na dve decimale. Koristiti dinami\v cku alokaciju memorije. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+Ulaz
+&\mlcell{$proizvodi.txt$:\\4\\p1 2.09 7.33\\p2 5.67 4.01 \\p3 6.73 8.61\\p4 3.77 8.82}
+&\mlcell{$proizvodi.txt$:\\4\\p1 4 2\\p2 6 6\\p3 5 5\\p4 7 0}
+&\mlcell{$proizvodi.txt$:\\4\\p1 0 4\\p2 1 7\\p3 2 8\\p4 4 1}
+&\mlcell{}\\ \hline
+Izlaz
+&\mlcell{p3 6.73 8.61 57.95\\p4 3.77 8.82 33.25\\p2 5.67 4.01 22.74\\p1 2.09 7.33 15.32}
+&\mlcell{p2 6.00 6.00 36.00\\p3 5.00 5.00 25.00\\p1 4.00 2.00 8.00\\p4 7.00 0.00 0.00}
+&\mlcell{p3 2.00 8.00 16.00\\p2 1.00 7.00 7.00\\p4 4.00 1.00 4.00\\p1 0.00 4.00 0.00}
+&\mlcell{-1} \\ \hline
+\end{tabular}
+\normalsize
+
+\item Napisati program koji sa standardnog ulaza u\v citava neozna\v cen ceo broj $x$ i tri broja $i$, $j$ i $k$. U broju $x$ razmeniti vrednosti dva bloka bitova du\v zine $k$, gde prvi blok po\v cinje bitom na poziciji $i$, a drugi bitom na poziciji $j$. Dobijeni broj ispisati na standardni izlaz. Bitove broja \v citati od pozicija manje te\v zine ka pozicijama ve\' ce te\v zine. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. Gre\v skom smatrati preklapanja blokova, kao i ako neki blok isko\v ci van granica neozna\v cenog celog broja.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz &
+  1234567 0 4 3&
+  341 2 17 5&
+  2047 20 3 7&
+  32567536 10 5 4\\ \hline
+  Izlaz &
+  1234672&
+  2752769&
+  133170183&
+  32562576\\ \hline
+\end{tabular}
+\normalsize
+
+\item Napisati funkcuju \emph{void f4(cvor *lista)} koja bri\v se svaki element liste koji je manji od prethodnog elemenata u listi, a ve\' ci od slede\' ceg. Prilikom brisanja uzeti u obzir i prethodno obrisane elemente. Prvi i poslednji element se ne bri\v su. Kreirati glavni program koji u\v citava listu, poziva funkciju \emph{f4} i ispisuje dobijenu listu na izlaz. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz &
+  1 4 2 6 3 1 4 2 1 0&
+  5 4 3 2 1 0&
+ 8 1 3 2 7 4 3 1 4 6 2 1 0&
+  0\\ \hline
+  Izlaz &
+  1 4 2 6 1 4 1&
+  5 1&
+  8 1 3 2 7 1 4 6 1&
+  \\ \hline
+\end{tabular}
+\normalsize
+
+\item Napisati funkciju \emph{cvor* f5(cvor* s)} koja za svaki \v cvor u stablu menja redosled njegovog levog i desnog direktnog potomka ukoliko levo podstablo ima ve\' cu dubinu od desnog podstabla. Ispisati dobijeno stablo na izlazu. Dubina predstavlja najdu\v zi put od korena do lista. Kreirati glavni program koji u\v citava stablo, poziva funkciju \emph{f5} i ispisuje dobijeno stablo na izlaz. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz &
+  20 10 30 5 12 7 0&
+  10 5 15 3 1 0&
+  20 10 30 9 15 25 12 17 0&
+  10 5 3 8 7 0\\ \hline
+  Izlaz &
+  30 20 12 10 5 7&
+  15 10 5 3 1&
+  30 25 20 9 10 12 15 17&
+  10 3 5 8 7\\ \hline
+\end{tabular}
+\normalsize
+
+\end{enumerate}
+
+
+\section{I smer, Programiranje 2 2014/2015, zavr\v{s}ni ispit, jun2 2015}
+
+Na \textit{Desktop}-u napraviti direktorijum \v cije je ime u formatu \textbf{InicijaliAsistenta\_ImeIPrezime\_BrojIndeksa\_1}. Na primer, \textbf{AZ\_PeraPeric\_mi14231\_1}. Sve zadatke sa\v cuvati u ovom direktorijumu. Zadatke imenovati sa \textbf{1.c}, \textbf{2.c}, \textbf{3.c}, \textbf{4.c} i \textbf{5.c}.
+
+\bigskip
+
+\begin{enumerate}
+\item
+Kao argument komadne linije zadaje se jedna re\v c. Ispisati
+na standarni izlaz re\v c
+koja se dobije od zadate re\v ci tako \v sto se prvo slovo ponovi jednom, drugo dva puta, ..., \emph{n}-to \emph{n} puta. U slu\v caju gre\v ske
+ispisati -1 na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz & ./a.out petar & ./a.out 12345 & ./a.out p2ispit & ./a.out \\ \hline
+  Izlaz & peetttaaaarrrrr & 122333444455555 & p22iiisssspppppiiiiiittttttt & -1\\ \hline
+\end{tabular}
+\normalsize
+
+\item
+U datoteci \textbf{polinomi.txt} se nalaze polinomi zadati svojim koeficijentima. Prvo se zadaje ukupan broj polinoma,
+a zatim u svakom narednom redu po jedan polinom. Svaki od tih redova sadr\v zi ime
+polinoma (maksimalne du\v zine 20 karaktera), broj koeficijenata polinoma (ceo neozna\v cen broj \emph{n}) i koeficijente (tipa \emph{float}, ukupno \emph{n} njih).
+Sortirati polinome opadaju\'ce prema
+vrednosti u ta\v cki \emph{x} koja je prosle\d ena programu kao argument komandne linije (tipa \emph{float}).
+Ispisati imena i vrednosti sortiranih polinoma na standarni izlaz.
+Sve podatke ispisati zaokru\v zene na dve decimale.
+Koristiti dinami\v cku alokaciju memorije. U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+Ulaz
+&\mlcell{a.exe 1\\$polinomi.txt$:\\5\\x\^{}2+3x+5.1~~3 5.1 3 1\\x\^{}3+3x+5~~~~4 5 3 0 1\\x\^{}2-8~~~~~~~~~~~3 -8 0 1\\8.5x~~~~~~~~~~~~~2 0 8.5\\12x-4~~~~~~~~~~~2 -4 12}
+&\mlcell{a.exe 3\\$polinomi.txt$:\\5\\x\^{}2+3x+5.1~~3 5.1 3 1\\x\^{}3+3x+5~~~~4 5 3 0 1\\x\^{}2-8~~~~~~~~~~~3 -8 0 1\\8.5x~~~~~~~~~~~~~2 0 8.5\\12x-4~~~~~~~~~~~2 -4 12}
+&\mlcell{a.exe -3\\$polinomi.txt$:\\5\\x\^{}2+3x+5.1~~3 5.1 3 1\\x\^{}3+3x+5~~~~4 5 3 0 1\\x\^{}2-8~~~~~~~~~~~3 -8 0 1\\8.5x~~~~~~~~~~~~~2 0 8.5\\12x-4~~~~~~~~~~~2 -4 12}
+&\mlcell{a.exe}\\ \hline
+Izlaz
+&\mlcell{x\^{}2+3x+5.1~~~9.10\\x\^{}3+3x+5~~~9.00\\8.5x~~~8.50\\12x-4~~~8.00\\x\^{}2-8~~~-7.00}
+&\mlcell{x\^{}3+3x+5~~~41.00\\12x-4~~~32.00\\8.5x~~~25.50\\x\^{}2+3x+5.1~~~23.10\\x\^{}2-8~~~1.00}
+&\mlcell{x\^{}2+3x+5.1~~~5.10\\x\^{}2-8~~~1.00\\8.5x~~~-25.50\\x\^{}3+3x+5~~~-31.00\\12x-4~~~-40.00}
+&\mlcell{-1} \\ \hline
+\end{tabular}
+\normalsize
+
+
+
+\item
+Sa standarnog ulaza u\v citava se neozna\v cen ceo broj \emph{x}, neozna\v cen ceo broj \emph{n}
+i niz od \emph{n} celih neozna\v cenih brojeva ($n \le 32$). Odrediti neozna\v cen ceo broj \emph{y} koji se dobija na slede\'ci na\v cin: porede se
+\emph{i}-ti bit broja \emph{x} i \emph{i}-ti bit \emph{i}-tog broja niza. Ukoliko su jednaki na
+\emph{i}-to mesto broja \emph{y} se postavlja bit 1, a ina\v ce se postavlja 0 (ukoliko \emph{i}-ti broj niza ne postoji, podrazumevati da je vrednost odgovaraju\' ceg bita 0).
+Ispisati broj \emph{y} na standardni izlaz. U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz & 1023 7 0 0 1023 1023 0 0 0 & 348712 4 1235 964914 24214 4212 & 12345 0 &726431 2 4967 349672 \\ \hline
+  Izlaz & 4294966284 & 4294618576 & 4294954950 & 4294240865\\ \hline
+\end{tabular}
+\normalsize
+
+\item
+Napisati funkciju \emph{void f4(cvor* lista, int k)} koja u datoj listi izme\d u svaka dva elementa
+\v ciji su zbir ili razlika jednaki datom broju \emph{k} ume\' ce -1. Glavni program u\v citava listu i ceo broj \emph{k}.
+Potrebno je ispisati rezultuju\' cu listu na stadardni izlaz. Nije dozvoljeno kori\v s\'cenje pomo\'cne liste. U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+Ne analizirati prvi i poslednji element liste jer oni nemaju oba suseda.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz & 1 2 3 1 2 3 0 3 & 4 2 1 5 6 2 4 0 2 & 1 3 1 1 3 1 0 2 & 0 5 \\ \hline
+  Izlaz & 1 -1 2 3 1 -1 2 3 & 4 -1 2 1 5 6 2 -1 4 & 1 -1 3 -1 1 -1 1 -1 3 -1 1 & \\ \hline
+\end{tabular}
+\normalsize
+
+\item
+Napisati funkciju \emph{int f5(cvor* s, int k)} koja ra\v cuna zbir svih parnih elemenata stabla \emph{s} na nivou \emph{k}, umanjen za zbir svih neparnih elemenata stabla \emph{s} na nivou \emph{k}.
+Glavni program u\v citava stablo i ceo broj \emph{k}. Potrebno je ispisati rezultat funkcije \emph{f5} na standardni izlaz. U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  Ulaz &
+  20 10 30 5 12 7 0 3&
+  10 5 15 3 1 0 2&
+  20 10 30 9 15 25 12 17 0 3&
+  10 5 3 8 7 0 10\\ \hline
+  Izlaz &
+  7&
+  -20&
+  -49&
+  0\\ \hline
+\end{tabular}
+\normalsize
+
+\end{enumerate}
+
+
+\section{I smer, Programiranje 2 2014/2015, zavr\v{s}ni ispit, septembar 2015}
+
+Na \textit{Desktop}-u napraviti direktorijum \v cije je ime u formatu
+\textbf{InicijaliAsistenta\_ImePrezime\_BrojIndeksa\_1}. Na primer,
+\textbf{AZ\_PeraPeric\_mi14231\_1}. Sve zadatke sa\v cuvati u ovom
+direktorijumu. Zadatke imenovati sa \textbf{1.c}, \textbf{2.c},
+\textbf{3.c}, \textbf{4.c} i \textbf{5.c}. U poslednja dva zadatka
+koristiti prilo\v zene biblioteke za rad sa listama (liste.[hc]) i
+stablima (stabla.[hc]) i kompilirati ih iz dve C datoteke.
+
+\begin{enumerate}
+\item 
+Kao argument komadne linije zadaju se tri parametra -- re\v c, slovo,
+broj. Izmeniti re\v c tako da se izme\d u prva dva pojavljivanja datog
+slova u re\v ci svaki karakter uve\'ca za dati broj.  U slu\v caju
+gre\v ske ispisati {\tt -1}.
+\begin{verbatim}
+  Primer 1:               Primer 2:             Primer 3:             Primer 4:
+  ./a.out danas a 3       ./a.out danas n 3     ./a.out oktobar 50    ./a.out proGramiraNjer r 5
+
+  daqas                   danas                 -1                    prtLramiraNjer
+\end{verbatim}
+
+
+\item
+U datoteci {\tt bioskop.txt} se nalaze podaci o filmovima koji se
+prikazuju u bioskopu. Ukupan broj filmova nije unapred poznat. Podaci
+su zapisani na slede\'ci na\v cin: {\tt ime\_filma} (jedna re\v c, ne
+du\v za od 50 kraktera), {\tt vreme\_prikazivanja} (vreme je oblika
+{\tt HH:MM}).  Pretpostaviti da su podaci u datoteci ispravno zadati.
+Sortirati podatke rastu\'ce prema vremenu prikazivanja i na standarni
+izlaz ispisati imena filmova tako sortiranog niza. Potom ispisati onaj
+sat ({\tt HH:00}) u kome ima najvi\v se projekcija.  U slu\v caju
+gre\v ske ispisati {\tt -1}.
+\begin{verbatim}
+ Primer 1:                           Primer 2:              Primer 3:               Primer 4:
+ Fantasticna_cetvorka 22:40          (nema datoteke)        (prazna datoteka)       Poseta 20:30
+ Noc_u_muzeju_2 14:00 
+ Bekstvo_iz_Sosenka 20:20
+ Gradovi_na_papiru 19:00
+ Haos_u_najavi 19:20
+ Malci 19:10
+ 
+ Noc_u_muzeju_2                      -1                     -1                      Poseta
+ Gradovi_na_papiru                                                                  20:00
+ Malci
+ Haos_u_najavi
+ Bekstvo_iz_Sosenka
+ Fantasticna_cetvorka
+ 19:00
+\end{verbatim}
+
+\item
+  Napisati funkciju koja na osnovu neozna\v cenog broja $x$ formira
+  nisku $s$ koja sadr\v zi heksadekadni zapis broja $x$, koriste\' ci
+  algoritam za brzo prevo\d enje binarnog u heksadekadni zapis (svake
+  $4$ binarne cifre se zamenjuju jednom odgovaraju\' com heksadekadnom
+  cifrom).  Napisati program koji tu funkciju testira za broj koji se
+  zadaje sa standardnog ulaza.
+\begin{verbatim}
+Primer 1:                Primer 2:                Primer 3:                Primer 4:
+11                       1024                     12345                    123456789
+0000000B                 00000400                 00003039                 075BCD15
+\end{verbatim}
+
+\item
+Napisati funkciju {\tt cvor* f4(cvor* lista, int k)} koja u datoj
+listi izbacuje susedne elemente \v ciji zbir je jednak datom broju
+{\tt k}. Potrebno je ispisati tako dobijenu listu na stadardni
+izlaz. Nije dozvoljeno kori\v s\'cenje pomo\'cne liste. Nije dovoljno
+samo ispisati tra\v zenu listu ve\' c je potrebno elemente zaista
+izbaciti i konstruisati novu listu. Elementi liste su celi brojevi,
+lista se unosi sa standarnog ulaza sve dok se ne unese {\tt 0}. Nakon
+unosa elemenata liste unosi se broj {\tt k}.
+\begin{verbatim}
+Primer 1:             Primer 2:              Primer 3:              Primer 4:
+13 4 5 10 0 9         13 4 5 9 9 0 9         13 4 5 4 3 0 9         4 5 3 -2 11 -2 11 -2 0 9
+
+13 10                 13 9 9                 13 3                   3 
+\end{verbatim}
+
+\item
+Napisati funkciju {\tt int f5(cvor* stablo)} koja u datom stablu
+odre\d uje broj onih elemenata kod kojih je zbir cifara svih elemenata
+levog podstabla strogo ve\'ci od zbira cifara svih elemenata desnog
+podstabla. Testirati funkciju pozivom u main-u. Stablo se unosi sa
+standardnog ulaza sve dok se ne unese 0. Elementi stabla su celi
+pozitivni brojevi.
+\begin{verbatim}
+Primer 1:                        Primer 2:         Primer 3:                         Primer 4:
+52 38 64 21 40 55 103 88 0       304 0             104 88 110 78 99 105 120 55 0     1111 -100 0
+
+1                                0                 4                                 1
+\end{verbatim}
+\end{enumerate}

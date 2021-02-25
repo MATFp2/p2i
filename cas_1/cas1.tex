@@ -1,0 +1,492 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{{\bf Programiranje 2\\ \emph{Datoteke, argumenti komandne linije, pseudo-slučajni brojevi}}}
+
+\usepackage{preambula}
+
+\def\d{{\fontencoding{T1}\selectfont\dj}}
+\def\D{{\fontencoding{T1}\selectfont\DJ}}
+
+\begin{document}
+
+\maketitle
+
+\section{Zadaci sa časa}
+
+\begin{z}
+Napisati program koji prepisuje datoteku \verb|ulaz.txt| u datoteku
+\verb|izlaz.txt| i to:
+\begin{description}
+\item[a)] karakter po karakter
+\item[b)] liniju po liniju
+\end{description}
+U slu\v caju gre\v ske na standardni izlaz za greške ispisati {\tt -1}. Pretpostaviti da je maksimalna dužina linije 80 karaktera.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:                Primer 3:}
+ulaz.txt:                ulaz.txt:                ulaz.txt:
+danas je lep dan         Cena soka je 30          
+i ja zelim da            Cena vina je 150
+postanem programer       Cena limunade je 200     izlaz.txt:
+                         Cena sendvica je 120
+izlaz.txt:
+danas je lep dan         izlaz.txt:
+i ja zelim da            Cena soka je 30  
+postanem programer       Cena vina je 150
+                         Cena limunade je 200
+                         Cena sendvica je 120
+\end{Verbatim}
+
+\begin{z}
+Napisati program koji na standarni izlaz ispisuje broj linija u
+tekstualnom fajlu sa imenom \verb|knjiga.txt|. U slu\v caju gre\v ske
+na standardni izlaz za greške ispisati -1.  Pretpostaviti da je maksimalna dužina linije 80 karaktera.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:                Primer 3:}
+ulaz.txt:                ulaz.txt:                ulaz.txt:
+danas je lep dan         Cena soka je 30          
+i ja zelim da            Cena vina je 150
+postanem programer       Cena limunade je 200     
+                         Cena sendvica je 120
+
+3                        4                        0
+\end{Verbatim}
+
+\begin{z}
+Sa standarnog ulaza u\v citavaju se imena dve tekstualne datoteke i
+jedan karakter.  Napisati program koji prepisuje datoteku \v cije se
+ime navodi kao prva niska u datoteku \v cije ime se navodi kao
+druga niska. Ukoliko je ucitan karakter \verb|u|, program prilikom
+prepisivanja treba da zamenjuje sva mala slova velikim, a ukoliko je
+u\v citan karakter \verb|l| sva velika slova se zamenjuju malim. U
+slu\v caju greške na standardni izlaz za greške ispisati -1.  Maksimalna du\v
+zina naziva datoteka je 20 karaktera.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                       Primer 2:                        Primer 3:}
+ulaz.txt izlaz.txt u           prva.dat druga.dat  l            primer.c prazna.txt V       
+ulaz.txt:                      prva.dat:                        primer.c:
+danas je lep dan               Cena soka je 30                  #include <stdio.h>
+i Ja zelim                     Cena vina je 150                 int main()
+da postanem programer          Cena limunade je 200             \{
+                               Cena sendvica je 120             \}
+                               
+izlaz.txt:                     druga.dat:                       -1                               
+DANAS JE LEP DAN               cena soka je 30
+I JA ZELIM                     cena vina je 150
+DA POSTANEM PROGRAMER          cena limunade je 200
+                               cena sendvica je 120
+\end{Verbatim}                         
+
+\begin{z}
+Prvi red datoteke \verb|matrica.txt| sadr\v zi 2 cela broja manja od
+50 koji predstavljaju redom broj vrsta i broj kolona realne matrice
+A. Svaki slede\'ci red sadr\v zi po jednu vrstu matrice. Napisati
+program koji pronalazi sve elemente matrice A koji su jednaki zbiru
+svih svojih susednih elemenata i \v stampa ih u obliku
+\begin{verbatim}
+(broj vrste, broj kolone, vrednost elementa).
+\end{verbatim}
+ U slučaju greške na standardni izlaz za greške ispisati {\tt -1}.
+Pretpostaviti da je sadr\v zaj datoteke ispravan. 
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                       }
+3 4
+ 1  2  3  4
+ 7  2 15 -3
+-1  3  1  3
+
+(1, 0, 7)
+(1, 2, 15)
+\end{Verbatim}
+
+\begin{z}
+ U datoteci \v cije se ime navodi na standarnom ulazu
+  programa nalazi se broj \verb|n|, a zatim i \verb|n| re\v ci (du\v zine
+  najvi\v se 50 karaktera). Napisati program koji u\v citava ovaj niz
+  i
+  \begin{enumerate}
+  \item ispisuje ga na standardni izlaz,
+  \item iz njega uklanja sve duplikate i u datoteku \verb|rez.txt|
+    ispisuje transformisani niz
+  \end{enumerate}
+  U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. Maksimalna du\v zina naziva datoteka je 20 karaktera. Maksimalan broj reči je 256.
+\end{z}
+
+
+\begin{Verbatim}%
+  [formatcom=\color{primeri}] 
+\textbf{Primer 1:                                       |        Primer 2:}
+dat1.txt                                        |        dat2.txt
+dat1.txt: 12 jha14 hahaha deda mraz deda        |        dat2.txt:  14
+          mraz deda deda jase konj konj konj    |        so secer supa so ljuto secer kiselo slatko
+                                                |        ljuto
+jha14 hahaha deda mraz deda mraz deda           |        paprika, ljuta paprika, ljuto dete
+deda jase konj konj konj                        | 
+                                                |        so secer supa so ljuto secer kiselo slatko 
+rez.txt: jha14 hahaha deda mraz jase konj       |        ljuto paprika, ljuta paprika, ljuto dete  
+                                                |
+                                                |        rez.txt: so secer supa ljuto kiselo slatko
+                                                |        paprika, ljuta dete
+---------------------------------------------------------------------------------------------------
+
+\textbf{Primer 3:                                                                  |}
+dat3.txt                                                                   |      
+dat.txt: 17 Buducnost televizije su ultra HD, odnosno 4K                   |       
+uredaji koji imaju ogromnu dijagonalu ekrana i znacajno vise piksela       |      
+                                                                           |
+Buducnost televizije su ultra HD, odnosno 4K                               |
+uredaji koji imaju ogromnu dijagonalu ekrana i znacajno vise piksela       |
+                                                                           |
+rez.txt: Buducnost televizije su ultra HD, odnosno 4K                      |
+uredaji koji imaju ogromnu dijagonalu ekrana i znacajno vise piksela       |
+\end{Verbatim}
+
+\begin{z}
+U datoteci \v cije se ime navodi na standarnom ulazu
+  programa nalazi se broj $n$, a zatim i $n$ re\v ci (du\v zine
+  najvi\v se 50 karaktera). Napisati program koji u\v citava reči 
+  i
+  \begin{enumerate}
+  \item ispisuje ih na standardni izlaz,
+  \item u datoteku \verb|rez.txt| upisuje sve re\v ci koje sadr\v ze
+    prvu re\v c i podvlaku.
+  \end{enumerate}
+  U slučaju greške na standardni izlaz za greške ispisati {\tt -1}.  Maksimalna du\v zina naziva datoteka je 20 karaktera. \\
+NAPOMENA: Nije potrebno koristiti niz za čuvanje svih učitanih reči. 
+\end{z}
+
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]  
+\textbf{Primer 1:                                     |        Primer 2:}
+dat1.txt                                        |      dat2.txt
+dat1.txt: 7 rec Opet _rec Reci rec_enica        |      dat2.txt:  11 Sunce sija iznad grada  
+          DVa recica_                           |      Sunce_Moje Jedan Dva Su_nce Sve Sunce123_123 suncanica.
+                                                |        
+rec Opet _rec Reci rec_enica                    |      Sunce sija iznad grada
+DVa recica_                                     |      Sunce_Moje Jedan Dva Su_nce Sve Sunce123_123 suncanica.
+                                                |        
+rez.txt: _rec rec_enica recica_                 |      rez.txt: Sunce_Moje Sunce123_123
+                                                |
+ --------------------------------------------------------------------------------------------------
+
+\textbf{Primer 3:                                                                  }
+dat3.txt                                                                   |      
+dat.txt: 18 Na danasnji dan roden je poznati engleski pisac Carls Dikens,  |       
+a umro reformator srpskog jezika Vuk Stefanovic Karadzic.                  |     
+                                                                           |
+Na danasnji dan roden je poznati engleski pisac Carls Dikens,              |
+a umro reformator srpskog jezika Vuk Stefanovic Karadzic.                  |
+                                                                           |
+rez.txt:                                                                   |
+                                                                           |
+\end{Verbatim}
+
+\begin{z}
+Napisati program koji ispisuje broj navedenih argumenata komadne linije, a zatim i same argumente sa rednim brojevima.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                  Primer 2:                  Primer 3:}
+./a.out danas 63           ./a.out                    ./a.out -abc -f input.txt
+
+3                          1                          4
+1. ./a.out                 1. ./a.out                 1. ./a.out
+2. danas                                              2. -abc
+3. 63                                                 3. -f
+                                                      4. input.txt
+\end{Verbatim}
+
+\begin{z}
+Ako su celi brojevi \verb|a| i \verb|b| argumenti komandne linije na standardni izlaz ispisati sve brojeve koji pripadaju intervalu $[a,b]$. 
+U slučaju greške na standardni izlaz za greške ispisati {\tt -1}.  
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                  Primer 2:                      Primer 3:           Primer 4:}
+./a.out 34                 ./a.out 12 20                  ./a.out 30 8        ./a.out -4 -1
+
+-1                         12 13 14 15 16 17 18 19 20     -1                  -4 -3 -2 -1
+\end{Verbatim}
+
+\begin{z}
+Uobi\v cajena praksa na UNIX sistemima je da se argumenti komandne
+linije dele na opcije i argumente u u\v zem smislu. Opcije po\v cinju
+znakom ’-’ nakon \v cega obi\v cno sledi jedan ili vi\v se karaktera
+koji ozna\v cavaju koja je opcija u pitanju. Ovim se naj\v ce\v s\' ce
+upravlja funkcionisanjem programa i neke mogu\' cnosti se uklju\v cuju
+ili isklju\v cuju. Argumenti na\v c\v s\' ce predstavljaju opisne
+informacije poput na primer imena datoteka. Napisati program koji
+ispisuje sve opcije koje su navedene u komandnoj liniji.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                                       Primer 2:              Primer 3:}
+./a.out -abc input.txt -d -Fg output            ./a.out                ./a.out ulaz.txt  
+
+a b c d F g
+\end{Verbatim}
+
+\begin{z}
+Napisati program koji poredi dva fajla i ispisuje redni broj linija u
+kojima se fajlovi razlikuju.  Imena fajlova se zadaju kao argumenti
+komandne linije.  Pretpostaviti da je maksimalna du\v zina
+reda u datoteci 200 karaktera.  Linije brojati počevši od {\tt 1}. U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                         Primer 2:                               Primer 3:}                    
+./a.out ulaz.txt izlaz.txt        ./a.out primer1.dat primer2.dat         ./a.out prva.dat
+
+ulaz.txt:                         primer1.dat:                            greska
+danas vezbamo                     danas vezbamo 
+programiranje                     analizu
+ovo je primer kad su              ovo je primer kad
+datoteke iste                     su datoteke razlicite
+
+izlaz.txt:                        primer2.dat:
+danas vezbamo                     danas vezbamo
+programiranje                     programiranje
+ovo je primer kad su              ovo je primer kad su
+datoteke iste                     datoteke razlicite
+                                  
+                                  2 3 4
+-----------------------------------------------------------------------------------------------------
+\textbf{Primer 4:}
+./a.out prva.dat druga.dat
+
+prva.dat:                           druga.dat:
+ovo je primer                       ovaj primer
+kada su                             kada su        
+datoteke                            datoteke
+razlicite duzine                    razlicite
+                                    duzine
+                                    i kada treba ispisati broj
+                                    tih redova
+
+1 4 5 6 7
+\end{Verbatim}
+
+\begin{z}
+Napraviti funkciju koja generi\v slu\v cajan realan broj od 0 i 1. Na standardni izlaz ispisati rezultat izvršavanja napisane funkcije.
+\end{z}
+
+\begin{z}
+Parametri komandne linije su {\tt n, a, b} ($a < b$). Na standardni izlaz ispisati n slučajnih brojeva koji
+su izme\d u {\tt a} i {\tt b}. U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\end{z}
+
+
+\newpage
+
+\section{Domaći zadaci}
+\begin{z}
+Sastaviti program koji sa standarnog ulaza u\v citava imena dve
+datoteke (ulazna i izlazna datoteka) i iz ulazne datoteke kopira u
+izlaznu svaki drugi karakter polaze\'ci od prvog pro\v citanog
+karaktera. U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+ Maksimalna du\v zina naziva datoteka je 20 karaktera.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:                  Primer 3:}
+ulaz.txt izlaz.txt       prva.dat druga.dat         primer.c prazna.txt          
+ulaz.txt:                prva.dat:                  primer.c:
+danas je lep dan         Cena soka je 30            #include <stdio.h>
+i ja zelim               Cena vina je 150           int main()
+da postanem programer    Cena limunade je 200       \{
+                         Cena sendvica je 120       \}
+
+izlaz.txt:               druga.dat:                 prazna.txt:
+aa elpdnij ei            eask e3                    icue<ti.>itmi(
+apsae rgae               eavn e10Cn iuaej 0
+                         easnvc e10 
+\end{Verbatim}
+
+\begin{z}
+Sastaviti program koji sa standardnog ulaza prima ime datoteke koju treba
+otvoriti. Ispisati (na standardnom
+izlazu) koja cifra (me\d u svim ciframa koje se pojavljuju u datoteci)
+ima najve\' ci broj pojavljivanja. Ukoliko nema cifara u datoteci na standardni izlaz ispisati {\tt -1}.
+Maksimalna du\v zina naziva datoteka je 20 karaktera.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                       Primer 2:                        Primer 3:}
+ulaz.txt                       prva.dat                         primer.c        
+ulaz.txt:                      prva.dat:                        primer.c:
+danas je lep dan               Cena soka je 30                  #include <stdio.h>
+i Ja zelim                     Cena vina je 150                 int main()
+da postanem programer          Cena limunade je 200             \{
+                               Cena sendvica je 120             \}
+                               
+-1                             0                                -1
+\end{Verbatim}  
+
+\begin{z}
+Sa standarnog ulaza se u\v citava prirodan broj k i ime datoteke u kojoj se prvo nalazi
+   prirodan broj n a zatim i n celih brojeva. Napisati program koji prebrojava
+   koliko k-tocifrenih brojeva postoji u datoteci. U slu\v caju gre\v ske
+na standardni izlaz za greške ispisati {\tt -1}. Pretpostaviti da je sadr\v zaj datoteke
+   ispravan. Maksimalna du\v zina naziva datoteka je 20 karaktera.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                       Primer 2:                        Primer 3:}
+3 ulaz.txt                       1 prva.dat                         5 primer.c        
+ulaz.txt:                        prva.dat:                          primer.c:
+10                               4                                  3
+1 9 20 400 708                   1                                  4 5 50000
+-2 -520 1000                     20
+403 20000                        9
+                                 -8
+                                 
+4                                3                                  1
+\end{Verbatim} 
+
+\begin{z}
+Napisati program koji za dve datoteke čija se imena zadaju kao dve niske na standardnom ulazu, radi slede\'ce: za cifru u prvoj datoteci, u drugu
+datoteku se upisuje 0, za slovo se upisuje 1, a za sve ostale karaktere se upisuje 2. U slu\v caju gre\v ske
+na standardni izlaz za greške ispisati {\tt -1}. Maksimalna du\v zina naziva datoteka je 20 karaktera.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                       }
+prva.dat druga.dat                   
+prva.dat:                        
+Cena soka je 30                  
+Cena vina je 150                 
+Cena limunade je 200             
+Cena sendvica je 120             
+                               
+druga.dat:
+11112111121120021111211112112000211112111111112112000211112111111112112000
+\end{Verbatim}
+
+\begin{z} Ako je data tekstualna datoteka \verb|plain.txt| napraviti tekstualnu
+datoteku \verb|sifra.txt| tako \v sto se svako slovo zamenjuje svojim
+prethodnikom (cikli\v cno) suprotne velicine \verb|’b’| sa \verb|’A’|,
+\verb|’B’| sa \verb|’a’|, \verb|’a’| sa \verb|’Z’|, \verb|’A’| sa
+\verb|’z’|, itd. Podrazumevati da se na sistemu koristi tabela
+karaktera ASCII. U slu\v caju gre\v ske na standardni izlaz za greške ispisati {\tt -1}.
+\end{z}
+
+\begin{z} Sa standarnog ulaza se u\v citava ime tekstualne datoteke i prirodan
+broj k. Podrazumeva se da zadata datoteka sadr\v zi samo slova i
+beline i da je svaka re\v c iz datoteke du\v zine najvi\v se
+100. Program treba da u\v citava re\v ci iz datoteke, da svaku re\v c
+rotira za k mesta i da tako dobijenu re\v c upi\v se u datoteku \v
+cije je ime \verb|rotirano.txt|. Maksimalna du\v zina naziva datoteka je 20 karaktera. U slu\v caju gre\v ske
+na standardni izlaz za greške ispisati {\tt -1}.
+\end{z}
+
+\begin{z}
+Napisati program koji u datoteku \verb|izlaz.txt| prepisuje sve re\v{c}i iz datoteke
+\verb|ulaz.txt| \v{c}iji je zbir ascii kodova slova strogo ve\'{c}i od 1000. Re\v ci su
+odvojene prazninama i nisu du\v ze od  200 karaktera. U slu\v caju gre\v ske
+na standardni izlaz za greške ispisati {\tt -1}.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                                               Primer 2:}
+ulaz.txt:                                               ulaz.txt:
+Sa standardnog ulaza unosi se neoznacen                 konstruisanje test-primera sa
+ceo broj. Formirati novi broj koji se dobija            i dugackim recima kao prestolonaslednik
+izbacivanjem svake druge cifre iz polaznog broja.       brojevima1234567890
+
+izlaz.txt:                                              izlaz.txt:
+standardnog izbacivanjem                                konstruisanje test-primera
+                                                        prestolonaslednik
+                                                        brojevima1234567890
+______________________________________________________________________________________________________________
+
+\textbf{Primer 3:                                                Primer 4:}
+ulaz.txt:                                                ulaz.txt:
+ima jos dugackih reci: predskazanje,                     i sada jedan kratak primer
+potom                                                    p1: 1234567890
+nelogicnosti, zanemarivati, odugovlaciti, a ima          p2: ABCDEFGHIJ
+i i malih reci koje su kratke                            p3: abcdefghij
+predosecaj
+
+izlaz.txt:                                               izlaz.txt:
+predskazanje, nelogicnosti,                              abcdefghij
+zanemarivati, odugovlaciti,
+predosecaj
+\end{Verbatim} 
+
+\begin{z}
+U datoteci \verb|razno.txt| nalazi se tekst. U datoteku
+\verb|palindromi.txt| prepisati sve re\v ci iz datoteke
+\verb|razno.txt| koje su palindromi. Re\v c je palindrom ako se \v
+cita isto sa leve i desne strane. Za re\v c smatramo niz karaktera
+koji se nalazi izme\d u belina i koji nije du\v zi od 200
+karaktera. Maksimalan broj re\v ci nije poznat. U slu\v caju gre\v ske
+na standardni izlaz za greške ispisati {\tt -1}.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                                               Primer 2:}
+razno.txt:                                              razno.txt:
+Ana i melem su primeri palindroma.                      jabuka neven pomorandza kuk
+
+palindromi.txt:                                         palindromi.txt:
+Ana i melem                                             neven kuk
+______________________________________________________________________________________________________________
+
+\textbf{Primer 3:                                               Primer 4:}
+razno.txt:                                              razno.txt:
+Kajak voda teret PoTop                                  Oko kapAk pero radar caj
+
+palindromi.txt:                                         palindromi.txt:
+Kajak teret PoTop                                       Oko kapAk radar
+\end{Verbatim}
+
+\begin{z}
+   Imena dve datoteke se zadaje na standarnom ulazu.
+   U prvoj datoteci 
+   navedena je rec {\tt r} i niz linija. Napisati
+   program koji u drugu datoteku  
+   upisuje sve linije
+   u kojima se re\v c {\tt r} pojavljuje bar {\tt n} puta, gde je
+   n prirodan broj koji se unosi sa standardnog ulaza. Ispis
+   treba da bude u formatu {\tt broj\_pojavljivanja: linija}. Linije brojati
+   po\v cev\v si od {\tt 1}. Maksimalna du\v zina naziva datoteka je 20 karaktera.
+\end{z}
+
+\begin{z}
+Kao argumenti komandne linje zadate su dimenzije matrice \verb|A|
+(\verb|m| i \verb|n|).  Element matrice se naziva sedlo ako je
+istovremeno najmanji u svojoj vrsti, a najve\'ci u svojoj
+koloni. Ispisati indekse i vrednosti onih elemenata matrice koji su
+sedlo. Pretpostaviti da je maksimalna dimenzija matrice $50\times 50$.
+U slu\v caju gre\v ske na standardni izlaz za greške ispisati {\tt -1}.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                    Primer 2:                   Primer 3:          Primer 4:}
+./a.out 2 3                  ./a.out 3 3                 ./a.out 3          ./a.out 200 3
+
+1 2 3                        10  3 20                    greska             greska
+0 5 6                        15  5 100
+                             30 -1 200
+0 0 1
+                             1 1 5
+\end{Verbatim}
+
+\end{document}
+
+\begin{z}
+Ovdde ide tekst zadatka.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:}
+nije bf             vlvlvl
+nesto dalje         zzzz
+\end{Verbatim}

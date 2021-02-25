@@ -1,0 +1,430 @@
+\chapter{Testovi i ispiti 2015/2016}
+
+\section{I smer, Programiranje 2 2015/2016, prvi prakti\v cni test}
+
+\subsection{Grupa I}
+
+\begin{enumerate}
+\item Kao argumenti komandne linije prosledjena su dva cela broja $k$ i $l$ ($2\le k \le l \le 10000$). Ispisati na standarni izlaz sve proste brojeve $p$ takve da vazi $k\le p\le l$. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & ./a.out 2 10  & ./a.out 3 6 & ./a.out 10 20 & ./a.out 52 10 \\ \hline 
+  Izlaz &  2 3 5 7 & 3 5 & 11 13 17 19 & -1 \\ \hline 
+\end{tabular}
+\normalsize
+
+\item U datoteci ''r.txt'' nalazi se broj $n$, za kojim sledi $n$ reci ($n \ge 0$, maksimalna du\v zina re\v ci je 50 karaktera). U datoteku ''b.txt'' ispisati sve re\v ci koje predstavljaju cele brojeve u dekadnom zapisu, a u datoteku ''o.txt'' sve one koje to nisu. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & 
+  \mlcell{r.txt: \\5 baba deda 123 sd3f45 ff543g}&
+  \mlcell{r.txt: \\10 1 a 22 b 333 c 4 d 5 ff } & 
+  \mlcell{r.txt: \\0 } & 
+  \mlcell{ }\\ 
+  \hline 
+  Izlaz &
+  \mlcell{b.txt: \\123 \\ o.txt: \\baba deda sd3f45 ff543g} &  
+  \mlcell{b.txt: \\1 22 333 4 5  \\ o.txt: \\a b c d ff } &  
+  \mlcell{b.txt: \\  \\ o.txt: \\ }&  
+  -1\\ 
+  \hline 
+\end{tabular}
+\normalsize
+
+
+\item Kreirati rekurzivnu funkciju \emph{int f3(int x)} koja u po\v cetnom zapisu broja $x$ izbacuje svaku neparnu cifru, ukoliko se ispred te cifre nalazi cifra 2. Kreirati program koji testira ovu funkciju, tako \v sto sa standardnog ulaza u\v citava ceo broj $x$, i na standardni izlaz ispisuje vrednost funkcije \emph{f3(x)}. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. 
+
+\textbf{Napomena.} Zadatak mora biti uradjen rekurzivno. Nije dozvoljeno kori\v s\' cenje stati\v ckih i globalnih promenljivih, menjanje zaglavlja funkcije i pisanje pomo\' cnih funkcija. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz  &  2325 &  23523 & 12345 & 0 \\ \hline 
+  Izlaz &  22 & 252 & 1245  & 0 \\ \hline 
+\end{tabular}
+\normalsize
+\end{enumerate}
+
+\subsection{Grupa II}
+
+\begin{enumerate}
+\item Kao argumenti komandne linije prosledjena su dva cela broja $k$ i $l$ ($0\le k \le l \le 10000$). Ispisati na standardni izlaz sumu cifara svih brojeva $x$, takvih da je $k\le x\le l$. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz &./a.out 0 9  & ./a.out 10 13& ./a.out 93 2145& ./a.out \\ \hline 
+  Izlaz & 45 &  10 &28722  &  -1\\ \hline 
+\end{tabular}
+\normalsize
+
+\item U datoteci ''u1.txt'' nalazi se broj $n_1$, za kojim sledi $n_1$ re\v ci, dok se u datoteci ''u2.txt'' nalazi broj $n_2$, za kojim sledi $n_2$ re\v ci ($n_1 \ge 0$, $n_2 \ge 0$, maksimalna du\v zina re\v ci je 50 karaktera). U datoteku ''i.txt'' upisati naizmeni\v cno re\v ci iz prve dve datoteke. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & 
+  \mlcell{u1.txt: \\5 a b c d e \\u2.txt: \\5 1 2 3 4 5}&
+  \mlcell{u1.txt: \\2 a b   \\u2.txt: \\5 1 2 3 4 5} & 
+  \mlcell{u1.txt: \\2 abc 123 \\u2.txt: \\0} & 
+  \mlcell{}\\ 
+  \hline 
+  Izlaz &
+  \mlcell{i.txt: \\a 1 b 2 c 3 d 4 e 5 } &  
+  \mlcell{i.txt: \\a 1 b 2 3 4 5 } &  
+  \mlcell{i.txt: \\abc 123 }&  
+  -1\\ 
+  \hline 
+\end{tabular}
+\normalsize
+
+\item 
+Kreirati rekurzivnu funkciju \emph{void f3(int *a, int na)} koja u po\v cetnom nizu $a$, duzine $na$, smanjuje vrednost broja za 1 ukoliko je on paran, i nakon njega se nalazi paran broj. Kreirati program koji testira ovu funkciju, tako \v sto sa standardnog ulaza u\v citava broj $na$ ($0 \le na \le 1000$), zatim vrednosti niza $a$, i na standardni izlaz ispisuje vrednosti izmenjenog niza.
+
+\textbf{Napomena.} Zadatak mora biti uradjen rekurzivno. Nije dozvoljeno kori\v s\' cenje stati\v ckih i globalnih promenljivih, menjanje zaglavlja funkcije i pisanje pomo\' cnih funkcija. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz  & 10 2 2 5 7 6 8 4 3 2 1 & 5 1 2 2 2 1 &  10 4 4 6 6 6 6 8 8 10 10& -1 \\ \hline 
+  Izlaz & 1 2 5 7 5 7 4 3 2 1      &  1 1 1 2 1  &  3 3 5 5 5 5 7 7 9 10 & -1 \\ \hline  
+\end{tabular}
+\normalsize
+\end{enumerate}
+
+
+\subsection{Grupa III}
+
+\begin{enumerate}
+\item Preko argumenata komandne linije prosledjen je niz celih brojeva. Neka su $a$, $b$, $c$ redom minimum, maksimum i prose\v cna vrednost niza. Ispisati brojeve niza strogo ve\' ce od (a + b + c)/3. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & ./a.out 1 2 3 4 5& ./a.out 4 11 10 5 6 15 8 9 19 8 & ./a.out 5 4 6 6 5 17 11 10 6 2 & ./a.out \\ \hline 
+  Izlaz &4 5  &11 15 19 & 17 11 10&  -1\\ \hline 
+\end{tabular}
+\normalsize
+
+\item  U datoteci ''dat.txt'' nalazi se re\v c $s$, zatim broj n i $n$ reci ($n \ge 0$, maksimalna du\v zina re\v ci je 50 karaktera). Napisati program koji na standardni izlaz ispisuje sve re\v ci kojima je re\v c $s$ sufiks. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. 
+
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz  &  
+  \mlcell{dat.txt:\\ab 6 \\vjab ab a abcd feb egaab}&   
+  \mlcell{dat.txt:\\ aa 7\\ a ab ba baa baaa b cba }& 
+  \mlcell{dat.txt:\\ abc  0\\} &
+  \\ 
+  \hline 
+  Izlaz &   
+  vjab ab egaab &  
+  baa baaa &  
+  & 
+  -1\\ 
+  \hline 
+\end{tabular}
+\normalsize
+
+\item 
+Kreirati rekurzivnu funkciju \emph{void f3(int *a, int na, int suma\_prethodnih)} koja u u nizu $a$, du\v zine $na$, 
+postavlja vrednost svakog broja na 0 ukoliko je ve\' ci od sume prethodnih brojeva u nizu. Kreirati program koji testira 
+ovu funkciju, tako \v sto sa standardnog ulaza u\v citava broj $na$, zatim vrednosti niza $a$, i na standardni izlaz 
+ispisuje izmenjeni niz. U slu\v caju gre\v ske ispisati $-1$ na standardni izlaz. 
+
+\textbf{Napomena.} Zadatak mora biti uradjen rekurzivno. Nije dozvoljeno kori\v s\' cenje stati\v ckih i globalnih promenljivih, menjanje zaglavlja funkcije i pisanje pomo\' cnih funkcija. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz  & 10 2 2 5 7 6 25 4 3 2 1 & 5 1 2 4 12 9 & 2 1 1& -1 \\ \hline 
+  Izlaz & 0 2 0 7 6 0 4 3 2 1      & 0 0 0 0 9  &  0 1 & -1 \\ \hline  
+\end{tabular}
+\normalsize
+\end{enumerate}
+
+\section{Programiranje 2 2015/2016, ispit, jun}
+\subsection{Grupa I}
+
+\begin{enumerate}
+\item U datoteci \textit{brojevi.txt} nalazi se niz brojeva u pokretnom zarezu. Napisati program koji prebrojava koliko puta je niz brojeva promenio uređenje iz neopadajućeg u opadajuće i obrnuto. Npr. za brojeve -1 2 2 3 1 0 početak niza je uređen neopadajuće dok od broja 1 postaje opadajuće uređen, pa je izlaz programa 1, jer je došlo do jedne promene uređenja. Ne postoji pretpostavka o du\v zini niza brojeva.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  brojevi.txt & -2.0 -1.0 2.0 -1.0 2.0 -1.0 2.0  & 4.2 4.2 4.2 & 1.23 2.23 0 & 0 1 1 1 1 2 1 \\ \hline 
+  Izlaz & 4 & 0 & 1 & 1 \\ \hline 
+\end{tabular}
+\normalsize
+
+\item U datoteci \v cije ime se zadaje kao argument komadne linije su dati podaci o pravougaonicima. Pra\-vo\-uga\-oni\-ci su zadaci svojim imenom
+   (maksimalne duzine 5 karaktera) i du\v zinama svojih stranica (dve du\v zine, realni brojevi). Sortirati pravougaonike rastu\' ce prema njihovoj povr\v sini.
+   Ispisati imena pravougaonika tako sortiranog niza na standarni izlaz. 
+   Ukupan broj pravougaonika nije poznat (\v citati do kraja datoteke).
+   U slu\v caju gre\v ske (negativna du\v zina stranice, nepostoje\' ca datoteka, lo\v s broj argumenata) ispisati -1.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Pozivanje & ./a.out dat.txt  & ./a.out & ./a.out dat.txt & ./a.out dat.txt \\ \hline 
+  Ulaz & 3 & 1 & 2 & 3 \\ \hline
+  dat.txt & p1 1 1      & p0 1 2  & p1 2 4 & p1 10 2 \\
+          & p2 0.2 0.3  &         & pr2 4 2 & p2 3 2 \\ 
+          & p3 4 5  &   &         & p3 -1 1 \\ \hline
+  Izlaz & p2 p1 p3  & -1      & p1 pr2 & -1 \\ \hline 
+\end{tabular}
+\normalsize
+
+
+\item Jedan broj tipa \textit{int} sadrži 4 osmobitna dela, svaki od tih delova se može tumačiti kao jedan ASCII kod karaktera. Za uneto \textit{n} ($0 < n \le 100$) i niz od \textit{n} brojeva ispisati na standardni izlaz sve karaktere koji su kodirani unetim brojevima u istom redosledu. \\ Npr. za broj 1380009033 = 01010010|01000001|01000100|01001001 = 82 65 68 73 = 'R','A','D','I'. \\
+U slu\v caju neispravnog ulaza (n izvan dozvoljenih granica) ispisati -1 na standardni izlaz.
+
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  
+  Ulaz & 4 & 1 & 2 & 5\\ 
+       & 1347571527 & 1330330153 & 1546145582 & 1298232421 \\
+       & 1380011337 & & 776939823 &  1835103337\\
+       & 1380011594 & &  & 1667983648 \\
+       & 1159737889 & & & 1717660533 \\ 
+       & & & & 1819567476 \\ \hline
+  
+  Izlaz & PROGRAMIRANJE 2! & OK:) & \textbackslash (O..O)/ &  Matematicki fakultet \\ \hline 
+\end{tabular}
+\normalsize
+
+\item Iz datoteke \textit{lista.txt} se u\v citava lista celih brojeva. Listu modifikovati na slede\' ci na\v cin: ako su teku\' ci i njegov slede\' ci element parni, slede\' ci element uve\' cati za jedan, u suprotnom slede\' ci element smanjiti za jedan. Parnost broja se odnosi na teku\' cu, promenjenu vrednost broja. Na izlaz ispisati rezultuju\' cu listu.
+
+
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  
+  lista.txt & 1 2 3 4 & 2 2 2 2 & 44 23 16 78 & 1 0 1 \\ \hline
+  
+  Izlaz & 1 1 2 5 & 2 3 1 1 & 44 22 17 77 & 1 -1 -2 \\ \hline 
+\end{tabular}
+\normalsize
+
+\item Iz datoteke \textit{stablo.txt} se u\v citava stablo celih brojeva i kao argument komandne linije dat je ceo pozitivan broj k. Odrediti broj onih \v cvorova stabla \v ciji su svi potomci deljivi sa k. U slu\v caju gre\v ske (pogre\v snog broja argumenata komandne linije), na standardni izlaz ispisati -1.
+
+
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  
+  Pozivanje & ./a.out 2 & ./a.out 3 & ./a.out & ./a.out 2 \\ \hline
+  stablo.txt & 4 2 6 1  & 3 2 3 4 & 44 23 16 78 & 4 2 6 10 8 \\ \hline
+  
+  Izlaz & 1 & 0 & -1 & 3 \\ \hline 
+\end{tabular}
+\normalsize
+\end{enumerate}
+
+\subsection{Grupa II}
+
+\begin{enumerate}
+
+
+\item  Napisati program koji iz datoteke \textit{ulaz.txt} u\v citava pozitivne cele brojeve, a zatim na standardni izlaz ispisuje koji se broj pojavio najve\' ci broj puta. Nije poznato koliko maksimalno mo\v ze imati brojeva u datoteci. U slu\v caju gre\v ske (nedovoljno memorije pri alokaciji, nepostoje\' ca datoteka, lo\v s broj argumenata) na standardni izlaz ispisati -1.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  ulaz.txt  & 5 1 2 3 4 5  & 1 1 1 2 2 2 2 & 2 5 2 5 2 & 100 0 100 \\ \hline 
+  Izlaz & 5 & 2 & 2 & 100 \\ \hline 
+\end{tabular}
+\normalsize
+
+\item U datoteci \textit{tablice.txt} nalazi se niz registarskih brojeva vozila u formatu GG BBB SS gde GG ozna\v cava skra\' cenicu grada, BBB numeri\v cki deo i SS slovni deo. Sa standardnog ulaza se u\v citava broj $n$ i na standardni izlaz ispisuje $n$-ti \v clan niza vozila sortiranog po numeri\v ckom delu registarskog broja u rastu\' cem poretku. Ukoliko su numeri\v cki delovi dva registarska broja jednaki, vr\v si se leksikografsko uređenje po oznaci grada a zatim, ukoliko su i oznake gradova jednake, leksikografski po slovnom delu. U slu\v caju gre\v ske (ako n nije validan indeks za niz, nepostoje\' ca datoteka) na standardni izlaz ispisati -1. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  tablice.txt & 
+  \mlcell{ BG 100 AV \\ BG 101 MS \\ NI 256 PO \\ NS 145 RV }&
+  \mlcell{BG 101 AV \\ BG 102 MS \\ NI 104 PO \\ NS 104 RV} & 
+  \mlcell{BG 100 AV \\ BG 198 MS \\ NI 256 PO \\ NS 148 RV} & 
+  \mlcell{BG 200 AV \\ BG 150 MS \\ NI 125 PO \\ NS 100 RV }\\ 
+  \hline 
+  Ulaz &
+  \mlcell{2} &  
+  \mlcell{3} &  
+  \mlcell{2}&  
+  10\\ 
+  \hline
+   Izlaz &
+  \mlcell{NS 145 RV} &  
+  \mlcell{NS 104 RV} &  
+  \mlcell{BG 198 MS}&  
+  -1\\ 
+  \hline
+\end{tabular}
+\normalsize
+
+
+\item Sa standardnog ulaza se unosi neozna\v cen broj $x$ i niz od 32 neozna\v cena broja. Ukoliko $i$-ti broj niza ima manje od $i$ jedinica u svom binarnom zapisu onda u $x$ na $i$-to mesto staviti bit 1, ako ima ta\v cno $i$ jedinica, u $x$ na $i$-to mesto staviti bit 0, a ukoliko ima vi\v se onda invertovati $i$-ti bit broja $x$. Na standarni izlaz ispisati novodobijeni broj.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & 
+  \mlcell{5\\
+1 2 3 4 5 6 7 8\\
+9 10 11 12 13 14\\
+15 16 17 18 19 20 \\
+21 22 23 24 25 26 \\
+27 28 29 30 31 32}&
+ \mlcell{0\\
+32 31 30 29 28\\
+27 26 25 24 23 \\
+22 21 20 19 18 17\\
+16 15 14 13 12 11\\
+10 9 8 7 6 5 4 3 2 1}&\\
+\hline
+  Izlaz &
+  \mlcell{4294967288} &  
+  \mlcell{4294967295} &  
+  \\ 
+  \hline 
+\end{tabular}
+\normalsize
+
+\item U\v citati listu celih brojeva iz datoteke \textit{lista.txt}, a zatim izme\dj u svaka dva elementa liste ubaciti njihovu apsolutnu razliku. Ne praviti novu listu. Nije dozovoljeno samo ispisati na izlaz tra\v zeni poredak, ve\' c je potrebno zaista modifikovati listu i onda nju ispisati.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & 
+  \mlcell{ 1 2 3 4 5  }&
+  \mlcell{ 1 1 1 1 1 } & 
+  \mlcell{-1 -2 -3 -4 -5} & 
+  \mlcell{ 0 2 2 4 6 10  }\\ 
+  \hline 
+  Izlaz &
+  \mlcell{1 1 2 1 3 1 4 1 5} &  
+  \mlcell{1 0 1 0 1 0 1 0 1} &  
+  \mlcell{-1 1 -2 1 -3 1 -4 1 -5}&  
+  0 2 2 0 2 2 4 2 6 4 10 \\ 
+  \hline 
+\end{tabular}
+\normalsize
+
+
+\item Napisati program koji u\v citava binarno stablo pretrage iz datoteke \textit{stablo.txt} i za zadato $n$ ispisati razliku vrednosti maksimalnog i minimalnog \v cvora u stablu na nivou $n$. U slu\v caju gre\v ske (ako je $n < 1$ ili u stablu ne postoji nivo $n$) na standardni izlaz ispisati -1. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  stablo.txt & 
+  \mlcell{ 3 1 5 2 0 4 8 2 6 }&
+ \mlcell{ 1 2 3 4 5 6 7 8 9 10}&
+ \mlcell{ 1 2 3 4 5 6 7 8 9 10  }&
+ 3 1 5 2 0 4 8 2 6 \\
+  \hline 
+  Ulaz &
+  \mlcell{3} &  
+  \mlcell{4} &  
+  \mlcell{10}&  
+  6\\ 
+  \hline
+   Izlaz &
+  \mlcell{8} &  
+  \mlcell{0} &  
+  \mlcell{0}&  
+  -1\\ 
+  \hline
+\end{tabular}
+\normalsize
+\end{enumerate}
+
+
+\section{Programiranje 2 2015/2016, ispit, septembar}
+
+\begin{enumerate}
+\item
+U datoteci brojevi.txt se nalaze celi brojevi. Napisati program
+koji pronalazi i ispisuje na standardni izlaz dva broja koja se najmanje razlikuju po vrednosti (ako ima vi\v se parova koji se isto razlikuju, ispisati bilo koji par). U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+   & Primer 1* &  Primer 2 &  Primer 3 &  Primer 4 \\ \hline
+  brojevi.txt  & 1 2 10 5 & -1 0 0 1 & 10 -1 -2 6 3 & ne postoji \\ \hline
+  Izlaz & 1 2 & 0 0 & -1 -2 & -1 \\ \hline
+\end{tabular}
+\normalsize
+
+\item U datoteci kupci.txt se nalaze podaci o kupcima oblika ime koli\v cina gde je ime re\v c maksimalne du\v zine 20 karaktera, a koli\v cina pozitivan ceo broj. Sa standardnog ulaza se u\v citava ceo broj \emph{n}. Na standardni izlaz ispisati imena prvih \emph{n} kupaca koji su uzeli najvi\v se proizvoda. Pretpostaviti da su imena kupaca jedinstvena, a ukoliko ima vi\v se kupaca sa istom koli\v cinom kupljenih proizvoda, ispis sortirati leksikografski rastu\' ce po imenu. Ako ima manje od \emph{n} kupaca u datoteci, ispisati sve kupce.    
+
+Nije poznat broj kupaca u datoteci. Pretpostaviti da su podaci u datoteci u ispravnom obliku. U slucaju gre\v ske ispisati -1 na standardni izlaz. \\
+\textbf{Napomena}: neophodno je uraditi zadatak kori\v s\' cenjem dinami\v cke alokacije memorije (u suprotnom \' cete dobiti 0 poena).
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  & Primer 1* &  Primer 2 &  Primer 3 &  Primer 4 \\ \hline
+  ulaz & 3 & 3 & -2 & 3 \\ \hline
+  kupci.txt & Pera 100 & Mika 120 & \v Zika 50 & \emph{ne postoji}\\
+          & Ana 30 & Ana 120 & & \\
+          & Stefan 2 & & &  \\
+          & Marija 50 & & &  \\
+          & Lena 45 & & &  \\
+          & Pavle 105 & & &  \\
+          & Marko 101 & & &  \\ \hline
+  izlaz &Pavle  & Ana &-1& -1 \\
+         & Marko &Mika & &  \\
+         & Pera & & &  \\ \hline
+\end{tabular}
+\normalsize
+
+
+\item Sa standardnog ulaza se u\v citava neozna\v cen ceo broj \emph{x}. Ukoliko je suma bitova u\v citanog broja parna, \v siftovati bitove broja za jedno mesto ulevo, a ukoliko je suma bitova neparna, \v siftovati bitove broja za jedno mesto udesno. Na standardni izlaz ispisati rezultuju\' ci neozna\v ceni ceo broj. 
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  & Primer 1* &  Primer 2 &  Primer 3 &  Primer 4 \\ \hline
+  ulaz & 3 & 7 &  8765
+ &0\\ \hline
+  izlaz & 6   & 3 &  4382 & 0\\\hline
+\end{tabular}
+\normalsize
+
+\item Iz datoteke \textit{lista.txt} se u\v citava lista celih brojeva.
+Kreirati funkciju \emph{void f4(\_cvor *g)} koja izbacuje one elemente liste kojima su u prvobitnoj listi oba suseda parni brojevi. Ispisati rezultuju\' cu listu na standardni izlaz.
+U slucaju gre\v ske ispisati -1 na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+  & Primer 1* &  Primer 2 &  Primer 3 &  Primer 4 \\ \hline
+  lista.txt & 1 2 3 4 & 2 2 2 2 & 7 3 6 6 7 3 2 7 6 8 & 3  \\ \hline
+
+  izlaz & 1 2 4 & 2 2 & 7 3 6 6 7 3 2 6 8 & 3 \\ \hline
+\end{tabular}
+\normalsize
+
+\item Iz datoteke \textit{stablo.txt} se u\v citava stablo celih brojeva.  Ispisati one elemente za koje va\v zi da je zbir levog i desnog potomka razli\v cite parnosti od roditelja. Uzimati u obzir samo \v cvorove koji imaju oba potomka. U slu\v caju gre\v ske ispisati -1 na standardni izlaz.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline
+& Primer 1* &  Primer 2 &  Primer 3 &  Primer 4 \\ \hline
+  stablo.txt & 10 2 13 & 2 1 3 & 1 2 3 & 2 5 1 4 6\\ \hline
+
+  izlaz & 10 &  &  &5\\ \hline
+\end{tabular}
+\normalsize
+
+\end{enumerate}
+

@@ -1,0 +1,273 @@
+\chapter{Testovi i ispiti 2007/08}
+% *************************************************************
+% *************************************************************
+% *************************************************************
+
+\section{Test 1, 14.04.2008.}
+
+
+
+\begin{enumerate}
+\item Napisati program koji iz datoteke \v cije se ime zadaje
+kao prvi argument komandne linije \v cita sve re\v ci i zatim
+odre\d uje i ispisuje re\v c koja se
+pojavila najvi\v se puta u toj datoteci (pretpostavljamo da su sve
+re\v ci u datoteci du\v zine najvi\v se $20$ karaktera).
+Koristiti pogodno definisanu strukturu.
+
+\item Za zadati ceo broj $n$ ve\'ci od 9 mo\v zemo primetiti da je suma
+cifara tog broja uvek manja od broja $n$.
+Neka je $n_1$ suma cifara broja $n$,
+neka je $n_2$ suma cifara broja $n_1$,
+$n_3$ suma cifara broja $n_2$, $\ldots$,
+$n_{i+1}$ suma cifara broja $n_{i}$. Va\v{z}i
+$n > n_1 > n_2 > \ldots > n_i$ dok god su brojevi
+$n_i$ ve\'ci od 9, pa se u jednom trenutku sigurno
+dolazi do jednocifrenog broja $n_k$. Taj indeks $k$
+zavisi od po\v{c}etnog broja $n$.
+
+Na primer:
+\begin{itemize}
+\item za $n=10$, $n_1 = 1+0 = 1$, va\v{z}i $k=1$
+\item za $n=39$, $n_1 = 3+9 = 12$, $n_2 = 1+2 = 3$, va\v{z}i  $k=2$
+\item za $n=595$, $n_1 = 5+9+5 = 19$, $n_2 = 1+9 = 10$, $n_3 = 1+0 = 1$,
+va\v{z}i  $k =3$
+\end{itemize}
+
+Napisati program koji za uneto $n$ sa standardnog ulaza ra\v cuna
+njemu odgovaraju\'ci broj $k$. Zadatak re\v siti bez kori\v s\' cenja nizova.
+
+
+\item Za datu kvadratnu matricu ka\v zemo da je \emph{magi\v cni
+kvadrat} ako je suma elemenata u svakoj koloni i svakoj vrsti
+jednaka. Napisati program koji sa standardnog ulaza u\v citava
+prirodni broj $n$ ($n<10$) i zatim elemente kvadratne matrice,
+proverava da li je ona \emph{magi\v cni kvadrat} i ispisuje
+odgovaraju\' cu poruku na standardni izlaz.
+
+Primer, matrica:
+
+\begin{verbatim}
+1 5 3 1
+2 1 2 5
+3 2 2 3
+4 2 3 1
+\end{verbatim}
+
+je magi\v cni kvadrat.
+\end{enumerate}
+
+
+\section{Test 2, 17.06.2008.}
+
+
+\begin{enumerate}
+\item
+Napisati program koji implementira red pomo\' cu jednostruko
+povezane liste (\v cuvati pokaziva\v ce i na po\v cetak i na kraj
+reda).
+Sa standardnog ulaza se unose brojevi koje sme\v stamo u red sa
+nulom ($0$) kao oznakom za kraj unosa.
+Napisati funkcije za:
+
+\begin{itemize}
+\item Kreiranje elementa reda;
+\item Ubacivanje elementa na kraj reda;
+\item Izbacivanje elementa sa po\v cetka reda;
+\item Ispisivanje reda;
+\item Osloba\d anje reda.
+\end{itemize}
+
+
+\item
+Napisati program koji formira ure\d eno binarno stablo bez ponavljanja
+elemenata. Elementi stabla su celi brojevi i unose se sa ulaza, a oznaka
+za kraj unosa je nula. Napisati funkciju koja proverava da li je uneto
+stablo \emph{lepo}. Stablo je \emph{lepo} ako za svaki \v cvor
+stabla va\v zi da mu se broj \v cvorova u levom i u desnom podstablu
+razlikuju najvi\v se za jedan.
+
+\item
+Iz datoteke \emph{ulaz.txt} u\v citavamo niz celih brojeva (pri \v cemu
+du\v zina datoteke nije unapred poznata). Napisati program koji
+ovaj niz sortira pozivom funkcije \emph{qsort} i zatim ga
+upisuje u datoteku \emph{izlaz.txt}.
+\end{enumerate}
+
+
+\section{Zavr\v{s}ni ispit, juni 2008.}
+
+
+
+\begin{enumerate}
+
+\item
+Napisati program koji sa standardnog ulaza u\v citava pozitivne cele
+brojeve dok ne u\v cita nulu kao oznaku za kraj. Na standardni izlaz
+ispisati koji broj se pojavio najvi\v se puta me\d u tim brojevima.
+Na primer, ako se na ulazu pojave brojevi:
+\verb+2 5 12 4 5 2 3 12 15 5 6 6 5+
+program treba da vrati broj $5$.
+
+Zadatak re\v siti kori\v{s}\'cenjem dinami\v cke realokacije i strukture
+koja sadr\v zi ceo broj i broj njegovih pojavljivanja.
+
+\item
+Napisati program koji formira sortiranu listu od niza celih brojeva koji se
+unose sa standardnog ulaza. Oznaka za kraj unosa je $0$. Napisati funkcije za
+formiranje \v cvora liste, ubacivanje elementa u ve\' c sortiranu listu,
+ispisivanje elemenata liste i osloba\d anje liste.
+
+
+\item Napisati funkcije potrebne za ispisivanje elemenata koji se nalaze
+na najve\' coj dubini binarnog stabla.
+
+Na primer, za stablo
+
+\begin{minipage}[t]{120mm}
+\begin{verbatim}
+        5
+      /   \
+     3     6
+   /   \
+  2     4
+\end{verbatim}
+\end{minipage}
+
+\noindent
+treba ispisati: {\tt 2 4}.
+
+(Pretpostavljamo da je stablo ve\' c zadato. \emph{Ne treba} pisati dodatne
+funkcije za kreiranje \v cvora, uno\v senje elementa u stablo i
+osloba\d anje stabla)
+
+
+\item
+Sa standardnog ulaza u\v citavamo prvo broj studenata a zatim i
+njihove podatke. Za svakog studenta dobijamo ime (niska od najvi\v se
+30 karaktera) i broj indeksa (ceo broj). Napisati program koji
+sortira ovaj niz studenata po imenima studenata pozivom standardne
+funkcije \emph{qsort} i zatim \v stampa tako dobijeni niz na standardni
+izlaz.
+\end{enumerate}
+
+
+
+\section{Zavr\v{s}ni ispit, septembar 2008.}
+
+
+
+
+\begin{enumerate}
+
+\item
+
+Napisati program koji sa standardnog ulaza u\v citava tekst nepoznate
+du\v zine i sme\v sta ga u (dinami\v cki) niz karaktera. Oznaka za kraj
+unosa je uneta $0$. Nakon toga ispisati uneti tekst na standardni izlaz
+po $10$ karaktera u redu. Zadatak re\v siti kori\v s\' cenjem dinami\v cke
+realokacije.
+
+Na primer, ako je uneto:
+
+\verb+"Ja polazem ispit iz programiranja2"+
+
+program treba da ispi\v se:
+
+\begin{verbatim}
+Ja polazem
+ispit iz p
+rogramiran
+ja2
+\end{verbatim}
+
+\item
+
+Napisati program koji formira ure\d eno binarno stablo koje sadr\v zi cele
+brojeve. Brojevi se unose sa standardnog ulaza sa nulom kao oznakom za kraj
+unosa. Napisati funkcije za:
+\begin{itemize}
+\item Kreiranje jednog \v cvora stabla;
+\item Ubacivanje elementa u ure\d eno stablo (bez ponavljanja elemenata);
+\item Ispisivanje stabla u preorder (prefix) redosledu;
+\item Odre\d ivanje zbira elemenata stabla;
+\item Ispisivanje listova stabla;
+\item Osloba\d anje stabla.
+\end{itemize}
+
+Primer, za stablo:
+\begin{verbatim}
+    5
+   / \
+  3   7
+ / \
+2   4
+\end{verbatim}
+
+zbir svih elemenata je $5+3+7+2+4 = 21$ a listovi su: $2$, $4$ i $7$.
+
+\item
+
+Napisati program koji iz datoteke \v cije se ime zadaje kao argument
+komandne linije, \v cita prvo broj elemenata niza pa zatim i elemente niza
+(celi brojevi). Ovaj niz sortirati pozivom funkcije \emph{qsort} a zatim za
+uneti ceo broj sa standradnog ulaza proveriti, pozivom funkcije
+\emph{bsearch}, da li se nalazi u nizu ili ne i ispisati odgovaraju\' cu
+poruku.
+\end{enumerate}
+
+
+\section{Zavr\v{s}ni ispit, oktobar 2008.}
+
+
+\begin{enumerate}
+
+\item
+
+Napisati program koji sa standardnog ulaza unosi sortirani niz celih brojeva
+dok ne unesemo nulu kao oznaku za kraj (niz alocirati dinami\v cki).
+U slu\v caju da niz nije sortiran ispisati podatak o gre\v sci na standardni
+izlaz a u suprotnom ispisati \emph{medijanu} tog niza.
+Medijana (sortiranog) niza koji ima $n$
+\v clanova je, u slu\v caju kada je $n$ neparan broj, sredi\v snji element
+niza odnosno, u slu\v caju kada je $n$ paran broj, srednja vrednost dva
+sredi\v snja elementa.
+
+Na primer,
+
+ako je dat niz $1$, $3$, $5$, $6$, $12$, medijana je broj $5$
+
+a ako je dat niz $3$, $5$, $8$, $13$, $20$, $25$, medijana je broj $10.5$.
+
+\item
+
+Napisati program koji kreira jednostruko povezanu listu. Elementi (celi
+brojevi) se unose sa standardnog ulaza dok se ne unese nula kao oznaka za
+kraj. Napisati:
+\begin{itemize}
+\item funkciju koja kreira jedan \v cvor liste,
+\verb+CVOR* napravi_cvor(int br)+
+\item funkciju za ubacivanje broja na kraj liste,
+\verb+void ubaci_na_kraj(CVOR** pl, int br)+
+\item funkciju koja skida element sa po\v cetka liste (pri \v cemu se menja
+po\v cetak liste) i vra\' ca vrednost tog broja kao povratnu vrednost,
+
+\verb+int izbaci_sa_pocetka(CVOR** pl)+
+\item funkciju za ispisivanje elemenata liste,
+\verb+void ispisi_listu(CVOR* l)+
+\item funkciju za osloba\d anje liste,
+\verb+void oslobodi_listu(CVOR* l)+
+\end{itemize}
+
+\item
+
+Napisati program koji sa standardnog ulaza u\v citava broj artikala (ne
+vi\v se od $50$) a zatim imena (karakterske niske du\v zine do $20$
+karaktera) i cene artikala (ceo broj). Ovaj niz artikala sortirati po ceni
+(pozivom funkcije \emph{qsort}) a zatim za uneti ceo broj $c$ sa standardnog
+ulaza prona\' ci (pozivom funkcije \emph{bsearch}) naziv artikla sa
+tom cenom. Ako takav artikal ne postoji ispisati odgovaraju\' cu
+poruku.
+\end{enumerate}
+
+

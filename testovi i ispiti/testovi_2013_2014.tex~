@@ -1,0 +1,521 @@
+% *************************************************************
+% *************************************************************
+% *************************************************************
+\chapter{Testovi i ispiti 2013/14}
+% *************************************************************
+% *************************************************************
+% *************************************************************
+
+
+
+%---------------------------------------------------------------------
+\section{Programiranje 2, I smer, 2013/14, Test 4 tok 2 grupa 1 (prakticni)}
+%---------------------------------------------------------------------
+
+
+\begin{enumerate}
+\item Odrediti klasu slo\v zenosti narednog programskog koda:
+\begin{verbatim}
+int f(int n) {
+  int i, a = 1;
+  if (n == 0)
+    return n;
+  for (i = 0; i < n; i++) {
+    if (i == 3)
+      break;
+    a *= i;
+  }
+  return a * f(n-1) * f(n-2);
+}
+\end{verbatim}
+
+\item Napisati rekurzivnu funkciju koja za za dati prirodan broj vra\'ca broj kome je
+      svaka cifra udvojena.
+      Primer: za broj 123 vra\'ca 112233.
+
+
+
+\item U datoteci razdaljine.txt nalaze se podaci o udaljenosti gradova od Beograda.
+U svakom redu datoteke dato je ime grada (koje se sastoji iz jedne re\v ci maksimalne du\v zine 20) i
+razdaljina od Beograda (kao ceo broj). Na standardni izlaz ispisati spisak
+gradova sa razdaljinama od Beograda u rastu\'cem redosledu rastojanja.
+Zatim za unetu vrednost ispisati ime grada koji je na toj udaljenosti od
+Beograda ili -1 ukoliko takav grad ne postoji.
+
+\end{enumerate}
+
+
+%---------------------------------------------------------------------
+\section{Programiranje 2, I smer, 2013/14, Test 4 tok 2 grupa 2 (prakticni)}
+%---------------------------------------------------------------------
+
+
+\begin{enumerate}
+\item Odrediti klasu slo\v zenosti narednog programskog koda:
+\begin{verbatim}
+int f(unsigned n){
+   int i, k=5;
+   int a=0;
+
+   if(n==1)
+       return 1;
+
+   for(i=0; i<k; i++)
+       a+=k;
+
+   return a+f(n-1)+f(n-2);
+}
+\end{verbatim}
+
+\item Napisati rekurzivnu funkciju koja ra\v cuna proizvod neparnih cifara datog
+      prirodnog broja.
+
+
+
+\item U datoteci koja se zadaje kao argument komandne linije, nalaze se
+koordinate ta\v caka u ravni, svaki red sadr\v zi po dva broja. Na
+standardni izlaz ispisati sve ta\v cke zajedno sa udaljeno\v s\'cu od
+koordinatnog po\v cetka u rastu\'cem redosledu. Zatim se sa standarnog
+ulaza unosi vrednost razdaljine i
+ispisati ta\v cku koja je na toj udaljenosti ili -1 ukoliko takava ne
+postoji.
+\end{enumerate}
+
+
+%---------------------------------------------------------------------
+\section{Programiranje 2, I smer, 2013/14, Test 4 tok 2 grupa 3 (prakticni)}
+%---------------------------------------------------------------------
+
+
+\begin{enumerate}
+\item Odrediti klasu slo\v zenosti narednog programskog koda:
+\begin{verbatim}
+int f(unsigned n){
+   int i, j;
+   int a=0;
+
+   if(n==1)
+       return 1;
+
+   for(i=0; i<n; i++)
+       for(j=0; j<n; j++)
+          if (i<>j) a+=i*j;
+
+   return a+f(n/2);
+}
+\end{verbatim}
+
+\item Napisati rekurzivnu funkciju koja brise svaku parnu cifru datog prirodnog broja.
+      Primer: za broj 12345 vra\'ca 135.
+
+
+\item U datoteci \verb|kvadrati.txt| dati su podaci o dr\v zavama. U svakom redu
+      nalazi se ime dr\v zave (jedna re\v c, maksimalne du\v zine 20) i njena povr\v sina
+      (realan, pozitivan broj). Ispisati imena dr\v zava sortirana po povr\v sinama
+      u opadaju\'cem poretku. Potom sa standarnog ulaza se unosi jedna povr\v sina Na standarni
+      izlaz ispisati ime grada koje ima tu povr\v sinu ili -1 ukoliko takva dr\v zava ne postoji.
+
+\end{enumerate}
+
+
+
+\section{I smer, Programiranje 2 2013/2014, zavr\v{s}ni ispit, septembar, 2014}
+
+\subsection{Deo II}
+
+\subsubsection*{Grupa I}
+
+NAPOMENA: Na desktopu napraviti direktorijum sa imenom \verb|inicijaliAsistenta_ImePrezime_brojIndeksa|.
+U tom direktorijumu \v cuvati zadatke -- 1.c, 2.c, 3.c, 4.c, 5.c, 6.c
+
+\bigskip
+
+U direktorijumu {\tt g1} nalaze se funkcije za rad sa listama ({\tt liste.c} i {\tt liste.h}) i
+funkcije za rad sa stablima ({\tt stabla.c} i {\tt stabla.h}).  \\
+Kompilacija: {\tt gcc 5.c liste.c} \\
+             {\tt gcc 6.c stabla.c}
+
+\bigskip
+
+\begin{z}
+Napisati program koji ispisuje na standardni izlaz koliko elemenata u njegovoj komandnoj liniji jesu palindromi
+(re\v ci koje su iste kada se \v citaju sa leva na desno, i sa desna na levo).
+\end{z}
+\begin{verbatim}
+Primer 1:                             Primer 2:            Primer 3:    Primer 4:
+./a.out ana_ana Milan MAMA TegeT W    ./a.out MaMa anka    ./a.out      ./a.out Ana H202H
+
+3                                     0                    0            1
+\end{verbatim}
+
+\begin{z}
+U datoteci {\tt matrica.txt} nalaze se podaci o kvadratnoj matrici. U prvom redu datoteke data je njena
+dimenzija, a potom slede elementi matrice. Napisati program koji alocira memorijski prostor za matricu
+i potom je u\v citava. Ispisati indekse onih redova matrice u kojima su elementi
+sortirani neopadaju\'ce (redovi se indeksiraju po\v cev\v si od nule).
+U slu\v caju gre\v ske ispisati {\tt -1} i prekinuti izvr\v savanje programa.
+\end{z}
+\begin{verbatim}
+Primer 1:           Primer 2:             Primer 3:           Primer 4:
+matrica.txt:        matrica.txt:          matrica.txt:        matrica.txt:
+2                   3                     -5                  3
+-1 3                1 3 2                                     4 4 3
+2 1                 -5 2 2                                    1 0 -3
+                    2 4 5                                     5 4 3
+
+0                   1 2                   -1
+\end{verbatim}
+
+\begin{z}
+U datoteci {\tt slagalica.txt} nalaze se podaci o u\v cesnicima u ``Slagalici'': ime i broj osvojenih
+ poena u svakoj od emisija. Mo\v ze se desiti da se ime nekog u\v cesnika vi\v se puta ponavlja. Na standardni izlaz ispisati
+imena u\v cesnika sortirana u opadaju\'cem poretku na osnovu ukupnog broja osvojenih poena.
+Ukupan broj u\v cesnika mo\v ze biti najvi\v se {\tt 50}.
+U slu\v caju gre\v ske ispisati {\tt -1} i prekinuti izvr\v savanje programa.
+\end{z}
+\begin{verbatim}
+Primer 1:         Primer 2:            Primer 3:          Primer 4:
+slagalica.txt     slagalica.txt        slagalica.txt      slagalica.txt
+Marko 50          Isidora 15           Marko 78
+Pavle 98          Janko 23             Milan 12
+Petar 12          Marko 45             Nebojsa 100
+Marko 60                               Milan 15
+Pavle 45                               Marko 10
+
+Pavle             Marko                Nebojsa
+Marko             Janko                Marko
+Petar             Isidora              Milan
+\end{verbatim}
+
+\begin{z}
+Sa standardnog ulaza unosi se niska koja sadr\v zi ispravan datum u formatu
+DD.MM.GGGG (dan i mesec su zapisani sa 2 cifre, a godina sa 4). Napisati
+funkciju {\tt unsigned f(char *date)} koja na osnovu prosledjenog
+(obavezno ispravnog) datuma formira neozna\v cen ceo tako \v sto mu
+5 bitova najmanje te\v zine postavlja na vrednost dana (broj od 1 do
+31), slede\' cih 4 bita na vrednost meseca (broj od 1 do 12), a u ostale
+bitove sme\v sta vrednost godine.
+\end{z}
+
+\begin{verbatim}
+Primer 1:            Primer 2:            Primer 3:
+03.06.2014           31.12.2000.          01.01.0001.
+
+1031363              1024415              545
+\end{verbatim}
+
+
+\begin{z}
+Lista se u\v citava sa standardnog ulaza. Elementi liste su celi brojevi i u\v citavaju se sve dok se ne
+unese {\tt 0} i sme\v staju se na kraj liste (koristiti datu funkciju {\tt cvor* ucitaj\_listu()}).
+Napisati funkciju koja iz date liste bri\v se sledbenika prvog elementa u listi sa zadatom vredno\v s\' cu,
+a ukoliko takav element ne postoji u listi, onda se bri\v se prvi \v clan liste.
+Dobijenu listu ispisati na standardni izlaz.
+NAPOMENA: Zadatak se mora re\v siti kori\v s\'cenjem listi, u suprotnom broj osvojenih poena je {\tt 0}.
+\end{z}
+\begin{verbatim}
+Primer 1:            Primer 2:            Primer 3:         Primer 4:
+1 2 8 3 8 4 0        6 2 -2 3 4 0         0                 2 6 3 4 5 6 0
+8                    4                    3                 7
+
+1 2 8 8 4            6 2 -2 3 4                             6 3 4 5 6
+\end{verbatim}
+
+\begin{z}
+Binarno uredjeno stablo se u\v citava sa standardnog ulaza. Elementi stabla su celi brojevi
+i u\v citavaju se sve dok se ne unese {\tt 0}. Nakon toga se unosi celobrojna vrednost nivoa stabla {\tt n}.
+Napisati funkciju koja izra\v cunava koliko se \v cvorova datog binarnog stabla nalazi na {\tt n}-tom
+nivou stabla (koren se nalazi na nultom nivou, njegova deca na prvom nivou i tako redom). Rezultat ispisati na standardni izlaz.
+NAPOMENA: Zadatak se mora re\v siti kori\v s\'cenjem stabla, u suprotnom broj osvojenih poena je {\tt 0}.
+\end{z}
+\begin{verbatim}
+Primer 1:                                                  Primer 2:
+           17                                                   50
+          /  \                                                 /  \
+        13    20                                             40    60
+       /  \   /                                              /      \
+      5   15 18                                            30       70
+       \                                                  /         / \
+       12                                                20       65   80
+                                                        / \
+ulaz:17 13 20 18 5 15 12 0                            10   25
+     2
+                                                      ulaz: 50 40 30 20 10 25 60 70 65 80 0
+izlaz: 3                                              3
+
+                                                      izlaz: 3
+________________________________________________________________________________________________
+Primer 3:                                                        Primer 4:
+            45                                                       7
+         /     \                                                   /   \
+       20        60                                               3     10
+      /  \       /                                                \
+    15    30    50                                                 4
+     \    /  \
+     18  21   33                                      ulaz: 7 3 10 4 0
+                                                            2
+                                                      izlaz: 1
+ulaz: 45 20 30 33 21 15 18 60 50 0
+      4
+izlaz: 0
+\end{verbatim}
+
+
+\section{I smer, Programiranje 2 2013/2014, zavr\v{s}ni ispit, septembar 2014}
+
+NAPOMENA: Na desktopu napraviti direktorijum sa imenom \verb|inicijaliAsistenta_ImePrezime_brojIndeksa_1|.
+U tom direktorijumu \v cuvati zadatke -- 1.c, 2.c, 3.c, 4.c, 5.c, 6.c
+
+\bigskip
+
+U direktorijumu {\tt g1} nalaze se funkcije za rad sa listama ({\tt liste.c} i {\tt liste.h}) i
+funkcije za rad sa stablima ({\tt stabla.c} i {\tt stabla.h}).  \\
+Kompilacija: {\tt gcc 5.c liste.c} \\
+             {\tt gcc 6.c stabla.c}
+
+\bigskip
+
+\begin{z}
+Prvi argument komadne linije je pozitivan ceo broj {\tt k}, a ostali argumenti
+su re\v ci (nije unapred poznato koliko maksimalno re\v ci mo\v ze biti).
+Na standarni izlaz ispisati svaku {\tt k}-tu re\v c.
+Ukoliko nisu zadati argumenti komandne linije, na standarni izlaz ne ispisivati ni\v sta. \\
+U slu\v caju gre\v ske ({\tt k $\le$ 0}) ispisati {\tt -1}.
+\end{z}
+
+\begin{verbatim}
+Primer 1:                                     Primer 2:
+./a.out 2 danas je ispit iz p2                ./a.out 3 sunce jutro oktobar festival nemacka pas auto
+
+je iz                                          oktobar auto
+_______________________________________________________________________________________________________________
+Primer 3:                                    Primer 4:
+./a.out -3 autobus prevoz gradski            ./a.out 4 jabuka sljiva banana pomorandza cvekla sargarepa bundeva tikvice paprike
+
+-1                                           pomorandza tikvice
+\end{verbatim}
+
+\begin{z}
+U datoteci {\tt pravougaonici.txt} dati su podaci o pravougaonicima -- ime (ne du\v ze od 10 karaktera), koordinate
+donjeg levog temena, koordinate gornjeg desnog temena (strane pravougaonika su paralelne koordinatnim osama, koordinate su dva broja,
+vrednosti na x-osi i y-osi). Sortirati povr\v sine pravouganika opadaju\'ci prema njihovoj povr\v sini.
+Na standarni izlaz ispisati imena pravougaonika prema sortiranom rasporedu.
+Maksimalno mo\v ze biti 1000 pravougaonika. U slu\v caju gre\v ske ispisati {\tt -1} i prekinuti izvr\v savanje programa.
+\end{z}
+\begin{verbatim}
+
+\end{verbatim}
+
+\begin{z}
+U svakom redu datoteke \verb|saldo.txt| nalazi se identifikacija (niska maksimalne du\v zine 20) korisnika banke i iznos novca koji korisnik trenutno ima (ceo broj).
+Svaki korisnik se pojavljuje ta\v cno jednom i njegov saldo je predstavljen celim brojem (negativan - korisnik je zadu\v zen,
+pozitivan - korisnik ima pozitivan saldo i nije zadu\v zen). Izra\v cunati koliko su prose\v cno
+zadu\v zeni korisnici (pri ra\v cunanju proseka ne ra\v cunati one korisnike koji nisu zadu\v zeni).
+Na standarni izlaz ispisati identifikacioni broj onog korisnika koji su zadu\v zeni vi\v se od proseka.
+Maksimalan broj korisnika nije unapred poznat.
+\end{z}
+\begin{verbatim}
+
+\end{verbatim}
+
+\begin{z}
+Napisati funkciju \verb|unsigned int f2(unsigned int x)| koja vra\' ca broj dobijen postavljanjem
+neparnih bitova u broju \verb|x| na 0. Parni bitovi ostaju nepromenjeni. Bitovi se broje po\v cev od 1,
+od bita najmanje te\v zine ka bitu najve\'ce te\v zine (sa desna na levo).
+\end{z}
+\begin{verbatim}
+Primer 1:             Primer 2:            Primer 3:           Primer 4:
+ulaz: 23              ulaz:  3456          ulaz:  456          ulaz: 778903
+
+izlaz: 2              izlaz: 2176          izlaz: 136          izlaz: 696962
+\end{verbatim}
+
+
+\begin{z}
+Lista se u\v citava sa standardnog ulaza. Elementi liste su celi brojevi i u\v citavaju se sve dok se ne
+unese {\tt 0} i sme\v staju se na kraj liste (koristiti datu funkciju {\tt cvor* ucitaj\_listu()}).
+Nakon unosa elemenata liste, unosi se ceo broj {\tt k}.
+Iz date liste izbaciti sve elemente \v koji su deljivi sa {\tt k}.
+Dobijenu listu ispisati na standardni izlaz. U slu\v caju gre\v ske (poku\v saj deljenja sa {\tt 0}) ispisati -1.
+NAPOMENA: Zadatak se mora re\v siti kori\v s\'cenjem listi, u suprotnom broj osvojenih poena je {\tt 0}.
+\end{z}
+\begin{verbatim}
+Primer 1:             Primer 2:                  Primer 3:                 Primer 4:           Primer 5:
+2 3 6 7 8 91 0        5 7 9 20 24 56 78 0        24 3 7 93 12 4 11 0       9 7 5 3 1 0         6 8 10 0
+3                     5                          0                         100                 2
+
+2 7 8                 7 9 24 56 78               -1                        9 7 5 3 1
+\end{verbatim}
+
+\begin{z}
+Binarno uredjeno stablo se u\v citava sa standarnog ulaza. Elementi stabla su celi brojevi
+i u\v citavaju se sve dok se ne unese {\tt 0}.
+Odrediti broj \v cvorova kod kojih je levo podstablo (strogo) dublje od desnog podstabla.
+NAPOMENA: Zadatak se mora re\v siti kori\v s\'cenjem stabla, u suprotnom broj osvojenih poena je {\tt 0}.
+\end{z}
+\begin{verbatim}
+Primer 1:                                                  Primer 2:
+           17                                                   50
+          /  \                                                 /  \
+        13    20                                             40    60
+       /  \   /                                              /      \
+      5   15 18                                            30       70
+       \                                                   /          \
+       12                                                 20          80
+                                                         /              \
+ulaz:17 13 20 18 5 15 12 0                              10              90
+                                                       /                  \
+izlaz:  3                                             5                   95
+
+                                                     ulaz: 50 40 30 20 10 5 60 70 80 90 95 0
+
+                                                     izlaz: 4
+________________________________________________________________________________________________
+Primer 3:                                                        Primer 4:
+            45                                                       7
+         /     \                                                   /   \
+       20        60                                               3     10
+      /  \       /                                                \       \
+    15    30    50                                                 4       12
+     \    /  \
+     18  21   33                                      ulaz: 7 3 10 4 12 0
+
+                                                      izlaz: 0
+ulaz: 45 20 30 33 21 15 18 60 50 0
+
+izlaz: 2
+\end{verbatim}
+
+
+\section{Programiranje 2, Zavr\v{s}ni ispit, januar 2015.}
+
+
+\begin{z}
+Argumenti komandne linije su celi, pozitivni brojevi.
+Napisati program koji ispisuje broj elemenata komandne
+liniji \v cije su cifre uredjene strogo rastu\'ce.
+\end{z}
+\begin{verbatim}
+Primer 1:                Primer 2:               Primer 3:              Primer 4:
+./a.out 26 13 468        ./a.out 2 14 41         ./a.out                ./a.out 423 189 243 117 258
+
+3                        2                       0                      2
+\end{verbatim}
+
+\begin{z}
+U svakom redu datoteke {\tt kurs.txt} dat je datum, u formatu dan mesec godina (celi brojevi odvojeni blanko znakom), a zatim
+i kurs eura (realan broj) na taj datum. Napisati program koji ispisuje mesec i godinu u kojoj je prose\v can kurs
+eura bio najni\v zi. U slu\v caju gre\v ske ispisati {\tt -1}.
+\end{z}
+\begin{verbatim}
+Primer 1:                    Primer 2:                  Primer 3:                 Primer 4:
+kurs.txt:                    kurs.txt:                  kurs.txt:                 kurs.txt:
+12 3 2014 112.34             12 4 2013 102.23                                     2 3 2011 110.34
+18 3 2014 115.54                                                                  18 3 2011 110.54
+1 5 2012 108.12              4 2013                                               12 2 2011 107.1
+2 2 2014 109.12                                                                   15 2 2011 108.1
+25 5 2012 105.12                                                                  13 2 2012 110
+                                                                                  15 2 2012 115
+
+5 2015                                                                            2 2011
+\end{verbatim}
+
+\begin{z}
+Napisati program koji ispisuje broj jedinica koje se nalaze izmedju
+dve nule u binarnom zapisu neozna\v cenog celog broja koji se unosi sa
+standardnog ulaza.
+\end{z}
+\begin{verbatim}
+Primer 1:                    Primer 2:                  Primer 3:                 Primer 4:
+1024                         320                        2015                      42
+
+1                            2                          0                         2
+\end{verbatim}
+
+\begin{z}
+Napisati program koji sa standardnog ulaza u\v citava indekse studenata,
+njihova imena i prezimena (svaki student u jednom redu, ne vise od 128
+redova), a potom iste ispisuje na standardni izlaz, sortirane rastu\'ce
+po godini, pa po broju indeksa. Koristiti funkciju standardne
+biblioteke {\tt qsort}. Predpostavka je da su svi redovi zadati u ispravnom
+formatu.
+\end{z}
+\begin{verbatim}
+Primer 1:                                  Primer 2:
+23/2014 Marko Markovic                     56/1999 Marko Maric
+1/2014 Pera Peric                          223/2015 Pera Peric
+234/2011 Branko Brankovic                  224/2015 Mira Miric
+123/2012 Branko Brankovic
+
+                                           56/1999 Marko Maric
+234/2011 Branko Brankovic                  223/2015 Pera Peric
+123/2012 Branko Brankovic                  224/2015 Mira Miric
+1/2014 Pera Peric
+23/2014 Marko Markovic
+________________________________________________________________________________________________
+Primer 3:                                   Primer 4:
+Ulaz:                                       Ulaz:
+                                            12/2010 Jelena Jovanovic
+
+Izlaz:                                      Izlaz:
+                                            12/2010 Jelena Jovanovic
+\end{verbatim}
+
+\begin{z}
+Sa standarnog ulaza se unosi lista celih brojeva dok se ne unese 0. Formirati listu, a potom izbaciti sve one
+elemente koji su jednaki zbiru svojih suseda i ispisati novodobijenu listu. Susedi \v cvoru su njegov prethodnik
+i njegov sledbenik. Sused prvom elementu liste je njegov sledbenik. Sused poslednjem elementu liste je njegov prethodnik. Ne kreirati novu listu. Smatra se neta\v cnim re\v senje
+u kome se elementi liste samo ispisuju, a lista se pri tome ne menja.
+NAPOMENA: Zadatak se mora re\v siti kori\v s\'cenjem liste, u suprotnom broj osvojenih poena je {\tt 0}.
+\end{z}
+\begin{verbatim}
+Primer 1:                Primer 2:                   Primer 3:                Primer 4:
+7 8 1 3 2 1 0            23 -4 -27 -23 0             1 2 3 4 5 0              7 7 7 0
+
+7 1 2 1 1                23 -23                      1 2 3 4 5                7
+\end{verbatim}
+
+\begin{z}
+Uredjeno binarno stablo se u\v citava sa standarnog ulaza. Elementi stabla su celi brojevi
+i u\v citavaju se sve dok se ne unese {\tt 0}.
+Odrediti broj \v cvorova uredjenog binarnog stabla
+koji su jednaki zbiru svojih suseda. Smatramo da su susedi nekom \v cvoru njegovi direktni potomci i njegov prvi predak.
+Koren nema pretka, pa su njegovi susedi samo njegovi direktni potomci. \v Cvor koji je list nema potomke, pa je njegov sused samo njegov direktan predak. Rezultat ispisati na standardni izlaz.
+NAPOMENA: Zadatak se mora re\v siti kori\v s\'cenjem stabla, u suprotnom broj osvojenih poena je {\tt 0}.
+\end{z}
+
+\begin{verbatim}
+Pored cvora koji zadovoljava trazeno svojstvo stavljena je zvezdica.
+
+Primer 1:                                                  Primer 2:
+           17*                                                  50
+          /  \                                                 /  \
+        -4*   21                                              40*  60
+       /  \   /                                              /      \
+     -20   -1 21*                                          -10       70
+       \                                                   /  \       \
+       -8                                                -20   20      80
+                                                         /              \
+ulaz:17 -4 -20 -1 -8 21 21 0                            -30             90
+                                                       /                  \
+izlaz: 3                                              -45                 95
+
+                                                    ulaz: 50 40 -10 20 -20 -30 -45 60 70 80 90 95 0
+
+                                                    izlaz: 1
+________________________________________________________________________________________________
+Primer 3:                                                        Primer 4:
+            45*                                                        7*
+         /      \                                                   /   \
+       -20*      65                                               -3     10
+      /  \       /                                                 \     /
+    -50*  -15*   65*                                               4    10*
+     \     /  \
+     -30  -8  13                                      ulaz: 7 -3 4 10 10 0
+
+                                                      izlaz: 2
+ulaz: 45 -20 -50 -15 -30 -8 13 65 65 0
+
+izlaz: 5
+\end{verbatim}
+

@@ -1,0 +1,235 @@
+% *************************************************************
+% *************************************************************
+% *************************************************************
+\chapter{Testovi i ispiti 2008/09}
+% *************************************************************
+% *************************************************************
+% *************************************************************
+
+\newpage
+
+\section{Test 1, 01.04.2009.}
+
+
+\begin{enumerate}
+\item
+Napisati program koji sa standardnog ulaza u\v citava pozitivne cele
+brojeve dok ne u\v cita nulu kao oznaku za kraj. Na standardni izlaz
+ispisati koji broj se pojavio najvi\v se puta me\d u tim brojevima.
+Na primer, ako se na ulazu pojave brojevi:
+\verb+2 5 12 4 5 2 3 12 15 5 6 6 5+
+program treba da vrati broj $5$.
+Zadatak re\v siti kori\v{s}\'cenjem dinami\v cke realokacije i uz kori\v s\' cenje struktura.
+
+\item
+Napisati rekurzivnu i iterativnu funkciju koja za uneto $n$ sa standardnog ulaza ra\v cuna $f(n)$ ako je $f(n)$ definisan na slede\' ci na\v cin:
+
+$f(1)=1$, $f(2)=2$, $f(3)=3$, $f(n+3)=f(n+2)+f(n+1)+f(n)$, za $n>0$.
+Napisati i program koji poziva ove dve funkcije.
+
+\item
+Napisati program koji sa standardnog ulaza unosi prvo dimenziju matrice
+($n<10$)
+pa zatim elemente matrice i izra\v cunava sumu elemenata iznad sporedne
+dijagonale matrice.
+Napisati funkciju koja ra\v cuna sumu elemenata iznad glavne dijagonale
+koja se izvr\v sava u \v sto manjem broju koraka.
+
+Primer:
+\begin{verbatim}
+4
+1 2 3 4
+5 6 7 8
+9 1 2 3
+4 5 6 7
+\end{verbatim}
+
+Suma elemenata iznad sporedne dijagonale je: $1+2+3+5+6+9=26$
+\end{enumerate}
+
+
+
+
+\section{Test 2, 06.06.2009.}
+
+
+
+\begin{enumerate}
+\item
+Napisati funkcije za rad sa stekom \v{c}iji su elementi celi
+brojevi. Treba napisati (samo) funkcije za dodavanje elementa u
+stek \verb+void push(cvor** s, int br)+ , brisanje elementa iz
+steka \verb+void pop(cvor** s)+ i funkciju za izra\v cunavanje
+zbira svih elemenata koji su parni brojevi
+\verb+int zbir_parnih(cvor* s)+.
+
+\item Napisati funkcije za rad sa ure\d enim binarnim stablom \v{c}iji su
+elementi celi brojevi. Treba napisati (samo) funkcije za dodavanje
+elementa u stablo \verb+void dodaj(cvor** s, int br)+ , brisanje
+stabla \verb+void obrisi(cvor* s)+ i funkciju za izra\v cunavanje
+zbira listova stabla \verb+int zbir_listova(cvor* s)+.
+
+\item
+Napisati program koji radi sa ta\v ckama. Ta\v cka je
+predstavljena svojim $x$ i $y$ koordinatama (celi brojevi). Sa
+standardnog ulaza se u\v citava prvo broj ta\v caka a zatim
+koordinate ta\v caka. Dobijeni niz struktura sortirati pozivom
+funkcije \emph{qsort}. Niz sortirati po $x$ koordinati, a ako neke dve
+ta\v cke imaju istu $x$ koordinatu onda ih sortirati po $y$ koordinati.
+
+Ako na ulazu dobijete niz: $(4,6)$, $(2,9)$, $(4,5)$; sortirani niz \' ce
+izgledati: $(2,9)$, $(4,5)$, $(4,6)$.
+
+\end{enumerate}
+
+
+
+
+\section{Zavr\v{s}ni ispit, juni 2009.}
+
+
+
+Napisati program koji iz datoteke "reci.txt" \v cita redom sve
+re\v ci (maksimalne du\v zine $20$) i smesta ih u:
+
+\begin{enumerate}
+\item Niz struktura (pretpostaviti da razli\v citih re\v ci u datoteci nema
+vi\v se od $100$) u kome \' ce se za svaku re\v c \v cuvati i njen
+broj pojavljivanja.
+
+\item Red koji \' ce za svaku re\v c \v cuvati i njen broj pojavljivanja.
+Napisati funkcije za ubacivanje elementa u red, \v stampanje reda,
+brisanje reda i
+odre\d ivanja najdu\v ze re\v ci koja se pojavila u redu.
+
+\item Ure\d eno binarno drvo (ure\d eno leksikografski) koje u svakom
+\v cvoru \v cuva re\v c i broj pojavljivanja te re\v ci. Napisati
+funkcije za dodavanje elementa u stablo, ispisivanje stabla, brisanje
+stabla i ra\v cunanje ukupnog
+broja pojavljivanja svih re\v ci u stablu.
+
+\end{enumerate}
+
+
+
+\section{Zavr\v{s}ni ispit, septembar 2009.}
+
+
+
+\begin{enumerate}
+\item
+Napisati program koji iz datoteke \v cije se ime zadaje kao argument
+komandne linije u\v citava cele brojeve i sme\v sta ih u listu.
+Napisati funkcije za rad sa listom, pravljenje elementa liste, ubacivanje
+elementa na kraj liste, ispisivanje liste i brisanje liste.
+Pretpostavka je da datoteka sadr\v zi samo cele brojeve.
+\item
+Napisati program koji sa standardnog ulaza u\v citava cele brojeve dok
+se ne unese $0$ kao oznaka za kraj. Brojeve smestiti u ure\d eno
+binarno stablo i ispisati dobijeno stablo. Napisati funkcije za formiranje
+elementa stabla, ubacivanje elementa u stablo, ispisivanje stabla u
+prefiksnom poretku, brisanje stabla.
+\item
+3. Sa standardnog ulaza u\v citavamo prvo broj studenata a zatim i
+njihove podatke. Za svakog studenta dobijamo ime (niska od najvi\v se
+30 karaktera) i broj indeksa (ceo broj). Napisati program koji
+sortira ovaj niz studenata po imenima studenata pozivom standardne
+funkcije \emph{qsort} a zatim pronalazi broj indeksa studenta \v cije
+se ime zadaje sa standardnog ulaza pozivom funkcije \emph{bsearch}.
+
+\end{enumerate}
+
+
+\section{Zavr\v{s}ni ispit, oktobar 2009}
+
+
+\begin{enumerate}
+
+\item
+Napisati program koji sa standardnog ulaza u\v citava pozitivne cele
+brojeve dok ne u\v cita nulu kao oznaku za kraj. Na standardni izlaz
+ispisati koji broj se pojavio najvi\v se puta me\d u tim brojevima.
+Na primer, ako se na ulazu pojave brojevi:
+\verb+2 5 12 4 5 2 3 12 15 5 6 6 5+
+program treba da vrati broj $5$.
+
+Zadatak re\v siti kori\v{s}\'cenjem dinami\v cke realokacije i strukture
+koja sadr\v zi ceo broj i broj njegovih pojavljivanja.
+
+\item
+Napisati program koji formira listu od niza celih brojeva koji se
+unose sa standardnog ulaza. Oznaka za kraj unosa je $0$. Napisati funkcije za
+formiranje \v cvora liste, ubacivanje elementa na kraj liste,
+ispisivanje elemenata liste i osloba\d anje liste i u programu demonstrirati
+pozive ovih funkcija.
+
+
+\item Napisati funkcije potrebne za ispisivanje elemenata koji se nalaze
+na najve\' coj dubini binarnog stabla.
+
+Na primer, za stablo
+
+\begin{minipage}[t]{120mm}
+\begin{verbatim}
+        5
+      /   \
+     3     6
+   /   \
+  2     4
+\end{verbatim}
+\end{minipage}
+
+\noindent
+treba ispisati: {\tt 2 4}.
+
+(Pretpostavljamo da je stablo ve\' c zadato. \emph{Ne treba} pisati dodatne
+funkcije za kreiranje \v cvora, uno\v senje elementa u stablo i
+osloba\d anje stabla)
+
+
+\item
+Sa standardnog ulaza u\v citavamo prvo broj studenata a zatim i
+njihove podatke. Za svakog studenta dobijamo ime (niska od najvi\v se
+30 karaktera) i broj indeksa (ceo broj). Napisati program koji
+sortira ovaj niz studenata po imenima studenata pozivom standardne
+funkcije \emph{qsort} i zatim \v stampa tako dobijeni niz na standardni
+izlaz.
+\end{enumerate}
+
+
+\section{Zavr\v{s}ni ispit, Oktobar 2 2009.}
+
+
+
+\begin{enumerate}
+
+\item Napisati program koji formira ure\d eno binarno stablo bez
+ponavljanja elemenata \v ciji elementi su imena studenata
+(karakterska niska do $30$ karaktera). Napisati program koji sa
+standardnog ulaza \v cita podatke o studentima, sme\v sta ih u
+stablo (ure\d eno leksikografski) i \v stampa podatke o studentima
+infiksno. Oznaka za kraj unosa je kada se umesto imena studenta
+unese niska $"kraj"$. Napisati funkcije za kreiranje \v cvora
+stabla, umetanje studenta u stablo, brisanje stabla i ispis stabla
+na opisan na\v cin.
+
+\item Napisati program koji simulira red u studentskoj poliklinici.
+Napisati funkcije \emph{add} (za ubacivanje studenta na kraj
+reda), \emph{get} (za izbacivanje studenta sa po\v cetka reda) i
+funkcije za \v stampanje i brisanje reda. Podaci o studentu se
+sastoje od imena studenta (karakterska niska du\v zine ne ve\' ce
+od $30$) i broja indeksa studenta (ceo broj).
+
+\item Napisati program koji sa standardnog ulaza u\v citava prvo
+dimenzije matrice ($n$ i $m$) a zatim redom i elemente matrice (ne
+postoje pretpostavke o dimenziji matrice). Nakon toga u datoteku
+\v cije se ime zadaje kao prvi argument komandne linije, zapisati
+sumu elemenata iznad glavne dijagonale.
+
+\item Napisati program koji sa standardnog ulaza unosi prvo broj studenata
+a zatim i podatke o studentima (ime studenata - karakterska niska
+du\v zine do $30$ karaktera i broj indeksa studenta - ceo broj),
+sortira ih po imenu studenta leksikografski (pozivom funkcije
+qsort) i ispisuje sortiran niz na standardni ulaz.
+\end{enumerate}
+

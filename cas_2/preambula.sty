@@ -1,0 +1,25 @@
+\date{}
+
+\usepackage{xcolor}
+\definecolor{capture}{HTML}{741B47}
+\definecolor{text}{HTML}{000000}
+\definecolor{primeri}{HTML}{134F5c}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheoremstyle{ZadatakStil}{}{}{\color{text}\itshape}{}{\color{capture}\bfseries}{}{ }{}
+\theoremstyle{ZadatakStil}
+\newtheorem{z}{Zadatak}
+
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage[explicit]{titlesec}
+\usepackage{lipsum}
+\titleformat{\section}
+  {\normalfont}{\thesection}{1em}{\MakeUppercase{#1}}
+
+
+\fvset{frame=single,framesep=1mm,fontfamily=courier,fontsize=\scriptsize, framerule=.3mm,commandchars=\\\{\}}
+
+\usepackage{fullpage}

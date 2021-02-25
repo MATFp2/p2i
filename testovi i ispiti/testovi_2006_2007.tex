@@ -1,0 +1,370 @@
+\chapter{Testovi i ispiti 2006/07}
+% *************************************************************
+% *************************************************************
+% *************************************************************
+
+\section{Test 1, 17.04.2007. Grupa 1}
+
+
+\begin{enumerate}
+
+\item
+Neka je, za zadati ceo broj $n$, $n_1$ proizvod cifara broja $n$,
+$n_2$ proizvod cifara broja $n_1$, $\ldots$,
+$n_k$ proizvod cifara broja $n_{k-1}$, pri \v cemu je
+$k$ najmanji prirodan broj za koji je $n_k$ jednocifren. Na primer:
+\begin{itemize}
+\item za $n=10$, $n_1 = 1*0 = 0$, zna\v ci $k=1$
+\item za $n=25$, $n_1 = 2*5 = 10$, $n_2 = 1*0 = 0$, zna\v ci $k=2$
+\item za $n=39$, $n_1 = 3*9 = 27$, $n_2 = 2*7 = 14$, $n_3 = 1*4 = 4$,
+zna\v ci $k=3$
+\end{itemize}
+Napisati: (a) rekurzivnu; (b) iterativnu funkciju koja za dato $n$
+ra\v cuna $k$. Zadatak re\v siti bez kori\v s\' cenja nizova.
+
+\item
+Napisati program koji sa standardnog ulaza u\v citava pozitivne cele
+brojeve dok ne u\v cita nulu kao oznaku za kraj. Na standardni izlaz
+ispisati koji broj se pojavio najvi\v se puta me\d u tim brojevima.
+Na primer, ako se na ulazu pojave brojevi:
+\verb+2 5 12 4 5 2 3 12 15 5 6 6 5+
+program treba da vrati broj $5$.
+Zadatak re\v siti kori\v{s}\'cenjem dinami\v cke realokacije.
+
+\item
+Napisati program koji iz datoteke, \v cije se ime zadaje kao prvi
+argument komandne linije, \v cita prvo dimenziju kvadratne matrice $n$,
+a zatim elemente matrice (pretpostavljamo da se u datoteci nalaze brojevi
+pravilno raspore\d eni,
+odnosno da za dato $n$, sledi $n \times n$ elemenata matrice). Matricu
+dinami\v cki alocirati.
+Nakon toga, na standardni izlaz ispisati redni broj kolone koja ima
+najve\' ci zbir elemenata.
+Na primer, za datoteka sa sadr\v{z}ajem:
+\vspace*{-8mm}
+\begin{center}
+\begin{verbatim}
+3
+1 2 3
+7 3 4
+5 3 1
+\end{verbatim}
+\end{center}
+\vspace*{-3mm}
+program treba da ispi\v se redni broj $0$ (jer je suma elemenata u nultoj
+koloni \verb|1 + 7 + 5 = 13|, u prvoj \verb|2 + 3 + 3 = 8|, u drugoj
+\verb|3 + 4 + 1 = 8|).
+\end{enumerate}
+
+
+
+
+
+\section{Test 1, 17.04.2007. Grupa 2}
+
+
+\begin{enumerate}
+\item
+Neka je, za zadati ceo broj $n$, $n_1$ suma cifara broja $n$,
+$n_2$ suma cifara broja $n_1$, $\ldots$, $n_k$ suma cifara broja
+$n_{k-1}$, pri \v cemu je $k$ najmanji prirodan broj za koji je
+$n_k$ jednocifren. Na primer:
+\begin{itemize}
+\item za $n=10$, $n_1 = 1+0 = 1$, zna\v ci $k=1$
+\item za $n=39$, $n_1 = 3+9 = 12$, $n_2 = 1+2 = 3$, zna\v ci $k=2$
+\item za $n=595$, $n_1 = 5+9+5 = 19$, $n_2 = 1+9 = 10$, $n_3 = 1+0 = 1$,
+zna\v ci $k =3$
+\end{itemize}
+Napisati: (a) rekurzivnu; (b) iterativnu funkciju koja za dato
+$n$ ra\v cuna $k$. Zadatak re\v siti bez kori\v s\' cenja nizova.
+
+\item
+Napisati program koji sa standardnog ulaza u\v citava pozitivne cele
+brojeve dok ne u\v cita nulu kao oznaku za kraj. Na standardni izlaz
+ispisati koji broj se pojavio najvi\v se puta me\d u tim brojevima.
+Na primer, ako se na ulazu pojave brojevi:
+\verb+2 5 12 4 5 2 3 12 15 5 6 6 5+
+program treba da vrati broj $5$.
+Zadatak re\v siti kori\v{s}\'cenjem dinami\v cke realokacije.
+
+\item
+Napisati program koji iz datoteke, \v cije se ime zadaje kao prvi
+argument komandne linije, \v cita prvo dimenziju kvadratne matrice $n$,
+a zatim elemente matrice (pretpostavljamo da se u datoteci nalaze brojevi
+pravilno raspore\d eni,
+odnosno da za dato $n$, sledi $n \times n$ elemenata matrice). Matricu
+dinami\v cki alocirati.
+Nakon toga, na standardni izlaz ispisati redni broj vrste koja ima
+najve\' ci zbir elemenata.
+Na primer, za datoteka sa sadr\v{z}ajem:
+\vspace*{-8mm}
+\begin{center}
+\begin{verbatim}
+3
+1 2 3
+7 3 4
+5 3 1
+\end{verbatim}
+\end{center}
+\vspace*{-2mm}
+program treba da ispi\v se redni broj $1$ (jer je suma elemenata u nultoj
+vrsti \verb|1 + 2 + 3 = 6|, u prvoj \verb|7 + 3 + 4 = 14|, u drugoj
+\verb|5 + 3 + 1 = 9|).
+\end{enumerate}
+
+
+
+\section{Test 2, 19.06.2007., grupa 1.}
+
+
+\begin{enumerate}
+
+\item Napisati program koji implementira red pomo\' cu jednostruko
+povezane liste (\v cuvati pokaziva\v ce i na po\v cetak i na kraj reda).
+Sa standardnog ulaza se unose brojevi koje sme\v stamo u red sa
+nulom ($0$) kao oznakom za kraj unosa.
+Napisati funkcije za:
+
+\begin{itemize}
+\item Kreiranje elementa reda;
+\item Ubacivanje elementa na kraj reda;
+\item Izbacivanje elementa sa po\v cetka reda;
+\item Ispisivanje reda;
+\item Osloba\d anje reda.
+\end{itemize}
+
+\item Napisati program koji formira ure\d eno binarno stablo koje sadr\v zi
+cele brojeve. Brojevi se unose sa standardnog ulaza sa nulom kao oznakom
+za kraj unosa.
+Napisati funkcije za:
+
+\begin{itemize}
+\item Ubacivanje elementa u ure\d eno stablo (bez ponavljanja elemenata);
+\item Ispisivanje stabla u inorder (infix) redosledu;
+\item Osloba\d anje stabla;
+\item Odre\d ivanje najmanje dubine lista stabla.
+
+Na primer, za stablo:
+
+\begin{verbatim}
+    5
+   / \
+  3   7
+ / \
+2   4
+\end{verbatim}
+
+funkcija treba da vrati $2$ (jer se na toj dubini nalazi list $7$).
+\end{itemize}
+
+\item Napisati program koji sa standardnog ulaza u\v citava podatke o
+studentima tako \v sto za svakog studenta dobijamo prezime
+(karakterska niska od najvi\v se $30$ karaktera) i broj indeksa (ceo broj).
+Pretpostavka je da studenata nema vi\v se od $100$.
+
+Sortirati ovaj niz studenata po prezimenima studenata pozivom standardne
+funkcije {\tt qsort} i ispisati ih na standardni izlaz.
+
+\end{enumerate}
+
+
+\section{Test 2, 19.06.2007., grupa 2.}
+
+
+\begin{enumerate}
+
+\item Napisati program koji implementira stek pomo\' cu jednostruko
+povezane liste. Sa standardnog ulaza se unose brojevi koje sme\v
+stamo u stek sa nulom ($0$) kao oznakom za kraj unosa. Napisati
+funkcije za:
+
+\begin{itemize}
+\item Kreiranje elementa steka;
+\item Ubacivanje elementa na po\v cetak steka;
+\item Izbacivanje elementa sa po\v cetka steka;
+\item Ispisivanje steka;
+\item Osloba\d anje steka.
+\end{itemize}
+
+\item Napisati program koji formira ure\d eno binarno stablo koje sadr\v zi
+cele brojeve. Brojevi se unose sa standardnog ulaza sa nulom kao
+oznakom za kraj unosa. Napisati funkcije za:
+
+\begin{itemize}
+\item Ubacivanje elementa u ure\d eno stablo (bez ponavljanja elemenata);
+\item Ispisivanje stabla u preorder (prefix) redosledu;
+\item Osloba\d anje stabla;
+\item Odre\d ivanje najve\' ce dubine lista stabla.
+
+Na primer, za stablo:
+
+\begin{verbatim}
+    5
+   / \
+  3   7
+ / \
+2   4
+\end{verbatim}
+
+funkcija treba da vrati $3$ (jer se na toj dubini nalazi list $4$).
+\end{itemize}
+
+\item Napisati program koji sa standardnog ulaza u\v citava podatke o
+studentima tako \v sto za svakog studenta dobijamo prezime
+(karakterska niska od najvi\v se $30$ karaktera) i broj indeksa (ceo broj).
+Pretpostavka je da studenata nema vi\v se od $100$.
+
+Sortirati ovaj niz studenata po brojevima indeksa studenata
+pozivom standardne funkcije {\tt qsort} i ispisati ih na
+standardni izlaz.
+
+\end{enumerate}
+
+
+\section{Programiranje 2, Zavr\v{s}ni ispit, juni 2007.}
+
+
+\begin{enumerate}
+
+
+\item
+Napisati program koji sa standardnog ulaza u\v citava dve
+karakterske niske du\v zine do $20$ karaktera i proverava da li je
+prva niska podniz druge niske (odnosno da li se svi karakteri prve
+niske nalaze u drugoj nisci, ne obavezno u istom redosledu).
+Napisati funkciju koja vra\' ca $1$ ako je prva niska podniz
+druge, odnosno $0$ u suprotnom.
+
+\item
+Napisati program koji za datoteku \v cije se ime zadaje kao prvi
+argument komandne linije odre\d uje i ispisuje re\v c koja se
+pojavljuje najvi\v se puta u toj datoteci (pretpostavljamo da su
+re\v ci du\v zine najvi\v se $20$ karaktera). Zadatak re\v siti
+kori\v s\' cenjem dinami\v cke realokacije.
+
+
+\item
+Napisati program koji formira sortiranu listu od celih brojeva
+koji se unose sa standardnog ulaza. Oznaka za kraj unosa je $0$.
+
+Napisati funkcije za:
+
+\begin{itemize}
+\item Formiranje \v cvora liste,
+\item Ubacivanje elementa u ve\' c sortiranu listu,
+\item Ispisivanje elemenata liste u rastu\' cem poretku u vremenu $O(n)$,
+\item Ispisivanje elemenata liste u opadaju\' cem poretku u vremenu $O(n)$,
+\item Osloba\d anje liste.
+\end{itemize}
+
+Napomena: potrebno je da lista bude takva da funkcije za ispis
+liste u rastu\' cem i u opadaju\' cem poretku \emph{ne koriste
+rekurziju niti dodatnu alociranu memoriju} a rade u vremenu
+$O(n)$.
+\end{enumerate}
+
+
+
+\section{Programiranje 2, Zavr\v{s}ni ispit, septembar 2007.}
+
+
+
+
+\begin{enumerate}
+\item Napisati program koji formira ure\d eno binarno stablo bez
+ponavljanja elemenata. Elementi stabla su celi brojevi i unose se sa
+standardnog ulaza (oznaka za kraj unosa je 0). Napisati funkcije za
+kreiranje elementa stabla, umetanje elementa u ure\d eno stablo,
+\v stampanje stabla, brisanje stabla i odre\d ivanje sume elemenata u
+listovima stabla.
+
+\item Napisati program koji simulira rad sa stekom. Napisati funkcije
+\emph{push} (za ubacivanje elementa u stek), \emph{pop} (za izbacivanje
+elementa iz steka) i funkciju \emph{peek} (koja na standardni izlaz
+ispisuje vrednost elementa koji se nalazi na vrhu steka - bez brisanja tog
+elementa iz steka).
+
+\item Napisati program koji sa standardnog ulaza u\v citava tekst nepoznate
+du\v zine i sme\v sta ga u (dinami\v cki) niz karaktera. Oznaka za kraj
+unosa je uneta 0.
+Nakon toga ispisati uneti tekst na standardni izlaz po $10$ karaktera u
+redu.
+Zadatak re\v siti kori\v s\' cenjem dinami\v cke realokacije.
+
+Na primer, ako je uneto:
+
+"Ja polazem ispit iz programiranja2"
+
+program treba da ispise:
+
+\begin{verbatim}
+Ja polazem
+ispit iz p
+rogramiran
+ja2
+\end{verbatim}
+
+\item Napisati program koji sa standardnog ulaza unosi prvo broj artikala
+a zatim i podatke o artiklima
+(ime artikla - karakterska niska du\v zine do $20$ karaktera i cena artikla
+ - ceo broj), sortira ih po ceni (pozivom funkcije qsort) i
+nakon toga (pozivom funkcije bsearch) odre\d uje naziv artikla
+\v ciju cenu korisnik zadaje sa standardnog ulaza.
+\end{enumerate}
+
+
+\section{Programiranje 2, Zavr\v{s}ni ispit, oktobar 2007.}
+
+
+
+\begin{enumerate}
+
+\item Napisati program koji formira ure\d eno binarno stablo bez
+ponavljanja elemenata \v ciji elementi su imena studenata i brojevi
+njihovih indeksa (struktura). Pretpostavka je da ime studenta nije du\v ze
+od $30$ karaktera i da je indeks dat kao ceo broj.
+Napisati program koji sa standardnog ulaza \v cita podatke o studentima,
+sme\v sta ih u stablo (ure\d eno prema brojevima indeksa) i \v stampa
+podatke o studentima u opadaju\' cem poredku prema brojevima indeksa.
+Oznaka za kraj unosa je kada se umesto imena studenta unese niska $"kraj"$.
+Napisati funkcije za kreiranje \v cvora stabla, umetanje studenta u
+stablo, brisanje stabla i ispis stabla na opisan na\v cin.
+
+\item Napisati program koji simulira red u studentskoj poliklinici.
+Napisati funkcije \emph{add} (za ubacivanje studenta na kraj reda),
+\emph{get} (za izbacivanje studenta sa po\v cetka reda) i funkciju
+\emph{peek} (koja na standardni izlaz ispisuje ime studenta koji se
+nalazi na po\v cetku reda - bez brisanja tog studenta iz reda).
+Podaci o studentu se sastoje od imena studenta (karakterska niska du\v zine
+ne ve\' ce od $30$) i broja indeksa studenta (ceo broj).
+
+\item Napisati program koji sa standardnog ulaza u\v citava prvo
+dimenzije matrice ($n$ i $m$) a zatim redom i elemente matrice (ne
+postoje pretpostavke o dimenziji matrice). Nakon toga u datoteku \v cije
+se ime zadaje kao prvi argument komandne linije, zapisati indekse ($i$ i $j$)
+onih elemenata matrice koji su jednaki zbiru svih svojih susednih elemenata
+(pod susednim elementima podrazumevamo okolnih $8$ polja matrice ako postoje).
+Na primer, za matricu:
+\begin{verbatim}
+1 1 2 1 3
+0 8 1 9 0
+1 1 1 0 0
+0 3 0 2 2
+\end{verbatim}
+polja na pozicijama [1][1], [1][3], [3][2] i [3][4] zadovoljavaju tra\v zeni
+uslov pa u datoteku treba upisati:
+\begin{verbatim}
+1 1
+1 3
+3 2
+3 4
+\end{verbatim}
+\item Napisati program koji sa standardnog ulaza unosi prvo broj studenata
+a zatim i podatke o studentima
+(ime studenata - karakterska niska du\v zine do $30$ karaktera i
+broj indeksa studenta - ceo broj), sortira ih po imenu studenta
+leksikografski (pozivom funkcije qsort) i
+nakon toga (pozivom funkcije bsearch) odre\d uje broj indeksa studenta
+\v cije ime korisnik zadaje sa standardnog ulaza.
+\end{enumerate}
+

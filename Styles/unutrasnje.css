@@ -1,0 +1,23 @@
+body {
+		margin-top: 110px;
+}
+
+#poruka_naslov {
+	text-align: center
+}
+
+footer {
+	clear : both;
+}
+
+.notif {
+	text-align: center;
+	position: fixed;
+	background-color: red;
+	color: white;
+	z-index: 1001;
+	top: 60px;
+	height: 30px;
+	padding-top: 3px;
+	width: 100%;
+}

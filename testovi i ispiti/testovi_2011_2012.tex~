@@ -1,0 +1,634 @@
+\chapter{Testovi i ispiti 2011/20%---------------------------------------------------------------------
+\section{Programiranje 2, I smer, 2011/12, Popravi test}
+%---------------------------------------------------------------------
+
+\subsection{Deo II - Grupa 1}
+
+Sa standardnog ulaza unosi se lista celih brojeva dok se ne unese 0, a potom se unosi jedan broj.
+Odrediti poziciju prvog pojavljivanja broja u listi i ispisati na standardni izlaz. Ukoliko broja nema u listi ispisati -1.
+Pozicija u listi se broji po\v cev\v si od 1.\\
+
+    \noindent U datoteci \verb|liste.h| nalaze se funkcije za rad sa listom:
+    \begin{verbatim}
+    void oslobodi(cvor* lista)
+    cvor* ubaci_na_pocetak(cvor* lista, int br)
+    cvor* novi_cvor(int br)
+    void ispis(cvor* lista)
+    \end{verbatim}
+
+    \noindent Napraviti main.c u kome se testira rad programa. U main.c treba da stoji \verb|#include "liste.h"|. \\
+    Kompaliranje:   \verb|gcc main.c liste.c|\\
+    Pokretanje: \verb|./a.out|\\
+
+  \textbf{NAPOMENA: Ukoliko se zadatak uradi bez kori\v s\' cenja liste broj osvojenih poena je 0.}
+
+\emph{Primeri:}
+\begin{verbatim}
+  Primer 1:                        Primer 2:
+  ulaz: -20 7 -31 4 5 6 0 -31      ulaz: 4 90 234 -8 0 322
+
+  izlaz: 3                         izlaz: -1
+
+\end{verbatim}
+
+\begin{verbatim}
+  Primer 3:                        Primer 4:
+  ulaz: 9 7 -42 7 343 7 0 7        ulaz: 8 90 8 56 3 2 0 8
+
+  izlaz: 2                         izlaz: 1
+\end{verbatim}
+
+\bigskip
+
+\subsection{Deo II - Grupa 1}
+
+Sa standardnog ulaza unosi se lista celih brojeva dok se ne unese 0.
+  Odrediti broj pojavljivanja datog broja u listi.\\
+
+  \noindent U datoteci \verb|liste.h| nalaze se funkcije za rad sa listom:
+    \begin{verbatim}
+    void oslobodi(cvor* lista)
+    cvor* ubaci_na_pocetak(cvor* lista, int br)
+    cvor* novi_cvor(int br)
+    void ispis(cvor* lista)
+    \end{verbatim}
+
+    \noindent Napraviti main.c u kome se testira rad programa. U main.c treba da stoji \verb|#include "liste.h"|. \\
+    Kompaliranje:   \verb|gcc main.c liste.c|\\
+    Pokretanje: \verb|./a.out|
+
+  \textbf{NAPOMENA: Ukoliko se zadatak uradi bez kori\v s\' cenja liste broj osvojenih poena je 0.}
+
+\emph{Primeri:}
+
+\begin{verbatim}
+  Primer 1:                      Primer 2:
+  ulaz: 56 -34 234 0 -34            ulaz: 3456 -67 -23 -67 45 0 -67
+
+  izlaz: 1                          izlaz: 2
+
+\end{verbatim}
+
+\begin{verbatim}
+  Primer 3:                      Primer 4:
+  ulaz: 89 0 567 -34 0 2         ulaz: 907 8 8 2 3 8 45 0 8
+
+  izlaz: 0                       izlaz: 4
+\end{verbatim}
+
+
+%---------------------------------------------------------------------
+\section{Programiranje 2, I smer, 2011/12, Zavr\v{s}ni ispit --- jun}
+%---------------------------------------------------------------------
+
+\subsection{Deo II}
+
+\begin{enumerate}
+\item
+Kao argumenti komandne linije zadaju su brojevi, nepoznato koliko.
+  Napisati funkciju \\ \verb|int f1(char** brojevi, unsigned int broj_brojeva)| koja ra\v cuna njihov zbir.
+
+Primeri:
+\begin{verbatim}
+Primer 1:           Primer 2:          Primer 3:              Primer 4:
+
+./a.out 3 4         ./a.out            ./a.out 3 -56 231      ./a.out 0 561 -34 2 34 56
+
+7                   0                   178                   619
+\end{verbatim}
+
+\item
+  U datoteci \verb|tekst.txt| nalazi se tekst. Ako datoteka ne postoji ispisati $-1$ na standardni izlaz.
+  Napisati funkciju \verb|int f2()| koja otvara datoteku, prebrojava i vra\'ca broj cifara koje se pojavljuju
+  u datoteci.
+
+
+Primeri (dati tekst se nalazi u datoteci \verb|tekst.txt|):
+\begin{verbatim}
+Primer 1:                              Primer 2:
+danas je 5 puta lepsi dana             od 2011. godine moze
+nego juce                              se putovati eko-taksijem kroz Bec
+
+rez: 1                                 rez: 4
+
+
+\end{verbatim}
+
+\begin{verbatim}
+Primer 3:                              Primer 4:
+ovde nema cifara                       a ov23de se cif89re
+                                       nalaze u 8 recima
+
+rez: 0                                 rez: 5
+\end{verbatim}
+
+\item
+  Napisati funkciju \verb|int f3()| koja u\v citava
+  cele brojeve sa standarnog ulaza sve dok se ne u\v cita 0. Broj brojeva nije unapred poznat. Funkcija vra\'ca
+  broj brojeva ve\'cih od proseka. Ako nema unetih brojeva funkcija treba da vrati $0$.
+
+Primeri:
+\begin{verbatim}
+Primer 1:            Primer 2:         Primer 3:            Primer 4:
+2 3 4 5 0            0                 56 -45 231 -34 0     76 -45 2 0
+
+rez: 2               rez: 0            rez: 2               rez: 1
+\end{verbatim}
+
+\item
+Data je
+datoteka \verb|voce.txt| koja ima najvi\v se 100 redova. U svakom redu se nalazi ime vo\'cke (ne du\v ze od 20 karaktera) i cena (int).
+Napisati funkciju \verb|int f4(int p, char* ime, int** cena)| koja otvara datoteku i u\v citava podatke iz nje u niz struktura i
+sortira taj niz po cenama. U promenljive \verb|ime| i \verb|cena| upisuju se ime vo\' cke i cena vo\' cke koja se nalazi na poziciji \verb|p| u sortiranom nizu. Ukoliko  \verb|p| ima nekorektnu vrednost funkcija vra\'ca -1
+a ina\v ce vra\'ca 1. \verb|p| je nekorektno ako je manje od 0 ili ve\'ce ili jednako od broja elemenata niza.
+
+
+Primeri(podaci o vo\'ckama su u datoteci \verb|voce.txt|):
+\begin{verbatim}
+Primer 1:                Primer 2:                Primer 3:               Primer 4:
+
+jabuka 10                ananas 12                jagode 14               limun 45
+kruska 15                kivi 34                  breskve 23              grejpfrut 23
+sljiva 23                                         pomorandze 11
+malina 7                 p = 5                    banane 3                p = -1
+
+p = 2                    funkcija vraca -1;       p = 1                   funkcija vraca -1;
+
+ime = kruska;                                     ime = pomorandze
+cena = 15;                                        cena = 11
+funkcija vraca 1;                                 funkcija vraca 1;
+\end{verbatim}
+
+\item
+Napisati funkciju \verb|unsigned int f6(unsigned int x)| koja
+vra\' ca broj dobijen izdvajanjem prvih 8 bitova broja (bitovi na najve\'cim tezinama), a ostatak
+broja popunjava jedinicama. Testirati pozivom u main-u.
+
+
+Primeri:
+\begin{verbatim}
+Primer 1:            Primer 2:             Primer 3:           Primer 4:
+x = 88888899         x = 679012345         x = 34              x = 837312000
+
+rez: 100663295       rez: 687865855        rez: 16777215       rez: 838860799
+
+\end{verbatim}
+
+\item
+Napisati funkciju \verb|int f7(cvor* lista)| koja menja elemente liste na slede\' ci na\v cin:
+ako je teku\' ci element paran,
+slede\' ci element uve\' cava za 1, a ako je element neparan slede\' ci element smanjuje za 1.
+Parnost broja se odnosi na teku\' cu, promenjenu vrednost broja. Funkcija vra\'ca
+vrednost poslednjeg elementa liste.
+
+Primeri:
+\begin{verbatim}
+Primer 1:               Primer 2:
+1->2->3->4->5->NULL     6->78->2->3->1->NULL
+
+rez: 4                  rez: 2
+
+
+\end{verbatim}
+
+\begin{verbatim}
+Primer 3:                     Primer 4:
+-87->9->45->2->2->NULL        22->-34->0->2->1->NULL
+rez: 1                        rez: 0
+\end{verbatim}
+
+
+\item
+Napisati funkcju \verb|int f8(cvor* drvo, int nivo)|
+koja vra\'ca  broj elemenata drveta koji se nalaze na nivou \verb|nivo| (\verb|nivo>0|).
+Testirati pozivom u main-u.
+
+Primeri:
+\begin{verbatim}
+Primer 1:                Primer 2:
+sa standardnog ulaza     sa standardnog ulaza
+se unose redom:          se unose redom:
+6 4 12 3 10 32           7 2 10 23
+
+      6                     7
+     / \                   / \
+    4   12                2   10
+   /   /  \                     \
+  3   10  32                     23
+
+nivo: 3                  nivo: 1
+
+rez: 3                   rez: 1
+
+
+\end{verbatim}
+
+\begin{verbatim}
+Primer 3:                Primer 4:
+sa standardnog ulaza     sa standardnog ulaza
+se unose redom:          se unose redom:
+10 12                    7 4 20 3 15 23 2
+
+      10                     7
+        \                   / \
+         12                 4   20
+                          /   /  \
+nivo: 3                  3   15   23
+                        /
+rez: 0                 2
+
+                         nivo: 2
+
+                         rez: 2
+\end{verbatim}
+\end{enumerate}
+
+
+%---------------------------------------------------------------------
+\section{Programiranje 2, I smer, 2011/12, Zavr\v{s}ni ispit --- juli}
+%---------------------------------------------------------------------
+
+\subsection{Deo II}
+
+
+\begin{enumerate}
+\item Argumenti komadne linije su opcija (\verb|-m|, \verb|-v| ili \verb|-mv|) i re\v c.
+Ukoliko je opcija \verb|-m| pretvoriti sva slova re\v ci u mala slova, ukoliko je opcija
+\verb|-v| pretvoriti sva slova u re\v ci u velika slova, a ukoliko je opcija \verb|-mv|
+pretvoriti sva mala slova u velika, a sva velika slova u mala slova. Ukoliko opcija nije zadata
+ili je neta\v cno navedena ispisati -1.
+
+\begin{small}
+\begin{verbatim}
+ulaz: ./a.out -m Dan28Mesec2        ulaz: ./a.out -v DanDanas;Pamtim
+
+izlaz: dan28mesec2                  izlaz: DANDANAS;PAMTIM
+----------------------------------------------------------------------------------
+
+ulaz: ./a.out -mv VArljivoLeto68    ulaz: ./a.out -nn greska
+
+izlaz: vaRLJIVOlETO68               izlaz: -1
+
+\end{verbatim}
+\end{small}
+
+
+\item Napisati funkciju \verb|void f2(char* ime, int n)| koja preko argumenata komandne linije dobija
+ime datoteke i ceo broj n. Iz datoteke ispisati na standardni izlaz svaku n-tu re\v c. Ukoliko
+argumenti nisu pravilno zadati ispisati -1. Gre\v ske mogu biti da nije zadato ime datoteke
+ili ceo broj. Pretpostavlja se da ako je une\v sen drugi argument je sigurno ceo broj.
+Ukoliko datoteka ne postoji ispisati -1.
+
+
+\begin{small}
+\begin{verbatim}
+ulaz: ./a.out primer1.txt 3              ulaz: ./a.out 4
+
+izlaz: Volfganga Nemca koji godine,      izlaz: -1
+       da pravi zarobljenik veliki
+----------------------------------------------------------------------------------------------
+ulaz: ./a.out                            ulaz: ./a.out primer2.txt 10
+
+izlaz: -1                                izlaz: Ban Bil mir
+\end{verbatim}
+\end{small}
+
+
+\item Sa standarnog ulaza unosi se ceo pozitivan broj i pozitivan broj \verb|p|. Napisati funkciju \\
+\verb|unsigned int f3(unsigned int x,unsigned int p)| koja menja
+mesta prvih i poslednjih \verb|p| bitova (npr. p = 3 i broj x = 111....010 treba da se dobije izlaz
+x = 010...111)
+
+
+\begin{small}
+\begin{verbatim}
+x = 1234567890         x = 567890567           x = 7484                 x = 827262627
+p = 5                  p = 7                   p = 4                    p = 10
+
+izlaz: 2442527433      izlaz: 265900688        izlaz: 3221232944        izlaz: 2832139461
+\end{verbatim}
+\end{small}
+
+
+\item U datoteci \verb|podaci.txt| se nalaze re\v ci i pozitivni celi brojevi. Napisati funkciju
+\verb|void f4(int m, int n)| koja sortira leksikografski re\v ci u rastu\'cem
+poretku i  ispisuje re\v c na poziciji \verb|m|. Potom sortirati brojeve u opadaju\'cem poretku
+i ispisati broj na poziciji \verb|n|. Ukoliko datoteka ne postoji ispisati -1. Ukoliko \verb|m|
+i \verb|n| nisu u odgovaraju\'cem opsegu ispisati -1. Re\v ci su maksimalne du\v zine 20 karaktera.
+
+
+\begin{small}
+\begin{verbatim}
+podaci.txt: Tekst 32 je sa 67 brojevima 166          podaci.txt: Drugi 789
+            i 890 zato 2 je cudan.                               interesantni 56 3 4
+m = 2                                                            primer
+n = 2                                                m = 4
+                                                     n = 2
+
+izlaz: cudan                                         izlaz: -1
+       67
+------------------------------------------------------------------------------------------------
+
+podaci.txt: 38 17 Londonski 67danas umetnik Patrik Vejl
+            postao je 92 internet senzacija 14 42.
+m = 4
+n = 1
+
+izlaz: internet
+       42
+\end{verbatim}
+\end{small}
+
+
+\item Napisati funkciju \verb|void f5(cvor* l1, cvor* l2)| koja spaja dve rastu\'ce sortirane liste tako
+da rezultat i dalje bude sortiran. Rezultat sa\v cuvati u prvoj listi. Rezulatuju\' cu
+listu ispisati na standardni izlaz. Lista se u\v citava sve dok se ne unese 0.
+
+\begin{small}
+\begin{verbatim}
+(napomena: lista se unosi obrnutim redosledom i na kraju se unosi 0)
+
+ulaz: 8->9->15->62->NULL                            ulaz: 8->9->15->62->NULL
+      15->67->100->102->NULL                              2->4->16->NULL
+
+izlaz: 8->9->15->15->62->67->100->102->NULL         izlaz: 2->4->8->9->15->16->NULL
+\end{verbatim}
+\end{small}
+
+
+\item Napisati funkciju koja iz datoteke \verb|karakteri.txt|
+ucitava karaktere i sme\v sta ih u binarno pretra\v zivacko drvo.
+Uz svaki karakter \v cuvati i broj pojavljivanja karaktera u datoteci.
+Ispisati na standardni izlaz karakter koji se pojavljuje najve\'ci broj puta u datoteci.
+
+
+\begin{small}
+\begin{verbatim}
+karakteri.txt: Danas je lep dan.          karakteri.txt: 78665555512
+
+izlaz: a                                  izlaz: 5
+------------------------------------------------------------------------------
+
+karakteri.txt: U Datoteci
+               je probni test
+               za Zadatke sa ispita.
+
+izlaz: a (izlaz moze biti i: t, ' ' (blanko znak))
+\end{verbatim}
+\end{small}
+\end{enumerate}
+
+
+%---------------------------------------------------------------------
+\section*{Programiranje 2, I smer, 2010/11, zavr\v{s}ni ispit, oktobar 2012}
+%---------------------------------------------------------------------
+
+
+
+\begin{enumerate}
+\item Napisati funkciju \verb|int f1(int x, int p, int q)| koja kao argumente dobija 3 cela broja \verb|x|,
+\verb|p|, \verb|q|, a kao rezultat vra\'ca broj
+koji je jednak broju \verb|x| kome je invertovan svaki drugi bit izme\d u pozicije \verb|p| i \verb|q|,
+\v citano sa desna na levo. Ukoliko \verb|p| ili \verb|q| izlaze iz opsega ili \verb|p| $>$ \verb|q|
+vratiti \verb|-1| kao rezultat.
+
+\begin{verbatim}
+Primer 1:             Primer 2:             Primer 3:                 Primer 4:
+ulaz: 3456 2 10       ulaz: -895 13 20      ulaz: 678910 21 31        ulaz: 657 19 33
+
+izlaz: 2260           izlaz: -697215        izlaz: -1431675906        izlaz: -1
+\end{verbatim}
+
+\item Napisati funkciju \verb|cvor* f2(cvor* L)| koja dobija glavu liste L
+kao argument, obr\'ce listu L i vra\'ca novu glavu.
+
+\begin{verbatim}
+ulaz: 4->1->2->67->0       ulaz: 0           ulaz: -56->28->31->-1000->0    ulaz: 10->9->8->1000000->0
+izlaz: 67 2 1 4            izlaz:            izlaz: -1000 31 28 -56         izlaz: 1000000 8 9 10
+\end{verbatim}
+
+
+\item Stablo se u\v citava tako da su u listovima realni brojevi,
+a u unutrasnjim cvorovima neka od operacija \verb|+|, \verb|-|, \verb|*| i \verb|/|.
+Funkcija \verb|float f3(svor* drvo)| ra\v cuna izraz u stablu i vra\'ca rezultat. Ukoliko
+do\d e do deljenja nulom funkcija vra\'ca -1.
+
+
+\begin{verbatim}
+Primer 1:           Primer 2:             Primer 3:                 Primer 4:
+
+ulaz: + 3 4         ulaz: + * 5 4 2       ulaz: + 3 * * 5 4 3       ulaz: / + 5 4 3
+izlaz: 7            izlaz: 22             izlaz: 63                 izlaz: 3
+\end{verbatim}
+
+
+\item Argumenti komandne linije su cu celi brojevi \verb|a|, \verb|n|, \verb|m|, \verb|p|. Napisati program koji ra\v cuna niz
+\begin{verbatim}
+a mod n,
+2a mod n,
+3a mod n
+...
+m*a mod n
+\end{verbatim}
+sortira ga u rastu\' cem poretku i ispisuje u datoteku \verb|rez.txt| p-ti \v clan niza (brojanje indeksa pocinje od 0)
+
+\begin{verbatim}
+Primer 1:                 Primer 2:                   Primer 3:
+ulaz: ./a.out 5 6 3 1     ulaz: ./a.out 23 10 5 2     ulaz: ./a.out 10 10 100 45
+rez.txt: 4                rez.txt: 5                  rez.txt: 0
+----------------------------------------------------------------------------------------------------------------
+\end{verbatim}
+
+\begin{verbatim}
+Primer 4:
+ulaz: ./a.out 634 2 34 67
+rez.txt: -1
+\end{verbatim}
+
+Ukoliko je do\v slo do neke od gre\v saka (nije ta\v can broj argumenata komandne linije, p$>$n,...)
+u \verb|rez.txt| upisati \verb|-1|.
+
+\item Argumenat komandne linije su ime datoteke i ceo broj \verb|n|.
+Napisati funkciju \verb|void f5(char* ime_dat, int n)|
+koja ispisuje na standardni izlaz svaku \verb|n|-tu re\v c iz datoteke.
+Ukoliko datoteka ne postoiji ili je broj \verb|n| neispravno zadat ili
+nema dovoljno argumenenata komadne linije ispisati \verb|-1|. Pretpostaviti
+da je maksimalna du\v zina re\v ci 100.
+
+
+\begin{verbatim}
+Primer 1:                                          Primer 2:
+
+./a.out dat.c 3                                    ./a.out p.txt 2
+dat.c: Kada 7642oIO solja za kafu                  U sobi ima 2
+       ekspres lonac, hleb i mleko.                kreveta, sto i racunar
+       Spisak za kupovinu.                         tepih i jos neka sitna oprema.
+
+izlaz: solja ekspres i za                          izlaz: sobi 2 sto racunar i neka oprema.
+-----------------------------------------------------------------------------------------
+\end{verbatim}
+
+\begin{verbatim}
+Primer 3:                                          Primer 4:
+
+./a.out dat.c -67                                  ./a.out primer.txt
+
+izlaz: -1                                          izlaz: -1
+\end{verbatim}
+
+\item U datoteci \verb|kupci.txt| se nalaze podaci o kupcima oblika \verb|ime kolicina| gde je \verb|ime| ime kupca
+koji je kupio proizvod, a \verb|kolicina| koli\v cina proizvoda. Kupac se mo\v ze vi\v se puta pojaviti
+u datoteci. Napraviti binarno pretra\v ziva\v cko drvo prema imenima kupaca. Na standarni izlaz ispisati
+ime onog kupca koji je uzeo najvi\v se proizvoda. Pretpostavlja se da je datoteka dobro struktuirana.
+
+
+\begin{verbatim}
+kupci.txt:          kupci.txt:        kupci.txt:          kupci.txt:
+pera 30             mika 10           zika 50
+marko 10            mira 15           ana 70
+jelena 14           mika 6
+marko 0
+
+izlaz: pera         izlaz: mika       izlaz: ana          izlaz:
+\end{verbatim}
+\end{enumerate}
+
+
+%---------------------------------------------------------------------
+\section{Programiranje 2, I smer, 2011/12, Zavr\v{s}ni ispit --- januar}
+%---------------------------------------------------------------------
+
+\subsection{Deo II}
+
+\begin{enumerate}
+\item Napisati funkciju \verb|float f5(float a, float b, float eps)| koja
+ra\v cuna nulu funkcije $f(x) = 5*sin(x)*ln(x)$ na intervalu \verb|(a, b)| sa ta\v cno\v s\'cu \verb|eps|. Brojevi
+\verb|a|, \verb|b| i \verb|eps| unose se sa standardnog ulaza.\\
+\textbf{Napomena1}: koristiti algoritam binarne pretrage\\
+\textbf{Napomena2}: u \verb|math.h| nalaze se \verb|float sin(float)| za ra\v cunanje sinusa i
+ \verb|float log(float x)| za ra\v cunanje prirodnog logaritma.
+Testirati funkciju pozivom u main-u.
+
+\begin{verbatim}
+Primer 1:        Primer 2:             Primer 3:        Primer 4:
+0.9 2 0.01       2 4 0.000001          4 10 0.001       10 20 0.001
+
+0.998828         3.141593              6.283142         12.566376
+\end{verbatim}
+
+
+\item Napisati funkciju koja pronalazi zbir parnih brojeva na neparnim pozicijama u nizu koji se zadaje kao argument komandne linije. Svi brojevi su pozitivni (ovo ne treba proveravati).
+Brojanje pozicija pocinje indeksom 0. Rezultat se ispisuje na standardni izlaz.
+
+\begin{verbatim}
+Primer 1:                 Primer 2:    Primer 3:                                Primer 4:
+\a.out 23 4 7 89 12       \a.out       \a.out 54 1 23 76 18 90 322 45678 12     \a.out 18 17 16
+
+4                         0             45844                                   0
+\end{verbatim}
+
+
+\item Napisati program koji iz datoteke \verb|brojevi.txt| u\v citava cele brojeve (nije unapred poznato koliko
+se brojeva nalazi u datoteci) pa zatim ceo broj sa standardnog ulaza. Program treba da vrati indeks
+tog broja u nizu (ako se broj nalazi u nizu) ili indeks i vrednost elementa niza koji je po apsolutnoj
+vrednosti najbli\v zi tom broju. Ukoliko ne bude kori\v s\'cena dinami\v cka alokacija memorije zadatak ne\'ce
+biti priznat. Indeksiranje niza po\v cinje od 0.
+
+\begin{verbatim}
+Primer 1:                               Primer 2:                        Primer 3:
+brojevi.txt: 23 -4 56 13 4 56 7         brojevi.txt: -7 8 14 12          brojevi.txt: -7 8 14 12
+56                                      -8                               -13
+
+2                                        1                               2
+
+---------------------------------------------------------------------------------------------------------------
+Primer 4:
+brojevi.txt: -7 8 14 12
+56
+
+2
+\end{verbatim}
+
+
+\item Napisati funkciju \verb|void f4(cvor* lista)| koja iz liste izbacuje svaki drugi element.
+U listi se nalaze celi brojevi. Lista se unosi sa standardnog ulaza sve dok se ne unese 0.
+
+\begin{verbatim}
+
+Primer 1:             Primer 2:         Primer 3:           Primer 4:
+1 2 3 4 5 6 0         1 2 3 4 5 0       34 5 -78 23 0       -16 72 13 24 98 0
+
+1 3 5                 1 3 5             34 -78              -16 13 98
+\end{verbatim}
+
+
+
+\item Napisati program koji u zavisnosti od toga da li je suma bitova broja parna ili neparna,
+\v siftuje bitove broja za jedno mesto ulevo odnosno u desno.
+
+\begin{verbatim}
+Primer 1:           Primer 2:        Primer 3:       Primer 4:
+3                   7                4567            8765
+
+6                   3                9134            4382
+\end{verbatim}
+
+
+\item Funkcija vr\v si rekurzivnu rotaciju drveta oko svih \v cvorova,
+dakle dobija se odraz prvobitnog drveta u ogledalu.
+\begin{verbatim}
+Primer 1:                                       Primer 2:
+
+    7                                               2
+   / \                                             / \
+  2   10                                        -10   8
+ / \ / \                                               \
+4  5 9  17                                              7
+       /
+      12
+       \
+        13
+
+unos: 7 2 4 5 10 9 17 12 13 0                   unos: 2 -10 8 7 0
+\end{verbatim}
+se transformi\v se u:
+\begin{verbatim}
+     7                                              2
+    / \                                            / \
+  10   2                                          8   -10
+ / \  / \                                        /
+17  9 5  4                                      7
+ \
+  12
+ /
+13
+
+ispis: 7 10 17 12 13 9 2 5 4                   ispis: 2 8 7 -10
+-----------------------------------------------------------------------------------
+\end{verbatim}
+
+
+\begin{verbatim}
+Primer 3:                                   Primer 4:
+   5                                          10
+  / \                                        /  \
+ 2   10                                     7    23
+                                           /     / \
+unos: 5 2 10 0                            2     12  40
+
+                                            unos: 10 7 2 23 12 40 0
+\end{verbatim}
+se transformi\v se u:
+\begin{verbatim}
+  5                                                10
+ / \                                              /  \
+10  2                                            23   7
+                                                / \    \
+ispis: 5 10 2                                  40 12   2
+
+                                                 ispis: 10 23 40 12 7 2
+
+\end{verbatim}
+\end{enumerate}
+
+

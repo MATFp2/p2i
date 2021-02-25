@@ -1,0 +1,110 @@
+\chapter{Testovi i ispiti 2019/2020}
+
+%------------------------------------------------------------------------
+\section{Programiranje 2, ispit, junski rok 2019/2020}
+%------------------------------------------------------------------------
+
+\begin{enumerate}
+
+\item U datoteci \texttt{fajlovi.txt} nalaze se, u svakom redu, ime fajla, dvotačka, a zatim i sadržaj fajla sa tim imenom. Potrebno je napraviti fajl sa tim imenom, a zatim tekst koji ide nakon dvotačke upisati u taj fajl, za svaki red u datoteci fajlovi.txt. \\
+\textbf{NAPOMENA}: \textit{Fajlovi se mogu ponavljati, u tom slučaju nadovezati tekst. Pretpostaviti da imena fajlova neće biti duža od 15 karaktera, kao i da dužina linije u fajlu neće biti duža od 200 karaktera. }
+\begin{verbatim}
+Primer 1:                                     Primer 2:                               
+fajlovi.txt:                                  fajlovi.txt:
+fajl1.txt:Ovo je tekst fajla 1                datoteka.txt:Ovo je neka datoteka           
+fajl2.txt:Ovo je tekst fajla 2                rezultati.txt:Ovo su neki rezultati
+fajl3.txt:Ovo je tekst fajla 3 
+   
+fajl1.txt:                                    datoteka.txt:
+Ovo je tekst fajla 1                          Ovo je neka datoteka
+
+fajl2.txt:                                    rezultati.txt:
+Ovo je tekst fajla 2                          Ovo su neki rezultati
+
+fajl3.txt:
+Ovo je tekst fajla 3
+-----------------------------------------------------------------------------------
+Primer 3 (prazan fajl):                       Primer 4 (ponavljanje):
+fajlovi.txt:                                  fajlovi.txt:
+zoran.txt:Tekst                               fajl1.txt:Ovo je tekst
+fajl.txt:                                     fajl2.txt:fajl 2
+                                              fajl1.txt:fajla 1  
+                                              
+zoran.txt:                                    fajl1.txt:
+Tekst                                         Ovo je tekstfajla 1
+
+fajl.txt:                                     fajl2.txt:
+                                              fajl 2
+
+\end{verbatim}
+\item Napisati program koji sa standardnog ulaza učitava indekse studenata, njihova imena i prezimena (svaki student u jednom redu, ne više od 128 redova), a potom iste ispisuje na standardni izlaz sortirane rastuće po broju indeksa, a u slučaju istog broja indeksa, opadajuće po godini. Koristiti algoritam \textbf{insertion sort}. Pretpostavka je da su svi redovi zadati u ispravnom formatu.\\
+\textbf{NAPOMENA}: \textit{ako je upotrebljen neki drugi algoritam, na zadatku se moze osvojiti najviše 60\%.}
+\begin{verbatim}
+Primer 1:                     Primer 2:                   Primer 3:                    
+ 
+Standardni ulaz:              Standardni ulaz:            Standardni ulaz:
+234/2014 Marko Markovic       56/1999 Marko Maric
+1/2014 Pera Peric             223/2015 Pera Peric
+234/2011 Branko Brankovic     224/2015 Mira Miric
+123/2012 Branko Brankovic
+
+Standardni izlaz:             Standardni izlaz:            Standardni izlaz:
+1/2014 Pera Peric             56/1999 Marko Maric
+123/2012 Branko Brankovic     223/2015 Pera Peric
+234/2014 Marko Markovic       224/2015 Mira Miric
+234/2011 Branko Brankovic
+
+\end{verbatim}
+
+
+\item Sa standarnog ulaza unosi se prvo broj $k$, a zatim ime datoteke u kojoj se nalaze informacije o studentima (u svakom redu ime, prezime i prosek).
+Napisati funkcije za rad sa listama studenata:\\
+(a) \textbf{Cvor *napraviCvor(char *ime, char *prezime, double prosek)} koja vraća pokazivač na novi čvor liste,\\
+(b) \textbf{void dodajNaKraj(Cvor **glava, char *ime, char *prezime, double prosek)} koja kreira novi čvor i dodaje ga na kraj liste,\\
+(c) \textbf{double suma(Cvor *glava, double k)} koja vraća sumu proseka svih studenata koji imaju prosek veći od $k$.\\
+Zatim u glavnom programu testirati napisane funkcije, prvo učitati listu studenata iz datoteke dodavanjem na kraj, a zatim pozvati funkciju suma i ispisati vrednost na standardni izlaz zaokruženu na dve decimale.\\
+\textbf{NAPOMENA}: \textit{Zadatak se mora uraditi pomoću liste, inače nosi 0 poena. Ime i prezime neće sadržati više od po 15 karaktera. Ukoliko prosek nije u intervalu [6,10] ispisati -1 na standardni izlaz za greške.}
+\begin{verbatim}
+Primer 1:                             Primer 2:  (primer prazne liste)           
+
+studenti.txt:                         studenti.txt:
+Mika Mikic 8.3
+Zoran Petkovic 9.4
+Goran Peric 7.4
+Milan Milanovic 9.3
+Milan Maric 6.5
+
+Standardni ulaz:                      Standardni ulaz:      
+7.5 studenti.txt                      7.5 studenti.txt
+
+Standardni izlaz:                     Standardni izlaz:     
+27.00                                 0.00
+---------------------------------------------------------------------------
+Primer 3:                             Primer 4 (nepostojeca datoteka):   
+
+lista.txt:
+Branko Brankovic 8.2
+Petar Petrovic 6.7
+Goran Gruzic 6.1
+Aleksandar Golubovic 8.0
+
+Standardni ulaz:                      Standardni ulaz:
+8.3 lista.txt                         7.7 lista.txt
+
+Standardni izlaz:                     Standardni izlaz za greške:
+0.00                                  -1
+
+\end{verbatim}
+
+\item Sa standardnog ulaza unosi se binarno stablo pretrage. Napisati program koji računa zbir vrednosti čvorova koji imaju tačno jedno dete. Na standardni izlaz ispisati zbir, a potom i sve čvorove kojima je vrednost veća od izračunatog zbira, infiksno (LKD).\\
+\textbf{NAPOMENA}:\textit{ Za rad sa binarnim pretraživačkim stablima obavezno koristiti datu biblioteku (\textbf{stabla.h} i \textbf{stabla.c}). Zadatak se mora rešiti korišćenjem binarnog pretraživačkog stabla. U suprotnom broj osvojenih poena je $0$.}
+\begin{verbatim}
+Primer 1:               Primer 2:               Primer 3:            Primer 4            
+Standardni ulaz:        Standardni ulaz:        Standardni ulaz:     Standardni ulaz:
+6 8 -7 -4 7             10 5 15 -20 7 12 16     -3 -2 1 3 4          1
+
+Standardni izlaz:       Standardni izlaz:       Standardni izlaz:    Standardni izlaz:
+1 6 7 8                 0 5 7 10 12 15 16       -1 1 3 4             0 1
+\end{verbatim}  
+ 
+\end{enumerate}	

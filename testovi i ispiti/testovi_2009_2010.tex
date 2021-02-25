@@ -1,0 +1,287 @@
+% *************************************************************
+% *************************************************************
+% *************************************************************
+\chapter{Testovi i ispiti 2009/10}
+% *************************************************************
+% *************************************************************
+% *************************************************************
+
+
+
+\section{Programiranje 2, I smer, 2009/10, Kolokvijum 1}
+
+
+\begin{enumerate}
+\item Napisati funkciju koja kao argumente prima kvadratnu matricu
+  celih brojeva i njenu dimenziju, a vra\'ca 1 ako je matrica donja
+  trougaona, odnosno 0 ako nije. Pretpostavka je da je maksimalna dimenzija
+  matrice 100. Matrica je donja trougaona ako se u
+  gornjem trouglu (iznad glavne dijagonale, ne uklju\v cuju\' ci je)
+  nalaze sve nule. Napisati prate\'ci program koji omogu\'cava
+  u\v{c}itavanje matrice iz datoteke \v{c}ija je putanja zadata prvim
+  argumentom komandne linije, a format datoteke je takav da je prvi
+  pro\v{c}itani broj dimenzija matrice, a potom sledi niz brojeva koji
+  popunjavaju matricu sleva nadesno, odozgo na dole (vrstu po vrstu).
+
+\item Napisati program koji omogu\'cava u\v{c}itavanje artikala iz
+  datoteke koja se zadaje prvim argumentom komandne linije. Jedan
+  artikal je definisan strukturom
+
+\begin{verbatim}
+typedef struct {
+  char ime[50];
+  float tezina;
+  float cena;
+} Artikal;
+\end{verbatim}
+
+Datoteka je ispravno formatirana i sadr\v{z}i najvi\v{s}e 500
+artikala. Program treba da, nakon u\v{c}itavanja, ispi\v{s}e sve
+artikle sortirane po zadatom kriterijumu. Kriterijum se zadaje kao
+drugi argument komandne linije i mo\v{z}e biti: \verb|i| - sortirati
+po imenu; \verb|t| - sortirati po te\v{z}ini; \verb|c| - sortirati po
+ceni.
+
+Podrazumeva se da je sortiranje u rastu\' cem redosledu, a da se
+za sortiranje po imenu koristi leksikografski poredak (dozvoljeno
+je kori\v s\' cenje funkcije \verb|strcmp|).  Koristiti generi\v
+cku funkciju za sortiranje \verb|qsort| iz standardne biblioteke.
+
+\item Napisati funkciju sa prototipom
+
+\begin{verbatim}
+double treci_koren(double x, double a, double b, double eps);
+\end{verbatim}
+
+koja, metodom polovljenja intervala, ra\v{c}una tre\'ci koren
+zadatog broja $x$ ($x \geq 1$), tj.~za dato $x$ odre\d uje broj
+$k$ za koji va\v{z}i $k^3=x$, sa ta\v cno\v s\' cu $eps$ i sa
+po\v{c}etnom pretpostavkom da se broj $k$ nalazi u datom intervalu
+$[a,b]$. Napisati prate\'ci program koji omogu\'cava korisniku da
+unese broj $x$ i tra\v{z}enu ta\v{c}nost. Korisnik ne unosi
+po\v{c}etnu procenu intervala, a za po\v{c}etni interval mo\v{z}e
+se uzeti $[0,x]$. Ispisati poruku o gre\v{s}ci ako je uneto $x$
+manje od $0$.
+\end{enumerate}
+
+%------------------------------------------------------------------------------------------------
+
+
+\section{Programiranje 2, I smer, 2009/10, Zavr\v sni ispit (juni 2010)}
+
+
+\begin{enumerate}
+\item Napisati program koji sa standardnog ulaza u\v{c}itava pozitivne cele
+brojeve dok ne u\v{c}ita nulu kao oznaku za kraj. Na standardni izlaz ispisati
+koji broj se pojavio najvi\v{s}e puta me{\d}u tim brojevima. Na primer, ako se
+na ulazu pojave brojevi: 2 5 12 4 5 2 5, program treba da ispi\v{s}e broj 5.
+Zadatak resiti kori\v{s}\'cenjem dinami\v{c}ke realokacije i strukture koja
+sadr\v{z}i ceo broj i broj njegovih pojavljivanja. Slo\v{z}enost izvr\v{s}avanja
+napisanog programa nije bitna.
+
+\item Napisati funkciju \verb|cvor* nova_lista(cvor* L1, cvor* L2);|
+koja od dve date liste \verb|L1| i \verb|L2|, u kojima se \v{c}uvaju celi brojevi, formira
+novu listu koja koja sadr\v{z}i alterniraju\'ce raspore{\d}ene elemente iz lista \verb|L1| i
+\verb|L2| (prvi element iz \verb|L1|, prvi element iz \verb|L2|, drugi element \verb|L1|,
+drugi element \verb|L2| itd.) sve dok ima elemenata u {\em obe} liste. Ne formirati nove
+\v{c}vorove, ve\'c samo postoje\'ce \v{c}vorove povezati u jednu listu, a kao rezultat
+vratiti po\v{c}etak te formirane liste.
+
+\item Neka su \v{c}vorovi binarnog stabla koje opisuje aritmeti\v{c}ki izraz opisani
+slede\'com strukturom:
+
+\begin{verbatim}
+typedef struct tagCvor
+{
+    int tipCvora;
+    int tipOperatora;
+    int vrednostKonstante;
+    char oznakaPromenljive;
+
+    struct tagCvor *levo;
+    struct tagCvor *desno;
+} CVOR;
+\end{verbatim}
+
+\v{C}lan \verb|tipCvora| moze imati slede\'ce vrednosti:
+\begin{itemize}
+\item[0] - \v{c}vor je operator i mora imati oba deteta;
+\item[1] - \v{c}vor je konstanta i ne sme imati decu, vrednost je u \v clanu \verb|vrednostKonstante|;
+\item[2] - \v{c}vor je promenljiva sa oznakom koju defini\v{s}e \v{c}lan \verb|oznakaPromenljive|
+i ne sme imati decu.
+\end{itemize}
+
+\v{C}lan \verb|tipOperatora| mo\v{z}e imati slede\'ce vrednosti:
+\begin{itemize}
+\item[0] - sabiranje
+\item[1] - mno\v{z}enje
+\end{itemize}
+
+\begin{itemize}
+\item[(a)] Napisati funkciju \verb|void dodela(CVOR* koren, char promenljiva, int vrednost);|
+koja menja izraz dat korenom u izraz u kojem je svako pojavljivanje promenljive sa datom
+oznakom zamenjeno konstantom sa datom vredno\v{s}\'cu.
+
+\item[(b)] Napisati funkciju \verb|int imaPromenljivih(CVOR *koren);|
+koja ispituje da li izraz dat korenom sadr\v{z}i promenljive. Funkcija vra\'ca
+vrednost razli\v{c}itu od nule ako izraz ima promenljivih, odnosno nulu
+u suprotnom.
+
+\item[(c)] Napisati funkciju \verb|int vrednost(CVOR *koren, int* v);|
+koja na adresu na koju pokazuje drugi argument funkcije sme\v sta  vrednost izraza datog korenom \verb|koren| i vra\'ca vrednost \verb|0|,
+u slu\v{c}aju da izraz nema promenljivih. U slu\v{c}aju da izraz ima
+promenljivih funkcija treba da vra\'ca \verb|-1|.
+\end{itemize}
+
+Podrazumevati da je drvo izraza koje se prosle{\d}uje funkcijama ispravno konstruisano.
+\end{enumerate}
+
+
+\section{Programiranje 2, I smer, 2009/10, Zavr\v sni ispit (septembar 2010)}
+
+
+
+\begin{enumerate}
+\item Napisati funkciju \verb|void zamene(CVOR** p)| koja menja povezanu listu koja
+je zadata svojim po\v cetkom tako da zameni mesta 1. i 2. elementu, potom 3. i 4.
+itd. Na primer, lista \verb|1->2->3->4| postaje \verb|2->1->4->3|. Lista \verb|1->2->3->4->5->6|
+postaje \verb|2->1->4->3->6->5|. Lista mo\v ze sadr\v zati i neparan broj elemenata, pri
+\v cemu u tom slu\v caju poslednji ostaje na svom mestu. Nije dozvoljeno formiranje
+nove liste - lista se mo\v ze jedino preurediti u okviru postoje\' cih struktura.
+
+\item Dato je binarno stablo koje sadr\v zi cele brojeve. Napisati funkciju
+\verb|CVOR* nadjiNajblizi(CVOR* koren)| koja vra\' ca pokaziva\v c na \v cvor koji je najbli\v zi
+korenu i pri tom je deljiv sa 3. Ako ima vi\v se \v cvorova na istom rastojanju od
+korena koji zadovoljavaju svojstvo, vratiti pokaziva\v c na bilo koji.
+
+Na primer, u binarnom stablu
+\begin{verbatim}
+      5
+     / \
+    4   11
+   /   /  \
+  3   8   13
+         /  \
+        6   10
+\end{verbatim}
+
+\v Cvorovi sa vrednostima 3 i 6 zadovoljavaju uslov, ali je 3 bli\v zi korenu, po\v sto
+su potrebna dva poteza da bi se stiglo do njega, odnosno 3 poteza da bi se
+stiglo do broja 6.
+
+\item Data je datoteka \verb|apsolventi.txt|. U svakom redu datoteke nalaze se podaci o apsolventu:
+  \emph{ime} (ne ve\' ce od 20 karaktera), \emph{prezime} (ne ve\' ce od 20 karaktera),
+  \emph{broj preostalih ispita}. Datoteka je dobro formatirana i broj redova datoteke
+   nije poznat. Potrebno je u\v citati podatke iz datoteke, odrediti prose\v can broj zaostalih ispita
+   i potom ispisati imena i prezimena studenta koji imaju ve\' ci broj zaostalih ispita od prose\v cnog u datoteku
+   \v cije ime je zadato kao argument komadne linije. NAPOMENA: koristiti strukturu
+\begin{verbatim}
+     typedef struct {
+          char ime[20];
+          char prezime[20];
+          int br_ispita;
+     } APSOLVENT;
+\end{verbatim}
+\end{enumerate}
+
+
+\section{Programiranje 2, I smer, 2009/10, Zavr\v sni ispit (oktobar 2010)}
+
+
+\begin{enumerate}
+\item Argument programa je putanja tekstualne datoteke koja
+sadr\v{z}i isklju\v{c}ivo cele brojeve. Napisati program koji
+pronalazi i ispisuje na standardnom izlazu dva broja koja se
+najmanje razlikuju (ako ima vi\v{s}e parova koji se isto razlikuju,
+ispisati bilo koji par). Uputstvo: koristiti funkciju \verb|qsort|.
+
+\item Neka je \v cvor binarnog stabla definisan kao
+
+\begin{verbatim}
+typedef struct cvorStabla
+{
+  int broj;
+  struct cvorStabla* levi;
+  struct cvorStabla* desni;
+} CVOR;
+\end{verbatim}
+
+Napisati funkciju \verb|void obrni(CVOR* koren);| koja menja mesto levom
+i desnom podstablu za svaki \v cvor. Na primer, stablo
+
+\begin{verbatim}
+    5
+  /   \
+ 3     8
+  \   / \
+   4 6   9
+\end{verbatim}
+
+bi posle transformacije postalo:
+
+\begin{verbatim}
+     5
+   /   \
+  8     3
+ / \   /
+9   6 4
+\end{verbatim}
+
+Dozvoljeno je isklju\v civo reorganizovanje strukture drveta pomo\' cu postoje\' cih
+pokaziva\v ca, ne i formiranje novog drveta.
+
+
+\item Data je lista. Svaki \v cvor liste opisan je strukturom:
+
+\begin{verbatim}
+    typedef struct CVOR
+    {
+        int vr;
+        struct CVOR* sled;
+    }cvor;
+\end{verbatim}
+
+    Napisati funkciju \verb|void udvaja(cvor* lista, int br)| koja
+    udvaja svako pojavljivanje elementa \verb|br| u listi \verb|lista|. \\
+    Npr. za listu \verb|1->7->6->7->1->4->7| i br = 7 potrebno je dobiti listu: \verb|1->7->7->6->7->7->1->4->7->7|.
+\end{enumerate}
+
+
+
+\section{Zavr\v{s}ni ispit, Oktobar 2 2010.}
+
+
+\begin{enumerate}
+\item Date su dve liste. \v Cvor liste opisan je strukturom
+\begin{verbatim}
+    tupedef struct cvorliste
+    {
+        int vr;
+        struct cvorliste *sled;
+    }cvor;
+\end{verbatim}
+
+  Napisati funkciju \verb|void uredjuje(cvor **lista1, cvor* lista2)|
+  koja izbacije iz liste \verb|lista1| sve elemente koji se nalaze
+  u listi \verb|lista2|.
+
+\item Ime tekstualne datoteke zadaje se kao argument komadne linije.
+      U svakom redu datoteke nalazi se ime proizvoda (ne vi\v se od 20 karaktera)
+      i koli\v cina u kojoj se proizvodi (broj redova datoteke nije poznat). Proizvodi su
+      leksikografski pore\d ani. Sa standardnog ulaza u\v citava se ime proizvoda. Kori\v s\' cenjem
+      sistemske funkcije \verb|bsearch| prona\' ci u kojoj meri se dati proizvod proizvodi.
+      NAPOMENA: koristiti strukturu
+
+\begin{verbatim}
+        tupedef struct
+        {
+            char ime[20];
+            int kolicina;
+        }proizvod;
+\end{verbatim}
+
+\item Binarno drvo je perfektno balansirano akko za svaki \v cvor va\v zi da se broj \v cvorova levog
+      i desnog podrveta razlikuje najvi\v se za jedan. Napisati funkciju koja proverava da li binarno drvo
+      perfektno balansirano.
+\end{enumerate}
+

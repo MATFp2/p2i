@@ -1,0 +1,153 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{{\bf Programiranje 2\\ \emph{Napredni ulaz/izlaz. Vežbanje.}}}
+
+\usepackage{preambula}
+
+\def\d{{\fontencoding{T1}\selectfont\dj}}
+\def\D{{\fontencoding{T1}\selectfont\DJ}}
+
+\begin{document}
+
+\maketitle
+
+\section{Zadaci sa časa}
+\begin{z} Napisati program koji filtrira datoteku imena.txt tako sto na standardni izlaz ispisuje samo imena i prezimena. Maksimalna duzina imena, kao i prezimena je 50 karaktera.
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1: }
+imena.txt:
+1. Pera Peric 7.5
+2. Mika Mikic 8.0
+3. Milos Savic 10.0
+
+Pera Peric
+Mika Mikic
+Milos Savic
+\end{Verbatim}  
+\end{z}
+
+\begin{z} Programu se kroz argumente komandne linije zadaje proizvoljan broj razlomaka u formatu a/b.
+Na standardni izlaz ispisati vrednosti ovih razlomaka zapisane na dve decimale. U slučaju greške na standardni izlaz za greške ispisati -1.
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:            Primer 2:            Primer 3:}
+./a.out 3/4 2/3     ./a.out              ./a.out 2/3 34 1/2
+
+0.75 0.67                                -1
+\end{Verbatim}  
+\end{z}
+
+\begin{z} 
+Napisati program koji za uneto n, formira fajlove 1.txt, 2.txt, ..., n.txt i popunjava ih na sledeci nacin: \\
+U 1.txt smesta cele brojeve [0,n] sa korakom 1 (0,1,...,n) \\
+U 2.txt smesta cele brojeve [0,n] sa korakom 2 (0,2,4,...) \\
+...\\
+U n.txt smesta cele brojeve [0,n] sa korakom n (0 i n) \\
+Maksimalna dužina imena fajla je 50 karaktera. Vrednost promenljive n mora biti u opsegu [0,100]. U slučaju greške na standardni izlaz za greške ispisati -1.
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:              Primer 2:}
+5                     10
+
+1.txt: 0 1 2 3 4 5    1.txt: 0 1 2 3 4 5 6 7 8 9 10
+2.txt: 0 2 4          2.txt: 0 2 4 6 8 10
+3.txt: 0 3            3.txt: 0 3 6 9
+4.txt: 0 4            4.txt: 0 4 8
+5.txt: 0 5            5.txt: 0 5 10
+                      6.txt: 0 6
+                      7.txt: 0 7
+                      8.txt: 0 8
+                      9.txt: 0 9
+                      10.txt: 0 10
+\end{Verbatim}  
+\end{z}
+
+\begin{z} 
+Napisati program koji u datoteci čije se ime zadaje kao argument komandne linije, pronalazi i na standardni izlaz ispisuje sve linije u kojima se zadata reč pojavljuje n puta. Tražena rec i broj pojavljivanja n se zadaju sa standardnog ulaza. Maksimalna dužina reči je 20 karaktera. U slučaju greške, na standardni izlaz za greške ispisati -1.
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:        }
+./a.out ulaz.txt
+
+ulaz.txt
+ovo je linija koja rec kisa sadrzi samo jednom
+danas je padala kisa a sutra kisa nece padati
+kisa je padala kisa kisa padala
+kisa kisa kisa
+ova recenica ne sadrzi trazenu rec
+
+\textbf{Standardni ulaz:}
+3
+kisa
+
+\textbf{Standardni izlaz:}
+kisa je padala kisa kisa padala
+kisa kisa kisa
+
+\end{Verbatim}  
+\end{z}
+
+\newpage
+
+\section{Domaći zadaci}
+
+\begin{z}
+Zadaci 1 i 2 sa prošlogodišnjeg kolokvijuma (sve tri grupe)
+\end{z}
+
+\begin{z}
+Na standarnom ulazu se navode nazivi dve datoteke (ulazna i izlazna) i opcije. 
+U datoteci \v cije se ime navodi kao prvo nalaze se podaci o razlomcima: 
+   u prvom redu se nalazi broj razlomaka, a u svakom slede\' cem redu brojilac i imenilac jednog razlomka. 
+   Potrebno je kreirati strukturu koja opisuje razlomak i u\v citati niz razlomaka
+   iz datoteke, a potom:
+   \begin{description}
+      \item[a)] ukoliko je navedena opcija {\tt x}, upisati u drugu datoteku  
+         recipro\v cni razlomak za svaki razlomak iz niza (npr. za 2/3 treba upisati 3/2)
+      \item[b)] ukoliko je navedena opcija {\tt y}, upisati u datoteku 
+         realnu vrednost (ispisati samo ne--nula decimale) recipro\v cnog razlomka svakog razlomka iz niza 
+(npr. za 2/3 treba upisati 1.5)  
+   \end{description}
+   Mo\v zemo pretpostaviti da se u datoteci sa podacima o razlomcima nalazi najvi\v se 100 razlomaka.
+
+  Prilikom pokretanja programa se, pored naziva ulazne i izlazne
+  datoteke, navode i opcije {\tt -x} i {\tt -y}. Mogu\'ce je navesti jednu ili
+  obe opcije. Maksimalna du\v zina naziva datoteka je 20 karaktera.
+  
+  Mogu\' ci na\v cini pokretanja:
+  \begin{Verbatim}
+   ulaz.txt izlaz.txt -x
+   ulaz.txt izlaz.txt -y
+   ulaz.txt izlaz.txt -yx
+   ulaz.txt izlaz.txt -xy
+  \end{Verbatim}
+\end{z}
+
+\begin{z}
+  Za svaki automobil poznati su marka, model i cena. Iz datoteke \v cije
+  se ime zadaje sa standardnog ulaza u\v citava se broj automobila a potom
+  i podaci za svaki automobil. Program treba da:
+  \begin{description}
+  \item[a)] izra\v cuna prose\v cnu cenu po marki kola
+  \item[b)] za maksimalnu cenu koju je kupac spreman da plati, a koja se zadaje
+  kao argument komandne linije, da ispi\v se automobile u tom cenovnom
+  rangu zajednu sa prose\v cnom cenom odgovarajuce marke.
+  \end{description}
+  
+  Mo\v zemo pretpostaviti da se model i marka sastoje od jedne re\v ci i 
+  da svaka od njih sadr\v zi najvi\v se 30 karaktera kao i da se u datoteci
+  nalaze podaci za najvi\v se 100 automobila. Maksimalna du\v zina naziva datoteka je 20 karaktera.
+\end{z}
+
+\end{document}
+
+\begin{z}
+Ovdde ide tekst zadatka.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:}
+nije bf             vlvlvl
+nesto dalje         zzzz
+\end{Verbatim}

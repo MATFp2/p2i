@@ -1,0 +1,17 @@
+@media only screen and (min-width : 992px) {
+	body {
+		margin-top: 100px;
+	}
+}
+
+.notif {
+	text-align: center;
+	position: fixed;
+	background-color: red;
+	color: white;
+	z-index: 1001;
+	top: 60px;
+	height: 30px;
+	padding-top: 3px;
+	width: 100%;
+}

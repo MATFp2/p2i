@@ -1,0 +1,273 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{{\bf Programiranje 2\\ \emph{Dinamička alokacija memorije}}}
+
+\usepackage{preambula}
+
+\def\d{{\fontencoding{T1}\selectfont\dj}}
+\def\D{{\fontencoding{T1}\selectfont\DJ}}
+
+\begin{document}
+
+\maketitle
+
+\section{Zadaci sa časa}
+
+\begin{z}
+Napisati program koji sa standardnog ulaza učitava dimenziju niza celih brojeva, a zatim i njegove
+elemente. Ne praviti pretpostavke o dimenziji niza. Na standardni
+izlaz ispisati učitane brojeve u obrnutom poretku.
+U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:                Primer 3:}
+5                        7                        -5
+1 2 3 4 5                12 10 56 -98 15 2 100    -1
+
+5 4 3 2 1                100 2 15 -98 56 10 12
+\end{Verbatim}
+
+\begin{z}
+Napisati program koji sa standardnog ulaza učitava niz razlomaka. Prvo se učita broj razlomaka,
+a zatim i razlomci u obliku brojilac imenilac. Na standardni izlaz ispisati sve razlomke čija je vrednost veća od
+prosečne vrednosti svih učitanih razlomaka, u obliku brojilac/imenilac. 
+Ne praviti nikakve pretpostavke o maksimalnoj dimenziji niza. U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:               }
+5                        3
+1 2                      -5 6
+3 4                      100 31
+5 7                      2 9
+2 3
+6 5
+
+6/5                      100/31
+\end{Verbatim}
+
+\begin{z}
+Napisati program koji učitava niz celih brojeva iz datoteke brojevi.txt  sve do unosa broja 0, koristeći funkciju za realokaciju memorije sa korakom k (koji se zadaje kao argument komandne linije). Na standardni izlaz ispisati sve brojeve koji su veći od središnjeg elementa niza. U slučaju parne dimenzije niza, središnji element računati kao aritmetičku sredinu dva elementa najbliža sredini. 
+U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:  }
+./a.out 10               ./a.out 5
+brojevi.txt              brojevi.txt                    
+1 2 3 4 5 0              12 10 56 -98 15 2 100 55 0
+
+4 5                      12 10 56 15 2 100 55
+\end{Verbatim}
+
+\begin{z}
+Napisati program koji sa standardnog ulaza učitava matricu celih brojeva. Prvo se učitaju broj
+vrsta i kolona matrice, a zatim i elementi matrice. Na standardni izlaz ispisati učitanu matricu.
+Zatim napisati funkciju \\
+\begin{center}{\tt int sum\_max(int **A, int n, int m)} \end{center}
+koja računa zbir najvećih elemenata u svakoj vrsti. Ispisati rezultat izvršavanja funkcije na standardni izlaz.
+ U slučaju greške na standardni izlaz za greške ispisati {\tt -1}.
+\end{z}
+
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:               }
+2 3                      3 3
+1 2 3                    -5 6 6
+4 5 6                    100 31 10
+                         2 9 -55
+
+1 2 3                    -5 6 6
+4 5 6                    100 31 10
+9                        2 9 -55
+                         115
+\end{Verbatim}
+
+\begin{z}
+Sa standardnog ulaza se učitava reč pretrage, dimenzija niza, a zatim i niz reči. 
+Pretpostavljati da je maksimalna duzina reči 20 karaktera (prostor za reč alocirati dinamički).
+Na standardni izlaz ispisati indeks prvog i poslednjeg pojavljivanja tražene reči u okviru unetog niza reči. U slučaju da 
+se reč ne pojavljuje u nizu, ispisati -1 za obe pozicije. 
+U slučaju greške na standardni izlaz za greške ispisati {\tt -1}.
+\end{z}
+
+
+\begin{Verbatim}%
+  [formatcom=\color{primeri}] 
+\textbf{Primer 1:                                              Primer 2:}
+kisa	                                           programiranje
+9                                                      3
+danas je padala kisa a sutra kisa nece padati          mi volimo matematiku
+
+3 6                                                    -1 -1 
+\end{Verbatim}
+
+\begin{z}
+Definisati strukturu 
+\begin{verbatim}
+typedef struct{
+    unsigned int a, b;
+    char ime[5];
+} PRAVOUGAONIK;
+\end{verbatim}
+kojom se opisuje pravougaonik du\v zinama svojih stranica i imenom. Napisati program koji iz datoteke \v cije ime se zadaje kao argument komandne linije u\v citava pravougaonike (nepoznato koliko), a zatim prvo ispisuje imena onih pravougaonika koji su kvadrati, a nakon toga ispisuje vrednost najve\' ce povr\v sine medju pravougaonicima koji nisu kvadrati. 
+U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\begin{center}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                        Primer 2:          Primer 3:           Primer 4:              Primer 5:}
+./a.out pravougaonici.dat        ./a.out dva.dat    ./a.out tri.dat     ./a.out primerx.dat    ./a.out prazna.dat
+pravougaonici.dat:               dva.dat:           tri.dat:            primerx.dat:           prazna.dat:
+2 4 p1                           5 2 pm             5 5 m               9 7 p
+3 3 p2                           4 7 pv             3 3 s
+1 6 p3                                              8 8 xl
+
+p2 8                             28                 m s xl              63         
+\end{Verbatim}
+\end{center}
+\end{z}
+
+\begin{z}
+Definisati strukturu \verb|STUDENT| koja sadr\v zi:
+\begin{itemize}
+\item \verb|puno_ime| (u polju se \v cuva ime i prezime studenta,
+  npr. "Marko Markovic", maksimalna du\v zina polja je 100
+  karaktera),
+\item \verb|ocene| (sadr\v zi najvi\v se 10 ocena studenta)
+\item \verb|broj_ocena| (ukupan broj ocena za studenata)
+\item \verb|prosek| (prose\v cna ocena)
+\end{itemize}
+U datoteci čiji se naziv zadaje kao argument komandne linije
+se nalaze podaci o studentima (prvo broj studenata, a zatim i i
+informacije o svakom studentu). Za svakog studenta unosi se
+ime i prezime razdvojeno razmakom, a potom ocene koje se zavr\v savaju sa
+0. Napisati funkciju
+\begin{center}{\tt int najveci\_prosek(STUDENT* niz, int n)} \end{center}
+koja pronalazi studenta sa najvećim prosekom i vraća poziciju u nizu na kojoj se taj student nalazi. \\
+Napisati funkciju
+\begin{center}{\tt void ispisi(const STUDENT* s)} \end{center}
+koja ispisuje podatke o studentu u formatu: ime prezime, prosek na dve decimale.
+Testirati obe funkcije pozivom u glavnom programu, tako što prvo treba nači studenta
+sa najvećim prosekom, a zatim ispisati informacije o tom studentu.
+U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                             Primer 2:           Primer 3:}
+./a.out studenti.txt                  ./a.out             ./a.out prazna.dat
+studenti.txt:                                             prazna.dat:
+4
+Marko Markovic 5 6 7 8 9 0            -1
+Jelena Jankovic 10 10 10 0
+Filip Viskovic 10 9 8 7 6 0
+Jana Peric 10 10 9 9 8 8 7 7 0
+
+Jelena Jankovic 10.00
+\end{Verbatim}
+\end{z}
+
+\newpage
+
+\section{Domaći zadaci}
+\begin{z}
+Napisati program koji sa standardnog ulaza učitava dimenziju niza celih brojeva, a zatim i njegove
+elemente. Na standardni izlaz za svaki broj ispisati koliko ima brojeva koji se nalaze ispred njega u nizu, a koji su manji od tog broja.
+U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:                Primer 3:}
+5                        7                        -5
+1 2 3 4 5                12 10 56 -98 15 2 100    -1
+
+0 1 2 3 4                0 0 2 0 3 1 6
+\end{Verbatim}
+
+\begin{z}
+Ime datoteke dato je kao argument komandne linije. U datoteci se
+nalaze otvorene i zatvorene zagrade i jo\v s nekakav tekst. Napisati program koji proverava
+da li su zagrade pravilno uparene. Npr. \verb|ab( cd) ..| odgovor je
+\verb|jesu|, a \verb|..)ba()| odgovor je \verb|nisu|.
+U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:               Primer 2:                Primer 3:               Primer 4:}
+./a.out zagrade.txt     ./a.out primer2.dat      ./a.out primer3.dat     ./a.out
+zagrade.txt:            primer2.dat:             primer3.dat:
+ab( cd) ..              (7+8                     )) 7 + 6 ((             -1
+((3+4)*5+1)*9           nisu(
+                        uparene                  nisu
+jesu
+                        nisu
+\end{Verbatim}
+
+\begin{z} Skupovi karaktera
+\begin{description}
+	\item{a)} Napisati C funkciju 
+	\verb|int unesiSkup(char **s, FILE* f)|
+	kojom se unosi skup elemenata iz datoteke F. Skup se predstavlja kao 
+	niz karaktera, pri \v cemu su dozvoljeni elementi skupa mala i velika slova abecede, kao i cifre.
+	Unos se prekida kada se nai\d e na znak za novi red ili nedozvoljeni karakter za skup 
+	Maksimalan broj elemenata skupa nije poznat.
+	Funkcija vra\' ca broj elemenata skupa koji su uspesno u\v citani.
+	\item{b)} Napisati funkciju
+	\verb|void prebroj(char *s, int *br_slova,int *br_cifara)|
+	kojom se odre\d uje broj slovnih elemenata skupa (velikih ili malih slova) 
+	kao i broj cifara u skupu.
+	\item{c)} Napisati glavni program gde se unose podaci o skupu elemenata. Ime datoteke se zadaje kao argument komandne linije.
+	Na stadardni izlaz ispisati informacije o broju slova i cifara (koristiti funkcije pod a) i b)).
+      \end{description}
+U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer 1:                   Primer 2:          Primer 3:                 Primer 4:}
+./a.out skup.txt            ./a.out            ./a.out skup2.txt         ./a.out skup3.txt
+skup.txt:                                      skup2.txt:                skup3.txt:
+abc56ighj9012hjFGHH         -1                 ovdeimamo\$dolar           broJ3
+                                                                         broj5
+broj slova: 13                                 broj slova: 9
+broj cifara: 6                                 broj cifara: 0            broj slova: 4 
+                                                                         broj cifara: 1
+\end{Verbatim}
+
+\begin{z}
+Definisati strukturu 
+\begin{verbatim}
+typedef struct{
+    int x;
+    int y;
+    int z;
+} VEKTOR;
+\end{verbatim}
+kojom se opisuje trodimenzioni vektor. U datoteci \verb|vektori.txt|
+nalazi se nepoznati broj vektora. Na standarni
+izlaz ispisati koordinate vektora sa najve\' com du\v zinom. Du\v zina vektora se izra\v cunava
+po formuli:
+$$|v|= \sqrt{x^2+y^2+z^2}$$ U slučaju greške na standardni izlaz za greške ispisati {\tt -1}. 
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{   Primer 1:           Primer 2:            Primer 3:           Primer 4:}
+   2                   -9                   3                   4
+   4 -1 7                                   0 0 0               3 0 1
+   3  1 2                                   0 1 0               4 5 2
+                                            1 0 0               1 0 0
+                                                                2 -1 2
+								
+   4 -1 7              -1                   0 1 0               4 5  2
+
+\end{Verbatim}
+\end{z}
+
+\end{document}
+
+\begin{z}
+Ovdde ide tekst zadatka.
+\end{z}
+\begin{Verbatim}%
+  [formatcom=\color{primeri}]
+\textbf{Primer1:                 Primer 2:}
+nije bf             vlvlvl
+nesto dalje         zzzz
+\end{Verbatim}

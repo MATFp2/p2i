@@ -1,0 +1,360 @@
+% *************************************************************
+% *************************************************************
+% *************************************************************
+\chapter{Testovi i ispiti 2012/13}
+% *************************************************************
+% *************************************************************
+% *************************************************************
+
+\newpage
+
+%---------------------------------------------------------------------
+
+\section{I smer, Programiranje 2 2012/2013, Drugi test}
+\subsection{(I Grupa)}
+
+\textbf{NAPOMENA:} Na desktopu napraviti direktorijum
+\verb|InicijaliAsistenta_ImePrezime_BrojIndeksa_Grupa|,
+\\ npr. \verb|AK_MarkoMarkovic_mi12201_1|. Zadatke \v cuvati u ovom
+direktorijumi pod nazivom \textbf{1.c, 2.c}.  U slu\v caju da zadaci
+budu sa\v cuvani na nekom drugom mestu ili poddirektorijumu ne\'ce
+biti pregledani!
+
+\begin{z} Napisati funkciju koja sortira slova unutar niske karaktera i
+  ispisuje ih na standardni izlaz. Napisati program koji proverava da
+  li su dve niske karaktera koje se zadaju kao argumenti komandne
+  linije anagrami. Dve niske su anagrami ako se sastoje od istog broja
+  istih karaktera. Program treba na standardni izlaz da ispi\v se
+  $true$ ili $false$.
+\end{z}
+
+\begin{verbatim}
+Primer 1:    ./anagram miroljub ljubomir          bijlmoru bijlmoru true
+Primer 2:    ./anagram vatra trava                aartv aartv true
+Primer 3:    ./anagram racunar racun              aacnrru acnru false
+Primer 4:    ./anagram program gram               agmoprr agmr false
+\end{verbatim}
+
+\begin{z} Napisati funkciju
+  \verb|int count_zero_pairs(unsigned x)| koja broji koliko se puta
+  kombinacija $00$ (dve uzastopne nule) pojavljuje u binarnom zapisu
+  celog neozna\v cenog broja (ako se u bitskoj reprezentaciji nekog
+  broja jave tri uzastopne nule, sredi\v snja se broji dva puta, u
+  levom i desnom paru). Napisati program koji za broj iz prvog
+  argumenta komandne linije na standardni izlaz ispisuje rezultat
+  funkcije.
+\end{z}
+
+\begin{verbatim}
+Primer 1:   ./zeros 487                                  23
+Primer 2:   ./zeros 255                                  23
+Primer 3:   ./zeros 3567                                 19
+Primer 4:   ./zeros 1024                                 29
+\end{verbatim}
+
+\vskip 2cm
+
+\subsection{(II Grupa)}
+
+\textbf{NAPOMENA:} Na desktopu napraviti direktorijum
+\verb|InicijaliAsistenta_ImePrezime_BrojIndeksa_Grupa|,
+\\ npr. \verb|AK_MarkoMarkovic_mi12201_2|. Zadatke \v cuvati u ovom
+direktorijumi pod nazivom \textbf{1.c, 2.c}.  U slu\v caju da zadaci
+budu sa\v cuvani na nekom drugom mestu ili poddirektorijumu ne\'ce
+biti pregledani!
+
+\begin{z} Sa standardnog ulaza unosi se broj re\v{c}i \verb|n|,
+za kojim sledi \verb|n| re\v{c}i (u svakom redu po jedna).  Nakon
+unosa re\v ci unosi se i broj \verb|q|.  Re\v{c}i nisu du\v{z}e od 20
+karaktera.  U\v{c}itati re\v{c}i u niz, a zatim ih sortirati. Ispisati
+re\v c na poziciji \verb|q|.  Kriterijum sortiranja je suma
+\verb|ascii| kodova slova svake re\v{c}i, poredak je rastu\'{c}i.
+\end{z}
+
+\begin{verbatim}
+Primer 1:                Primer 2:                Primer 3:                   Primer 4:
+3                        4                        4                           2
+programiranje            test                     aaaaa                       funkcija
+alokacija                kolokvijum               zzzzz                       C
+memorija                 ispit                    bbbbb                       1
+3                        usmeni                   ttttt
+                         1                        2
+--------------------------------------------------------------------------------------------
+programiranje            test                     bbbbb                       C
+\end{verbatim}
+
+\begin{z} Napisati funkciju
+  \verb|unsigned swap_pair(unsigned x, int i, int j)| koja razmenjuje
+  vrednosti bitova na pozicijama \verb|i| i \verb|j|, i vra\'ca
+  rezultat kao povratnu vrednost. Bit sa najmanjom te\v zinom nalazi
+  se na poziciji 0, bit do njega na poziciji 1, itd... Napisati i
+  program koji testira ovu funkciju. Sa standardnog ulaza se unose
+  redom broj kome se invertuju bitovi, i pozicije bitova, a rezultat
+  funkcije se ispisuje na standardni izlaz.
+\end{z}
+
+\begin{verbatim}
+Primer 1:                Primer 2:                Primer 3:                   Primer 4:
+159 0 1                  48 4 0                   255 1 9                     249 10 5
+159                      33                       765                         1241
+\end{verbatim}
+
+
+\section{Programiranje II, Zavr\v{s}ni ispit, jun 2013.}
+
+
+\begin{enumerate}
+\item Trougao je zadat duzinama svoje tri stranice. Napraviti strukturu koja opsuje trougao.
+Napisati funkciju koja ra\v cuna povr\v sinu trougla.
+Kao argumenti komadne linije zadati su podaci o dva trougla. Ispisati koji trougao ima ve\'cu povr\v sinu
+(na standarni izlaz ispisati \verb|prvi| ili \verb|drugi|).
+
+\item Sa standardnog ulaza se ucitava broj n a zatim i niz od n niski(svaka niska je maksimalne duzine 20 karaktera, duzina niza n
+nije unapred poznata niti ogranicena).
+Sortirati taj niz u opadajucem poretku pri cemu je kriterijum poredenja broj samoglasnika u reci.
+Ispisati sortirani niz na standardni izlaz.
+U slucaju greske ispisati "-1" na standardni izlaz.
+
+\item Napisati funkciju unsigned int fja(unsigned int x) koja vraca broj dobijen od broja x kada se prvih 8 bitova broja
+(bitovi na najvecim tezinama) postave na 0, poslednjih 4 bita(bitovi na najmanjim tezinama) se postave na 0110,
+ a ostatak broja ostaje nepromenjen. Testirati pozivom u main-u.
+
+\item Napisati funkciju \verb|void umetni(cvor* lista)| koja izmedju svaka dva el-
+ementa u listi umece element koji predstavlja razliku susedna dva.
+
+\item Napisati funkciju int prebroj(cvor* drvo) koja vraca broj elemenata stabla drvo koji su iste parnosti kao oba svoja sina(
+sva tri parna ili neparna).
+Ukoliko je cvor list ili ima samo jednog sina ne ulazi u zbir.
+
+\end{enumerate}
+
+
+
+\section{Programiranje II, Zavr\v{s}ni ispit, jun2 2013.}
+
+
+
+NAPOMENA: Na desktopu napraviti direktorijum sa imenom \verb|inicjaliAsistenta_ImePrezime_brojIndeksa|.
+U tom direktorijumu \v cuvati zadatke -- 1.c, 2.c, 3.c, 4.c. 5.c
+Na desktopu se nalazi folder \verb|p2_jun| sa datotekama za rad sa listama i drvetom. Date datoteke potrebno je koristiti
+po pravilima za rad sa vi\v se datoteka.
+
+\begin{z}Ime datoteke dato je kao argument komandne linije. U datoteci zameniti svaku cifru slede\' com \verb|0->1, 1->2,...|.
+Broj 9 zameniti sa \verb|0|. U slu\v caju gre\v ske na standardni izlaz ispisati \verb|-1|.
+\end{z}
+\begin{verbatim}
+Primer 1:                |     Primer 2:                      Primer 3:
+./a.out dat.txt          |     ./a.out zad                    ./a.out test.dat
+dat.txt: 123abc789       |     zad: 9202jsshsh 120            test.dat:  kazablanka je 1967. bila
+                         |          qoqo 2782 20                         kako uhvatiti ziravu 89 puta
+dat.txt: 234abc890       |                                               90 puta napisati euklidov algoritam
+                         |      zad: 0313jsshsh 231
+______________________   |           qoqo 3893 31
+Primer 4:                |                                    test.dat: kazablanka je 2078. bila
+./a.out                  |                                              kako uhvatiti ziravu 90 puta
+                         |                                              01 puta napisati euklidov algoritam
+ -1                      |
+\end{verbatim}
+
+\begin{z} Kao argumenti komandne linije dati su celi brojevi $a, b, c, d, e$. Binarnom pretragom na\' ci ceo broj na intervalu $[d, e]$
+nulu funkcije $a\cdot x^2 + b\cdot x + c$ sa ta\v cno\v s\'cu \verb|0.0001|. U slu\v caju gre\v ske na standardni izlaz napisati \verb|-1|.
+Ako su argumenti komandne linije ispravno dati podrazumevati da funkcija ima ta\v cno jednu nulu na datom intervalu.
+Na standardni izlaz ispisati na\d enu vrednost. Broj ispisati sa 3 decimale.
+\end{z}
+\begin{verbatim}
+Primer 1:                Primer 2:         Primer 3:                     Primer 4:
+./a.out 5 8 -4 0 1       ./a.out 4         ./a.out 10 -2 -15 -2 0        ./a.out -3 6 10 0 4
+
+0.400                    -1                -1.129                        3.082
+\end{verbatim}
+
+\begin{z}
+ Napisati funkciju  \verb|unsigned int f3(unsigned int x)| koja vra\' ca broj koji predstavlja odraz u ogledalu
+polaznog broja \verb|x|. Testirati pozivom u main funkciji -- sa standardnog ulaza se unosi broj, rezultat ispisati na standarni izlaz.
+ Na primer, ako je ulaz broj \v ciji je binarni zapis \verb|00101|, izlaz je broj \v ciji je binarni zapis \verb|10100|.
+\end{z}
+\begin{verbatim}
+Primer 1:           Primer 2:            Primer 3:          Primer 4:
+3                   1234                 -90                82720000
+
+3221225472          1260388352           1260388352         11302688
+\end{verbatim}
+
+\begin{z}
+Napisati funkciju \verb|Cvor* izbaci(Cvor *lista1, Cvor *lista2)|  koja iz \verb|liste1|
+izbacuje sve elemente koji se pojavljuju u \verb|listi2|. Testirati funkciju pozivom u main-u,
+sa standarnog ulaza se u\v citaju elementi prve liste sve dok se ne unese 0.
+Potom se u\v citavaju elementi druge liste sve dok se ne u\v cita 0. Elemente liste dodavati na kraj.
+Potom pozvati funkciju i novodobijenu listu ispisati na standarni izlaz.
+Dozvoljeno je pravljenje nove liste.
+\end{z}
+\begin{verbatim}
+Primer 1:          Primer 2:             Primer 3:            Primer 4:
+1 3 5 0            3 -90 2 8 7 0         7 8 0                0
+3 4 6 7 0          8 3 -4 0              0                    10 34 5 67 1 2 0
+
+izlaz: 1 5         izlaz: -90 2 7        izlaz: 7 8           izlaz:
+\end{verbatim}
+
+
+\begin{z}
+Napisati funkciju \verb|int ravnomerno_izbalansirano(Cvor *stablo)| koja proverava da li je stablo ravnomerno izbalansirano.
+ Stablo je ravnomerno izbalansirano ako za svaki \v cvor va\v zi da je pozitivna razlika izme\d u dubine levog i dubine desnog podstabla najvi\v se \verb|1|.
+Testirati funkciju pozivom u main-u, stablo se u\v citava sve dok se ne unese 0. Ukoliko jeste izbalansirano ispisati \verb|1|, a u suprotnom \verb|0|.
+\end{z}
+\begin{verbatim}
+Primer 1:                             Primer 2:                    Primer 3:            Primer 4:
+
+     10                                  10                        ulaz: 0                 10
+    /  \                                /  \                       izlaz: 1               /  \
+   7    20                             7    11                                           7    20
+  / \   / \                           /                                                 / \
+ 5  8  15  23                        5                                                 5   8
+                                    /
+ulaz: 10 7 20 5 8 15 23 0          4                                                   ulaz: 10 7 5 8 20 0
+izlaz: 1                                                                               izlaz: 1
+                                   ulaz: 10 7 11 5 4 0
+                                   izlaz: 0
+\end{verbatim}
+
+
+
+%----------------------------------------------------------------
+\section{Programiranje II, Zavr\v{s}ni ispit, januar 2014.}
+%----------------------------------------------------------------
+
+
+\begin{z}
+Argumenti komadne linije su ime datoteke i jedan ceo broj \verb|p| (\verb|p| $>$ 0).
+U datoteku \verb|izlaz.txt| prepisati svaki \verb|p|-ti karakter iz ulazne datoteke.
+U slu\v caju gre\v ske ispisati -1.
+\end{z}
+\begin{verbatim}
+Primer 1:                                      Primer 2:
+./a.out ulaz 3                                 ./a.out ulaz 10
+ulaz: danas pisemo                             ulaz: Na Sretenje 1804. godine podignut je
+      programe razne                                 Prvi srpski ustanak, a 1835.
+      i mnogo nam je zanimljivo                      donet prvi demokratski ustav Srbije.
+
+izlaz.txt: n sorreae o meami                   izlaz.txt: jogr aodib
+-------------------------------------------------------------------------------------------
+
+Primer 3:                                      Primer 4:
+./a.out dat.txt -3                             ./a.out
+
+-1                                             -1
+\end{verbatim}
+
+
+\begin{z}
+ U datoteci \verb|slike.txt| nalaze se podaci o slikama -- ime slike (maksimalne du\v zine 20 karaktera,
+ ne sadr\v zi praznine, dozvoljeno je kori\v scenje specifikatora \verb|%s| za unos imena) i
+ veli\v cina u kilobajtima (neozna\v cen ceo broj). Definisati strukturu koja opisuje sliku.
+ Sortirati niz slika u opadaju\'cem poretku pri \v cemu je kriterijum pore\d enja veli\v cina slike.
+ Na standarni izlaz ispisati imena slika sortiranog niza. Broj slika u datoteci nije unapred
+ poznat (koristiti dinami\v cku alokaciju). U slu\v caju gre\v ske ispisati -1.
+\end{z}
+\begin{verbatim}
+Primer 1:                   Primer 2:                   Primer 3:           Primer 4:
+slike.txt:                  slike.txt:                  slike.txt:          slike.txt:
+krug 200                    Klod_Mone 400               p1 300              oblak 200
+trougao 450                 Edvard_Munk 550             p2 400              livada.jpg 300
+Ojlerov_krug 320            Salvador_Dali 320           p3 320              suma 220
+Pashova_teorema 220         Gustav_Klimt 432                                planina 340
+paralelogram 330            Rembrant 578                izlaz:
+                            Francisko_Goja 349          p2                  izlaz:
+izlaz:                      Paja_Jovanovic 490          p3                  planina
+trougao                     Uros_Predic 390             p1                  livada.jpg
+paralelogram                                                                suma
+Ojlerov_krug                izlaz:                                          oblak
+Pashova_teorema             Rembrant
+krug                        Edvard_Munk
+                            Paja_Jovanovic
+                            Gustav_Klimt
+                            Klod_Mone
+                            Uros_Predic
+                            Francisko_Goja
+                            Salvador_Dali
+\end{verbatim}
+
+\begin{z}
+Napisati funkciju |\verb|unsigned int f3(unsigned int x, int k, int p)|| koja u broju \verb|x| komplementira
+\verb|k| bitova, po\v cev\v si od pozicije \verb|p|. Bitovi se broje sa desna na levo, po\v cev\v si od 0.
+Bitovi koji se komplementiraju idu od pozicije \verb|p| do pozicije \verb|k + p - 1|.
+Sa standarnog ulaza u\v citavaju se brojevi \verb|x|, \verb|k| i \verb|p|. Na standarni izlaz ispisati
+izlaz funkcije \verb|f3|. U slu\v caju gre\v ske ispisati -1.
+\end{z}
+\begin{verbatim}
+Primer 1:                   Primer 2:                   Primer 3:           Primer 4:
+345 5 6                     18903 10 5                  456672 4 15         45 15 23
+
+1689                        13879                       471656              -1
+\end{verbatim}
+
+\begin{z}
+Dat je polinom reprezentovan listom, tako da \v cvorovi liste sadr\v ze koeficijente i stepene polinoma.
+Dati polinom je nesre\d en, tj. mo\v ze sadr\v zati vi\v se \v clanova sa istim stepenom.
+Napisati funkciju \verb|cvor* f4(cvor* lista)| koja sre\d uje polinom tako da:
+\begin{itemize}
+\item da se svaki stepen pojavljuje najvi\v se jedanput
+\item da su svi koeficijenti koji su prisutni u listi razli\v citi od 0
+\end{itemize}
+U main-u se unosi broj elemenata liste, a potom i elementi liste
+(svaki element liste se dodaje na kraj).
+Ispisati na standarni izlaz polinom koja je dobijena sre\d ivanjem ulazne liste.
+\end{z}
+\begin{verbatim}
+Primer 1:               Primer 2:                 Primer 3:            Primer 4:
+4                       10                        4                    5
+1 1                     -1 2                      3 1                  2 3
+2 3                     3 3                       2 3                  1 2
+-1 1                    1 2                       5 1                  4 5
+1 3                     -3 3                      3 3                  -2 3
+                        7 1                                            2 2
+3*x^3                   2 5                       8*x^1 + 5*x^3
+                        3 1                                            3*x^2 + 4*x^5
+                        -1 5
+                        -1 5
+                        4 4
+
+                        10*x^1 + 4*x^4
+\end{verbatim}
+
+\begin{z}
+Napisati funkciju \verb|float f5(cvor* drvo)| koja ra\v cuna sumu svih elemenata drveta
+takvih da su ve\'ci od sume svojih direktnih potomaka. Ne ra\v cunati \v cvorove koji
+nemaju ni jednog direktog potomka.
+Sa standarnog ulaza unose se elementi u drvo sve dok se ne unese 0.
+Elementi su drveta su realni brojevi zapisani u jednostrukoj ta\v cnosti (koristiti \verb|float|).
+Na standarni izlaz ispisati izlaz funkcije \verb|f5|. Rezultat ispisati sa 3 decimale.
+Mogu\'ce je koristiti biblioteke za rad sa stablima (\verb|stbla.c| i \verb|stabla.h|),
+kompajlirati sa \verb|gcc 5.c stabla.c|.
+\end{z}
+\begin{verbatim}
+Primer 1:                                                    Primer 2:
+         7.51                                                        6
+       /      \                                                     /  \
+      -2        8.1                                               -4    8
+    /    \      /  \                                             / \   /
+   -8     5    8    9.1                                        -11 5   7
+   / \   / \        /                                           /
+-10 -3 -1.5 6      8.5                                        -20
+
+ulaz:                                                         ulaz:
+7.51 -2 -8 5 -10 -3 -1.5 6 8.1 8 9.1 8.5 0                    6 -4 8 -11 5 7 -20 0
+
+izlaz: 11.610                                                 izlaz: -1.000
+---------------------------------------------------------------------------------------------
+
+Primer 3:                                                  Primer 4:
+       7.82                                                      -2
+       /  \                                                     /   \
+     -4   10                                                  -10    4
+       \                                                      / \   /  \
+        6                                                   -13 -4 -1   4.1
+
+ulaz: 7.82 -4 10 6 0                                        ulaz: -2 -10 4 -13 -4 -1 4.1 0
+
+izlaz: 7.820                                                izlaz: -8.000
+\end{verbatim}
+

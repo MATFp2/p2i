@@ -1,0 +1,25 @@
+.alert h2 {
+	margin-bottom: 30px;
+}
+
+.alert-centriraj {
+	text-align: center;
+}
+
+.poruka {
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.notif {
+	text-align: center;
+	position: fixed;
+	background-color: red;
+	color: white;
+	z-index: 1001;
+	top: 60px;
+	height: 30px;
+	padding-top: 3px;
+	width: 100%;
+}

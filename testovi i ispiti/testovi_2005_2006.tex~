@@ -1,0 +1,414 @@
+\chapter{Testovi i ispiti 2005/06}
+% *************************************************************
+% *************************************************************
+% *************************************************************
+
+\newpage
+
+\section{Test 1, 03.04.2006.}
+
+
+1. Kori\v s\' cenjem nizova izra\v cunati pribli\v znu vrednost
+realnog broja $1/x$ (za $0 < x \le 2$) sa zadatom ta\v cno\v s\' cu
+$\epsilon$ ($0 \le \epsilon \leq 0.01$) na slede\' ci na\v cin:
+\begin{itemize}
+\item odrediti elemente nizova $(a)$ i $(c)$ koju su zadati sa:
+
+$a[0] = 1$
+
+$c[0] = 1-x$
+
+$a[i] = a[i-1] \cdot (1+c[i-1]), \;\;\; \textrm{za} \;\;\; i \ge 1$
+
+$c[i] = c[i-1] \cdot c[i-1], \;\;\; \textrm{za} \;\;\; i \ge 1$
+
+\item za vrednost broja $1/x$ uzima se ona vrednost $a[n]$ za koju
+je zadovoljen uslov $-\epsilon \le a[n]-a[n-1] \le \epsilon$.
+\end{itemize}
+
+Prostor za nizove $(a)$ i $(c)$ dinami\v cki alocirati i pove\' cavati
+im du\v zinu (u ve\'cim blokovima) dok ne bude zadovoljena tra\v zena
+ta\v cnost.
+
+Na primer:
+
+za $x = 0.5$ i $\epsilon = 0.0001$ program treba da vrati $2.00000$
+
+za $x = 0.5$ i $\epsilon = 0.01$ program treba da vrati $1.999969$ \\
+
+
+2. Napisati funkciju koja kao (jedini) arugment ima ime datoteke
+koja sadr\v{z}i dimenziju kvadratne matrice i njene elemente redom
+(po vrstama). Funkcija treba da ispi\v{s}e elemente matrice u grupama
+koje su paralelne sa sporednom dijagonalom matrice.
+
+Na primer, datoteka sa sadr\v{z}ajem \verb|3 1 2 3 4 5 6 7 8 9|
+opisuje matricu
+
+$\begin{array}{ccc}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{array}$
+
+a funkcija treba da ispi\v{s}e slede\'ce:
+
+$\begin{array}{ccc}
+1 &  & \\
+2 &  4 & \\
+3 & 5 & 7 \\
+6 & 8 & \\
+9 &  &
+\end{array}$
+
+Mo\v{z}e se pretpostaviti da matrica nije dimenzije ve\'ce od
+$100 \times 100$. \\
+
+3. Napraviti program za a\v{z}uriranje reda \v{c}ekanja u studentskoj
+poliklinici. Treba obezbediti:
+
+\begin{itemize}
+\item funkciju koja sa standardnog ulaza \v{c}ita broj indeksa studenta
+koji je do\v{s}ao (samo jedan ceo broj);
+\item funkciju koja ubacuje studenta (sa datim brojem indeksa) na kraj
+liste \v{c}ekanja u vremenu $O(1)$;
+\item funkciju koja odre{\d}uje slede\'ceg studenta za pregled i bri\v{s}e
+ga sa liste u vremenu $O(1)$;
+\item funkciju koja \v{s}tampa trenutno stanje reda \v{c}ekanja.
+\item funkciju koja oslobadja celu listu.
+\end{itemize}
+
+
+
+
+\section{Test 2, 01.06.2006.}
+
+
+
+1. Napisati program koji za uredjeno binarno stablo ispisuje
+elemente na najve\' coj dubini. Napisati funkcije za kreiranje
+\v cvora, uno\v senje elementa u stablo, oslobadjanje stabla.
+
+Na primer, za stablo
+
+\begin{minipage}[t]{120mm}
+\begin{verbatim}
+        5
+      /   \
+     3     6
+   /   \
+  2     4
+\end{verbatim}
+\end{minipage}
+
+\noindent
+program treba da ispi\v se: {\tt 2 4}.
+
+2. Sa ulaza \v citamo niz re\v ci (dozvoljeno je ponavljanje re\v ci) i
+sme\v stamo ih u listu (koja osim re\v ci \v cuva i broj pojavljivanja
+za svaku re\v c). Napisati funkciju koja sortira listu algoritmom
+\emph{bubble sort} po broju pojavljivanja re\v ci. Napisati funkciju
+koja ispisuje listu po\v cev\v si od re\v ci koja se pojavila najvi\v se puta.
+
+3. Sa standardnog ulaza u\v citavamo prvo broj studenata a zatim i
+njihove podatke. Za svakog studenta dobijamo ime (niska od najvi\v se
+30 karaktera) i broj indeksa (ceo broj). Napisati program koji
+sortira ovaj niz studenata po imenima studenata pozivom standardne
+funkcije \emph{qsort} a zatim pronalazi broj indeksa studenta \v cije
+se ime zadaje sa standardnog ulaza pozivom funkcije \emph{bsearch}.
+
+4. Napisati program koji simulira rad sa velikim brojevima.
+Cifre velikog broja sme\v stati u niz. Pretpostavljamo da broj
+ne\' ce imati vi\v se od $1000$ cifara.
+
+Napisati funkcije za:
+\begin{itemize}
+\item Uno\v senje broja sa standardnog ulaza (pri \v cemu cifre
+broja treba uneti na standardni na\v cin tj. po\v cev\v si od
+cifre najve\' ce te\v zine) i sme\v stanje u niz koji se predaje
+kao argument funkcije. Du\v zinu niza (odnosno broja) vratiti kao
+povratnu vrednost funkcije.
+\item Ispis broja (odnosno niza) na standardni izlaz.
+\item Oduzimanje dva velika broja (niz za sme\v stanje rezultata proslediti
+funkciji kao argument). Pretpostavljamo da je prvi argument ve\' ci od drugog.
+\end{itemize}
+
+Pre poziva funkcije za oduzimanje brojeva obezbediti da cifra najmanje
+te\v zine bude sme\v stena u $a[0]$ (ako je $a$ niz koji predstavlja
+veliki broj).
+
+Za unete brojeve {\tt 456 189} program treba da ispise {\tt 267}.
+
+Za unete brojeve {\tt 456 89} program treba da ispise {\tt 367}.
+\vspace*{3mm}
+
+
+
+\section{Programiranje II, Zavr\v{s}ni ispit, jun 2006.}
+
+
+
+\begin{enumerate}
+\item
+Napisati program za izra\v cunavanje koeficijenata polinoma $T_{n}(x)$ za
+proizvoljno veliko $n$. Pri tome je $T_{0}(x) = a$, $T_{1}(x) = b \cdot x + c$
+(celobrojne vrednosti $n$, $a$, $b$ i $c$ su argumenti komandne linije), a
+$T_{n}$ se izra\v cunava na osnovu formule $T_{n} = x \cdot T_{n-1} + T_{n-2}$.
+Polinom upisati u datoteku \v cije se ime zadaje kao peti argument komandne linije.
+Primer: nakon poziva
+
+\verb|program 2 1 2 3 izlaz.txt|
+
+\noindent
+u datoteci \verb|izlaz.txt| bi\'ce sadr\v{z}aj:
+
+\verb|T2(x) = 2*x^2 + 3*x^1 + 1|
+
+
+\item
+Celobrojni aritmeti\v cki izraz koji uklju\v{c}uje jednu promenljivu predstavljen
+je binarnim stablom. Na primer, izraz $2 + (3 * x)$ predstavljen je stablom:
+
+\begin{verbatim}
+   +
+  / \
+ 2   *
+    / \
+   3   x
+\end{verbatim}
+
+Izraz mo\v{z}e da sadr\v{z}i samo binarne operatore \verb|+| i \verb|*|.
+
+\begin{itemize}
+\item[-]
+Definisati strukturu \verb|cvor| kojom se mogu opisati \v{c}vorovi
+ovakvog stabla.
+
+\item[-]
+Napisati funkciju
+
+\verb|int vrednost(char ime_promenljive, int vrednost_promenljive, cvor* koren)|
+
+\noindent
+koja za promenljivu \verb|ime_promenljive| sa vredno\v s\' cu
+\verb|vrednost_promenljive| ra\v cuna vrednost izraza koji je predstavljen
+stablom \v{c}iji je koren \verb|*koren| i vra\' ca tu vrednost kao povratnu
+vrednost funkcije. Ukoliko u izrazu postoji promenljiva \v{c}ija vrednost
+nije zadata, ispisuje se poruka o gre\v{s}ci i vra\'ca vrednost 0.
+
+Na primer, ako je \verb|izraz| pokaziva\v{c} na koren stabla koje opisuje navedni izraz,
+onda se pozivom funkcije
+
+\verb|vrednost('x', 1, izraz)|.
+
+\noindent
+dobija vrednost 5.
+
+Ako je \verb|izraz| pokaziva\v{c} na koren stabla koje opisuje navedni izraz,
+onda se pozivom funkcije
+
+\verb|vrednost('y', 2, izraz)|.
+
+dobija poruka:
+
+\verb|Promenljiva x nije definisana|
+
+i povratna vrednost 0.
+
+\item[-]
+Napisati funkcije za ispis u prefiksnom i u infiksnom poretku
+drveta koje opisuje izraz.
+\end{itemize}
+
+Podrazumevati da su svi izrazi koji se dobijaju kao argumenti
+ispravno formirani.
+
+\item
+U datotekama \v cija se imena zadaju sa standardnog ulaza nalaze se re\v ci
+koje su leksikografski sortirane (unutar svake datoteke). Napisati program koji
+re\v ci iz ovih datoteka sme\v sta sortirano u tre\'cu datoteku (\v{c}ije se
+ime tako{\d}e zadaje sa standardnog ulaza). Ne koristiti dinami\v{c}ki
+alociranu memoriju, niti funkcije za pozicioniranje unutar datoteka.
+Pretpostaviti da su sve re\v{c}i du\v{z}ine manje od 100 karaktera.
+
+\end{enumerate}
+
+
+
+\section{Programiranje II, Zavr\v{s}ni ispit, septembar 2006}
+
+
+
+\begin{enumerate}
+
+\item
+Napisati program koji formira sortiranu listu od niza celih brojeva koji se
+unose sa standardnog ulaza. Oznaka za kraj unosa je $0$. Napisati funkcije za
+formiranje \v cvora liste, ubacivanje elementa u ve\' c sortiranu listu,
+ispisivanje elemenata liste i osloba\d anje liste.
+
+\item
+Iz datoteke \v cije se ime zadaje kao argument komandne linije
+\v cita se prvo dimenzija kvadratne matrice $n$, pa zatim elementi
+matrice. Prostor za matricu alocirati dinami\v cki. Napisati program
+koji:
+\begin{enumerate}
+\item
+pronalazi sve elemente matrice A koji su jednaki zbiru svih svojih susednih
+elemenata i \v stampa ih u obliku (broj vrste, broj kolone, vrednost elementa).
+Pod susednim elementima elementa $a[i][j]$ podrazumevamo elemente $a[i-1][j-1]$,
+$a[i-1][j]$, $a[i-1][j+1]$, $a[i][j-1]$, $a[i][j+1]$, $a[i+1][j-1]$, $a[i+1][j]$ i
+$a[i+1][j+1]$ (ako postoje).
+\item
+nalazi i \v stampa sve \v cetvorke oblika\\
+\verb"( A(i,j), A(i+1,j), A(i,j+1),A(i+1,j+1) )" u kojima su svi elementi me\d usobno
+razli\v citi.
+\end{enumerate}
+
+\item
+Napisati program koji formira ure\d eno binarno stablo bez ponavljanja
+elemenata. Elementi stabla su celi brojevi i unose se sa ulaza, a oznaka
+za kraj unosa je $0$. Napisati funkciju koja proverava da li je uneto
+stablo uravnote\v zeno. Stablo je uravnote\v zeno ako za svaki \v cvor
+stabla va\v zi da mu se visina levog i desnog podstabla razlikuju
+najvi\v se za jedan.
+\end{enumerate}
+
+
+
+
+\section{Programiranje II, Zavr\v{s}ni ispit, oktobar 2006}
+
+
+
+\begin{enumerate}
+
+\item
+Napisati funkciju koja za dva niza karaktera proverava da li je:
+\begin{itemize}
+\item [(a)]
+prvi podniz drugog (elementi prvog niza se ne moraju nalaziti na susednim
+pozicijama u drugom nizu).
+\item [(b)]
+prvi podstring drugog (karakteri prvog stringa se moraju nalaziti na susednim
+pozicijama u drugom stringu).
+Ako jeste funkcija treba da vrati poziciju prvog niza u drugom odnosno $-1$ ako
+nije.
+\end{itemize}
+
+\item
+Napisati program koji simulira rad sa stekom. Napraviti funkcije push (za
+ubacivanje elementa u stek), pop (za izbacivanje elementa iz steka) i
+funkciju peek (koja na standardni izlaz ispisuje vrednost elementa koji se nalazi
+na vrhu steka).
+
+\item
+Napisati program koji formira binarno uredjeno stablo. Napisati funkcije za:
+\begin{itemize}
+\item [(a)]
+ubacivanje elementa u stablo, ispisivanje stabla, oslobadjanje stabla
+\item [(b)]
+sabiranje elemenata u listovima stabla, izra\v cunavanje ukupnog broja \v cvorova
+stabla i izra\v cunavanje dubine stabla.
+\end{itemize}
+\end{enumerate}
+
+
+
+
+\section{Programiranje 2, Zavr\v{s}ni ispit, januarski rok, 2007}
+
+
+\begin{enumerate}
+\item Napisati program koji za uredjeno binarno stablo
+ispisuje sve listove (list je \v cvor stabla koji nema potomaka).
+Napisati funkcije za kreiranje \v cvora,
+uno\v senje elementa u stablo, ispis stabla i oslobadjanje stabla.
+
+Na primer: za stablo
+
+\begin{verbatim}
+
+        5
+      /   \
+     3     6
+   /   \
+  2     4
+
+\end{verbatim}
+
+program treba da ispi\v se: $2$ $4$ $6$.
+
+\item
+Napisati funkciju koja za dva niza karaktera proverava da li je
+prvi podstring drugog (elementi prvog stringa se moraju nalaziti na susednim
+pozicijama u drugom stringu).
+
+\item
+Iz datoteke \v cije se ime zadaje kao argument komandne linije
+\v cita se prvo dimenzija kvadratne matrice $n$, pa zatim elementi
+matrice. Prostor za matricu alocirati dinami\v cki. Napisati program
+koji ra\v cuna sumu elemenata matrice koji se nalaze iznad glavne dijagonale.
+
+Na primer, za matricu:
+\begin{verbatim}
+1 2 3
+4 5 6
+7 8 9
+\end{verbatim}
+
+program izra\v cunava sumu $2+3+6$ i ispisuje vrednost $12$.
+
+\end{enumerate}
+
+
+
+\section{Programiranje 2, Zavr\v{s}ni ispit, februarski rok, 2007}
+
+
+\begin{enumerate}
+\item Napisati program koji za uredjeno binarno stablo ra\v cuna ukupan broj
+listova u stablu (list je \v cvor stabla koji nema potomaka).
+Napisati funkcije za kreiranje \v cvora,
+uno\v senje elementa u stablo, ispis stabla i oslobadjanje stabla.
+
+Na primer: za stablo
+
+\begin{verbatim}
+
+        5
+      /   \
+     3     6
+   /   \
+  2     4
+
+\end{verbatim}
+
+program treba da ispi\v se: $3$.
+
+\item
+Napisati funkciju koja za dva niza karaktera proverava da li je
+jedan string permutacija drugog (jedan string je permutacija drugog stringa ako
+je od njega dobijen samo preme\v stanjem njegovih karaktera - bez ikakvog brisanja
+ili dodavanja karaktera).
+
+Npr. za stringove \emph{abc} i \emph{cba} funkcija treba da ispi\v se poruku
+da stringovi jesu permutacija. Za stringove \emph{aab} i \emph{ab} funkcija treba
+da ispi\v se poruku da stringovi nisu permutacija.
+
+\item
+Iz datoteke \v cije se ime zadaje kao argument komandne linije
+\v cita se prvo dimenzija kvadratne matrice $n$, pa zatim elementi
+matrice. Prostor za matricu alocirati dinami\v cki. Napisati program
+koji ra\v cuna suma elemenata matrice koji se nalaze na sporednoj dijagonali.
+
+Na primer, za matricu:
+\begin{verbatim}
+1 2 3
+4 5 6
+7 8 9
+\end{verbatim}
+
+program izra\v cunava sumu $3+5+7$ i ispisuje vrednost $15$.
+\end{enumerate}
+

@@ -1,0 +1,338 @@
+uf1[recenice.txt]{
+Danas je lep dan.
+gozba je bila predivna!!!
+Voli li Ana Milovana?
+Skola je za djake.
+uf1}
+if1[sort_recenice.txt]{
+Danas je lep dan.
+Skola je za djake.
+Voli li Ana Milovana?
+if1}
+|
+uf1[recenice.txt]{
+Danas je lep dan.
+gozba je bila predivna!!!
+Voli li Ana Milovana?
+Skola je za djake.
+ovo nije validna recenica
+Ni ovo
+Ali ovo jeste ok recenica!
+uf1}
+if1[sort_recenice.txt]{
+Ali ovo jeste ok recenica!
+Danas je lep dan.
+Skola je za djake.
+Voli li Ana Milovana?
+if1}
+|
+uf1[recenice.txt]{
+Danas je lep dan.
+gozba je bila predivna!!!
+Voli li Ana Milovana?
+Skola je za djake.
+ovo nije validna recenica
+Ni ovo
+Ali ovo jeste ok recenica!
+Danas je lep dan.
+gozba je bila predivna!!!
+Voli li Ana Milovana?
+Skola je za djake.
+ovo nije validna recenica
+Ni ovo
+Ali ovo jeste ok recenica!
+afdsla
+d453
+...!
+A.
+uf1}
+if1[sort_recenice.txt]{
+Ali ovo jeste ok recenica!
+Ali ovo jeste ok recenica!
+Danas je lep dan.
+Danas je lep dan.
+Skola je za djake.
+Skola je za djake.
+Voli li Ana Milovana?
+Voli li Ana Milovana?
+if1}
+|
+uf1[recenice.txt]{
+Skola je za djake.
+ovo nije validna recenica
+Ni ovo
+Ali ovo jeste ok recenica!
+afdsla
+d453
+...!
+A.
+A.
+Aa.
+A!
+a
+.!
+A
+.
+Bb.
+aaaa
+bb
+D353253 3535 35kl3 dfdc
+AAAA bbb!!!
+uf1}
+if1[sort_recenice.txt]{
+Aa.
+Ali ovo jeste ok recenica!
+Bb.
+Skola je za djake.
+if1}
+|
+uf1[recenice.txt]{
+Aa.
+Ali ovo jeste ok recenica!
+Bb.
+Skola je za djake.
+uf1}
+if1[sort_recenice.txt]{
+Aa.
+Ali ovo jeste ok recenica!
+Bb.
+Skola je za djake.
+if1}
+|
+uf1[recenice.txt]{
+Aaaab.
+Aaab.
+Aaaaaa
+Bbbbb.
+Bbbbb
+Baab!
+Aaaab!
+Aaaab fds!
+uf1}
+if1[sort_recenice.txt]{
+Aaaab fds!
+Aaaab!
+Aaaab.
+Aaab.
+Baab!
+Bbbbb.
+if1}
+|
+uf1[recenice.txt]{
+4
+d
+b
+adf!
+dg3
+....
+!!!
+AdfsaA.
+.
+.
+.
+.
+...
+!
+!aA
+uf1}
+if1[sort_recenice.txt]{
+
+if1}
+|
+uf1[recenice.txt]{
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+uf1}
+if1[sort_recenice.txt]{
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+if1}
+|
+uf1[recenice.txt]{
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna. 
+Ovo je neka recenica.    
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna. 
+Ovo je neka recenica.    
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna. 
+Ovo je neka recenica.    
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna. 
+Ovo je neka recenica.    
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna. 
+Ovo je neka recenica.    
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna. 
+Ovo je neka recenica.    
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna. 
+Ovo je neka recenica.    
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna. 
+Ovo je neka recenica.    
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Malo stres testing...
+Ovo je neka recenica.
+Mozda jos jedna ispravna.
+ali ova nije ! ispravna !.
+Mozda jos jedna ispravna. 
+Ovo je neka recenica.    
+Malo stres testing...
+uf1}
+if1[sort_recenice.txt]{
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Mozda jos jedna ispravna.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+Ovo je neka recenica.
+if1}
+|
