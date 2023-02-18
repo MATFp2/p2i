@@ -28,7 +28,7 @@
    Za povratak na stari stil samo zakomentarisati sadrzaj u okviru ova dva selektora.
  */
 .notification { /* Za samo obavestenje. */
-                  border-radius: 10px;
+                  border-radius: 15px;
 }
 		    
 .notification-content { /* Sadrzaj obavestenja. */
