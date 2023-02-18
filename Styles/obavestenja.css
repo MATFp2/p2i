@@ -23,3 +23,15 @@
 	padding-top: 3px;
 	width: 100%;
 }
+
+/* Dodato za samu izmenu stila obavestenja. 
+   Za povratak na stari stil samo zakomentarisati sadrzaj u okviru ova dva selektora.
+ */
+.notification { /* Za samo obavestenje. */
+              
+}
+		    
+.notification-content { /* Sadrzaj obavestenja. */
+	          margin-left: 20px;
+		  margin-top: 10px;
+}
