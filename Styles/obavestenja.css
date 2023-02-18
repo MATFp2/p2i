@@ -29,6 +29,8 @@
  */
 .notification { /* Za samo obavestenje. */
                   border-radius: 15px;
+		  background-color:#011e7d;
+	          color: white;
 }
 		    
 .notification-content { /* Sadrzaj obavestenja. */
