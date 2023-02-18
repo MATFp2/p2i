@@ -28,10 +28,11 @@
    Za povratak na stari stil samo zakomentarisati sadrzaj u okviru ova dva selektora.
  */
 .notification { /* Za samo obavestenje. */
-              
+                  border-radius: 10px;
 }
 		    
 .notification-content { /* Sadrzaj obavestenja. */
 	          margin-left: 30px;
 		  margin-top: 20px;
+	          margin-bottom: 30px;
 }
